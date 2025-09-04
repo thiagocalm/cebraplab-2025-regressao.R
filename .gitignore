@@ -1,5 +1,7 @@
 .Rproj.user
 .docx
+.docs
+.doc
 .Rhistory
 .Rdata
 .httr-oauth
