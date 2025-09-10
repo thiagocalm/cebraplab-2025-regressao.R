@@ -1,0 +1,80 @@
+/**
+ * Adapted from 'Solarized Light theme for reveal.js' to be used in cebrap.lab.
+ * Author: Achim Staebler (adatation made by Thiago Almeida)
+ *
+ * Adapted for Quarto by Posit, PBC
+ * Copyright (C) 2024 Posit, PBC
+ */
+
+/*-- scss:defaults --*/
+
+// Include theme-specific fonts
+@import url(./fonts/league-gothic/league-gothic.css);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
+
+$font-family-sans-serif: Lato, sans-serif !default;
+
+/**
+ * Solarized colors by Ethan Schoonover
+ */
+// Solarized colors
+$base03: #002b36;
+$base02: #465362;
+$base01: #586e75;
+$base00: #657b83;
+$base0: #839496;
+$base1: #93a1a1;
+$base2: #f7f7f7;
+$base3: #ecede8;
+$yellow: #b58900;
+$orange: #cb4b16;
+$red: #dc322f;
+$magenta: #d33682;
+$violet: #6c71c4;
+$blue: #268bd2;
+$cyan: #2aa198;
+$green: #859900;
+$cebrap.green: #708d81;
+$cebrap.green.light: #d3dfce
+// Override theme settings
+$body-color: $base00 !default;
+$link-color: $orange !default;
+$selection-bg: $cyan !default;
+
+// headings
+$presentation-heading-font: "League Gothic", sans-serif !default; // from settings.scss
+$presentation-heading-color: $base01 !default;
+$presentation-heading-text-transform: uppercase !default; // from settings.scss
+$presentation-heading-text-shadow: none !default;
+$presentation-heading-font-weight: normal !default;
+$body-bg: $base3 !default;
+
+
+
+$overlayElementBgColor: 0, 0, 0 !default;
+$overlayElementFgColor: 240, 240, 240 !default;
+
+// different slide backgrounds
+.topic-background {
+    background-color: #447099 !important;
+}
+.subtopic-background {
+    background-color: #447099 !important;
+}
+.break-background {
+    background-color: #447099 !important;
+}
+/**
+ * example of how to apply it... ## Slide Background {.topic-background}
+ */
+
+
+// code blocks
+$code-block-border-color: #93a1a1 !default;
+
+/*-- scss:rules --*/
+
+html * {
+  color-profile: sRGB;
+  rendering-intent: auto;
+}
