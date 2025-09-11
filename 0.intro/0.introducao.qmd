@@ -2,11 +2,11 @@
 title: "Regressão para pesquisas sociais"
 subtitle: "<span style='font-size:2em;'> Introdução </span>"
 author: "Thiago Cordeiro Almeida"
-institute: "Doutorando, Centre d'Estudis Demogràfics (CED, Espanha) <br> Pesquisador Assistente (Cebrap) <br>"
+institute: "Doutorando, Centre d'Estudis Demogràfics (CED, Espanha) <br> Pesquisador Assistente, Cebrap <br>"
 date: today
 date-format: long
 footer: "cebrap.lab - Introdução à análise de regressão para pesquisas sociais"
-logo: "cebrap-imagem.png"
+logo: "images/cebrap-imagem.png"
 code-link: true
 format:
   revealjs:
@@ -15,6 +15,7 @@ format:
     # scrollable: true
     # standalone: true
     # embed-resources: true
+    chalkboard: true
     transition: fade
     background-transition: fade
     highlight-style: ayu-mirage
@@ -23,6 +24,8 @@ format:
     fig-cap-location: top
     # fig-format: svg
     pdf-separate-fragments: false
+    auto-stretch: true
+    
     # fig-align: center
 editor: visual
 execute:
@@ -40,20 +43,22 @@ Forma de organização em termos dos dias:
 :::
 
 ::: {.column width="70%"}
-Dia 1 - Segunda, 15 de Setembro - Síncrono
+::: {style="text-align: left;"}
+**Dia 1** - Segunda, 15 de Setembro - Síncrono
 
-Dia 2 - Terça, 16 de Setembro - Síncrono
+**Dia 2** - Terça, 16 de Setembro - Síncrono
 
-Dia 3 - Quarta, 17 de Setembro - Assíncrono
+**Dia 3** - Quarta, 17 de Setembro - Assíncrono
 
-Dia 4 - Quinta, 18 de Setembro - Síncrono
+**Dia 4** - Quinta, 18 de Setembro - Síncrono
 
-Dia 5 - Sexta, 19 de Setembro - Assíncrono (e opcional)
+**Dia 5** - Sexta, 19 de Setembro - Assíncrono (e opcional)
+:::
 :::
 
 :::
 
-## Dia 1, Segunda {.theme-subtopic}
+## Dia 1, Segunda {.theme-subtopic .smaller}
 
 ### Fundamentos para modelagem de dados quantitativos
 
@@ -75,7 +80,7 @@ Dia 5 - Sexta, 19 de Setembro - Assíncrono (e opcional)
 
 :::
 
-## Dia 2, Terça {.theme-subtopic}
+## Dia 2, Terça {.theme-subtopic .smaller .font-size-smallest}
 
 ### Modelagem de dados contínuos - regressão linear
 
@@ -107,7 +112,7 @@ Dia 5 - Sexta, 19 de Setembro - Assíncrono (e opcional)
 
 :::
 
-## Dia 3, Quarta {.theme-subtopic}
+## Dia 3, Quarta {.theme-subtopic .smaller}
 
 ### Modelagem de dados contínuos - regressão linear multivariada com variáveis independentes qualitativas
 
@@ -123,7 +128,7 @@ Dia 5 - Sexta, 19 de Setembro - Assíncrono (e opcional)
 
 :::
 
-## Dia 4, Quinta {.theme-subtopic}
+## Dia 4, Quinta {.theme-subtopic  .smaller .font-size-smallest}
 
 ### Modelagem de variáveis binárias - regressão logística
 
@@ -155,7 +160,7 @@ Dia 5 - Sexta, 19 de Setembro - Assíncrono (e opcional)
 
 :::
 
-## Dia 5, Sexta {.theme-subtopic}
+## Dia 5, Sexta {.theme-subtopic .smaller}
 
 ### Próximos passos e aplicação na vida real
 
@@ -196,7 +201,7 @@ Slide
 
 :::
 
-## Regras do curso {.theme-next}
+## Regras do curso {.theme-next .smaller}
 ::: {.incremental}
 
 Aulas síncronas com duração de 3 horas, com *uma pausa* durante;
@@ -213,7 +218,7 @@ Certificados serão enviados em até 2 semanas após a finalização das aulas.
 
 :::
 
-# Quebrando o gelo! {.theme-stop}
+# Quebrando o gelo! {.theme-stop .smaller}
 
 :::: {.columns}
 
@@ -232,7 +237,9 @@ Bate bola, jogo rápido!
 :::
 
 ::: {.column width="60%"}
-<img src="images/ice.gif" style="border-radius: 50%; border:5px solid #708d81; width:450px; height:auto;" />
+<div style="display: flex; justify-content: flex-end; align-items: center; height: 100vh;">
+  <img src="images/ice.gif" style="border-radius: 50%; border:5px solid #708d81; width:450px; height:auto;" />
+</div>
 :::
 
 ::::
