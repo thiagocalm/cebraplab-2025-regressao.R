@@ -408,3 +408,10 @@ iris |>
 
 :::
 ::::
+
+# Pausa! {.theme-stop}
+
+<div style="display: flex; justify-content: flex-end; align-items: center; height: 100vh;">
+  <img src="images/stop.gif" 
+       style="border-radius: 50%; border:5px solid #708d81; width:450px; height:auto;" />
+</div>
