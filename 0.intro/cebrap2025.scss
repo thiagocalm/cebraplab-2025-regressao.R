@@ -151,6 +151,12 @@ $overlayElementFgColor: 240, 240, 240 !default;
  * example of how to apply it... ## Slide Background {.topic-background}
  */
 
+// list color
+
+ul, li, ol {
+  color: $cebrapgreen;
+  margin-bottom: auto;
+}
 
 // code blocks
 $code-block-border-color: #93a1a1 !default;
