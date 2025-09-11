@@ -415,3 +415,126 @@ iris |>
   <img src="images/stop.gif" 
        style="border-radius: 50%; border:5px solid #708d81; width:450px; height:auto;" />
 </div>
+
+# Relação entre fenômenos sociais: associação ou efeito? {.theme-first}
+
+Quando e como podemos dizer que um fenômeno social interage com o outro?
+
+## Formas de se captar a interação entre fenômenos sociais {.theme-subtopic .r-fit-text}
+
+O principal intuíto por trás da ideia de analisar dois fenômenos sociais conjuntamente está na possível **relação entre eles**.
+
+- Isso carrega uma ideia subjacente de que eles apresentam uma **dependência**/**interação** um com o outro.
+
+- Partindo dessa ideia, como se quantifica a interação entre fenômenos sociais?
+
+## Formas de se captar a interação entre fenômenos sociais {.theme-subtopic .smaller .font-size-smallest .r-fit-text}
+
+Quantificação da interação entre fenômenos sociais
+
+1. Estabeleça a natureza da relação entre eles
+
+  - Em geral, podemos estabelecer a relação entre fenômenos sociais através de: (i) **abordagem teórica**; (ii) **evidênciais empíricas**; ou (iii) ambos!
+
+![](images/programa-pe-meia.png){.absolute bottom=20 right=150 .r-stretch}
+
+## Formas de se captar a interação entre fenômenos sociais {.theme-subtopic .smaller .r-fit-text}
+
+Quantificação da interação entre fenômenos sociais
+
+.2. Explore a relação entre eles empíricamente
+
+:::columns
+
+:::{.column width="40%"}
+Há diferentes tipos de análises que podem ser feitas para explorar a relação entre dois fenômenos sociais a depender da natureza dos fenômenos analisados.
+:::
+
+:::{.column width="60%"}
+```{r, echo=FALSE}
+# library
+library(pacman)
+p_load(dplyr, ggplot2)
+
+# variables
+renda <- rnorm(1000, mean = 1512, sd = 400)
+renda <- renda[renda >= 0]
+
+e <- runif(1000, 0, 1000)
+
+enem_mat <- 200 + renda * 0.5 + 0.3 * e + 0.001 * e^2
+enem_mat <- (enem_mat - mean(enem_mat))/sd(enem_mat)
+
+# plot
+ggplot() +
+  aes(x = renda, y = enem_mat) +
+  geom_point() +
+  labs(
+    x = "Renda mensal domiciliar per capita do aluno",
+    y = "Nota do enem em matemática"
+  )
+
+```
+:::
+
+:::
+
+## Formas de se captar a interação entre fenômenos sociais {.theme-subtopic .smaller .r-fit-text}
+
+Quantificação da interação entre fenômenos sociais
+
+3. Avalie a magnitude da interação estatísticamente
+
+- Há diferentes medidas estatísticas para avaliar se há e a magnitude da relação entre fenômenos sociais.
+
+- Elas nos apontam (i) se há diferença estatisticamente significativa; (ii) a força dessa diferença; e (iii) a direção dessa diferença.
+  
+## Formas de se captar a interação entre fenômenos sociais {.theme-subtopic .smaller .font-size-smallest .r-fit-text}
+
+Quantificação da interação entre fenômenos sociais
+
+:::: columns
+
+:::{.column width="30%"}
+### Significância estatística{style="text-align: center;" .r-fit-text}
+
+É medida através da diferença entre as distribuições estatísticas das variáveis (Qui-Quadrado, P-Pearson)
+
+Nos dis se temos evidênciais suficientes para aceitar a hipótese de que há diferença entre elas.
+
+::::
+
+:::{.column width="30%"}
+### Força da relação entre elas{style="text-align: center;" .r-fit-text}
+
+Após analisar a magnitude, a análise da força nos diz se além de estatisticamente significante, há uma expressiva diferença entre elas.
+
+:::
+
+:::{.column width="30%"}
+### Direção da diferença{style="text-align: center;" .r-fit-text}
+
+A direção da relação nos diz se é:
+
+- **Relação direta:** aumento em $X$ leva a um aumento em $Y$ (vice-versa).
+
+- **Relação indireta:** aumento em $X$ leva a uma redução em $Y$ (vice-versa).
+
+:::
+::::
+
+## Formas de se captar a interação entre fenômenos sociais {.theme-subtopic .smaller .font-size-smallest .r-fit-text}
+
+Quantificação da interação entre fenômenos sociais: **O exemplo do programa pé-de-meia**.
+
+```{r}
+
+cor.test(renda, enem_mat) # teste de correlação, default 'Pearson'
+
+```
+
+Qual a conclusão que teríamos?
+
+a. Um aumento da renda teria um efeito direto de 50% no aumento da nota de matemática.
+
+b. Um aumento da nota de matemática teria um efeito direto de 50% no aumento da renda.

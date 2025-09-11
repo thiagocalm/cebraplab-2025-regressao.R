@@ -10,7 +10,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.6.42">
 <meta name="author" content="Thiago Cordeiro Almeida">
-<meta name="dcterms.date" content="2025-09-11">
+<meta name="dcterms.date" content="2025-09-12">
 <title>Regressão para pesquisas sociais</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -29,6 +29,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #cbccc6; background-color: #1f2430; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #cbccc6; } /* Normal */
+    code span.al { color: #ff3333; background-color: #332430; font-weight: bold; } /* Alert */
+    code span.an { color: #ffe6b3; } /* Annotation */
+    code span.at { color: #73d0ff; } /* Attribute */
+    code span.bn { color: #ffcc66; } /* BaseN */
+    code span.bu { color: #95e6cb; } /* BuiltIn */
+    code span.cf { color: #ffa759; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #95e6cb; } /* Char */
+    code span.cn { color: #d4bfff; } /* Constant */
+    code span.co { color: #5c6773; font-style: italic; } /* Comment */
+    code span.cv { color: #d4bfff; } /* CommentVar */
+    code span.do { color: #5c6773; } /* Documentation */
+    code span.dt { color: #ffa759; } /* DataType */
+    code span.dv { color: #ffcc66; } /* DecVal */
+    code span.er { color: #ff3333; text-decoration: underline; } /* Error */
+    code span.ex { color: #73d0ff; font-weight: bold; } /* Extension */
+    code span.fl { color: #ffcc66; } /* Float */
+    code span.fu { color: #ffd580; } /* Function */
+    code span.im { color: #bae67e; } /* Import */
+    code span.in { color: #ffcc66; } /* Information */
+    code span.kw { color: #ffa759; font-weight: bold; } /* Keyword */
+    code span.op { color: #f29e74; } /* Operator */
+    code span.ot { color: #5ccfe6; } /* Other */
+    code span.pp { color: #f28779; } /* Preprocessor */
+    code span.re { color: #73d0ff; background-color: #2a4254; } /* RegionMarker */
+    code span.sc { color: #95e6cb; } /* SpecialChar */
+    code span.ss { color: #95e6cb; } /* SpecialString */
+    code span.st { color: #bae67e; } /* String */
+    code span.va { color: #5ccfe6; } /* Variable */
+    code span.vs { color: #bae67e; } /* VerbatimString */
+    code span.wa { color: #f28779; } /* Warning */
   </style>
 <link rel="stylesheet" href="1.fundamentos_files/libs/revealjs/dist/theme/quarto-7b7ac89a9fee99105c9432f05352d95d.css">
 <link href="1.fundamentos_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -142,7 +207,7 @@ Thiago Cordeiro Almeida
     </div>
 </div>
 
-  <p class="date">September 11, 2025</p>
+  <p class="date">September 12, 2025</p>
 </section><section><section id="antes-de-começar" class="title-slide slide level1 center"><h1>Antes de começar…</h1>
 <p>lista de presença!</p>
 <p><img data-src="images/attention.gif" class="absolute" style="bottom: 10px; right: 50px; width: 240px; height: 240px; "></p>
@@ -379,9 +444,89 @@ Thiago Cordeiro Almeida
 <div style="display: flex; justify-content: flex-end; align-items: center; height: 100vh;">
 <p><img src="images/stop.gif" style="border-radius: 50%; border:5px solid #708d81; width:450px; height:auto;"></p>
 </div>
+</section><section><section id="relação-entre-fenômenos-sociais-associação-ou-efeito" class="title-slide slide level1 theme-first center"><h1>Relação entre fenômenos sociais: associação ou efeito?</h1>
+<p>Quando e como podemos dizer que um fenômeno social interage com o outro?</p>
+</section><section id="formas-de-se-captar-a-interação-entre-fenômenos-sociais" class="slide level2 theme-subtopic"><h2>Formas de se captar a interação entre fenômenos sociais</h2>
+<p>O principal intuíto por trás da ideia de analisar dois fenômenos sociais conjuntamente está na possível <strong>relação entre eles</strong>.</p>
+<ul>
+<li><p>Isso carrega uma ideia subjacente de que eles apresentam uma <strong>dependência</strong>/<strong>interação</strong> um com o outro.</p></li>
+<li><p>Partindo dessa ideia, como se quantifica a interação entre fenômenos sociais?</p></li>
+</ul></section><section id="formas-de-se-captar-a-interação-entre-fenômenos-sociais-1" class="slide level2 theme-subtopic smaller font-size-smallest"><h2>Formas de se captar a interação entre fenômenos sociais</h2>
+<p>Quantificação da interação entre fenômenos sociais</p>
+<ol type="1">
+<li>Estabeleça a natureza da relação entre eles</li>
+</ol>
+<ul>
+<li>Em geral, podemos estabelecer a relação entre fenômenos sociais através de: (i) <strong>abordagem teórica</strong>; (ii) <strong>evidênciais empíricas</strong>; ou (iii) ambos!</li>
+</ul>
+<img data-src="images/programa-pe-meia.png" class="absolute r-stretch" style="bottom: 20px; right: 150px; "></section><section id="formas-de-se-captar-a-interação-entre-fenômenos-sociais-2" class="slide level2 theme-subtopic smaller"><h2>Formas de se captar a interação entre fenômenos sociais</h2>
+<p>Quantificação da interação entre fenômenos sociais</p>
+<p>.2. Explore a relação entre eles empíricamente</p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p>Há diferentes tipos de análises que podem ser feitas para explorar a relação entre dois fenômenos sociais a depender da natureza dos fenômenos analisados.</p>
+</div><div class="column" style="width:60%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="1.fundamentos_files/figure-revealjs/unnamed-chunk-6-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section><section id="formas-de-se-captar-a-interação-entre-fenômenos-sociais-3" class="slide level2 theme-subtopic smaller"><h2>Formas de se captar a interação entre fenômenos sociais</h2>
+<p>Quantificação da interação entre fenômenos sociais</p>
+<ol start="3" type="1">
+<li>Avalie a magnitude da interação estatísticamente</li>
+</ol>
+<ul>
+<li><p>Há diferentes medidas estatísticas para avaliar se há e a magnitude da relação entre fenômenos sociais.</p></li>
+<li><p>Elas nos apontam (i) se há diferença estatisticamente significativa; (ii) a força dessa diferença; e (iii) a direção dessa diferença.</p></li>
+</ul></section><section id="formas-de-se-captar-a-interação-entre-fenômenos-sociais-4" class="slide level2 theme-subtopic smaller font-size-smallest"><h2>Formas de se captar a interação entre fenômenos sociais</h2>
+<p>Quantificação da interação entre fenômenos sociais</p>
+<div class="columns">
+<div class="column" style="width:30%;">
+<h3 class="r-fit-text" style="text-align: center;" id="significância-estatística">Significância estatística</h3>
+<p>É medida através da diferença entre as distribuições estatísticas das variáveis (Qui-Quadrado, P-Pearson)</p>
+<p>Nos dis se temos evidênciais suficientes para aceitar a hipótese de que há diferença entre elas.</p>
+</div><div class="column" style="width:30%;">
+<h3 class="r-fit-text" style="text-align: center;" id="força-da-relação-entre-elas">Força da relação entre elas</h3>
+<p>Após analisar a magnitude, a análise da força nos diz se além de estatisticamente significante, há uma expressiva diferença entre elas.</p>
+</div><div class="column" style="width:30%;">
+<h3 class="r-fit-text" style="text-align: center;" id="direção-da-diferença">Direção da diferença</h3>
+<p>A direção da relação nos diz se é:</p>
+<ul>
+<li><p><strong>Relação direta:</strong> aumento em <span class="math inline">\(X\)</span> leva a um aumento em <span class="math inline">\(Y\)</span> (vice-versa).</p></li>
+<li><p><strong>Relação indireta:</strong> aumento em <span class="math inline">\(X\)</span> leva a uma redução em <span class="math inline">\(Y\)</span> (vice-versa).</p></li>
+</ul>
+</div></div>
+</section><section id="formas-de-se-captar-a-interação-entre-fenômenos-sociais-5" class="slide level2 theme-subtopic smaller font-size-smallest"><h2>Formas de se captar a interação entre fenômenos sociais</h2>
+<p>Quantificação da interação entre fenômenos sociais: <strong>O exemplo do programa pé-de-meia</strong>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a><span class="fu">cor.test</span>(renda, enem_mat) <span class="co"># teste de correlação, default 'Pearson'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+    Pearson's product-moment correlation
+
+data:  renda and enem_mat
+t = 18.002, df = 998, p-value &lt; 2.2e-16
+alternative hypothesis: true correlation is not equal to 0
+95 percent confidence interval:
+ 0.4468279 0.5405096
+sample estimates:
+      cor 
+0.4951064 </code></pre>
+</div>
+</div>
+<p>Qual a conclusão que teríamos?</p>
+<ol type="a">
+<li><p>Um aumento da renda teria um efeito direto de 50% no aumento da nota de matemática.</p></li>
+<li><p>Um aumento da nota de matemática teria um efeito direto de 50% no aumento da renda.</p></li>
+</ol>
 
 
-</section>
+</section></section>
 </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="images/cebrap-imagem.png" class="slide-logo"></p>
