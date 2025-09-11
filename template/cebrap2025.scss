@@ -81,11 +81,15 @@ $overlayElementFgColor: 240, 240, 240 !default;
   &:is(.slide-background) {
     background-color: $cebrapgreen;
   }
-  h2, h3, h4, h5, p, pre {
+  h2, h3, h4, h5,{
     margin-left: 100px;
     color: $base3 !important;
     text-align: center;
   }
+   p, pre {
+     text-align: left;
+     color: $base3 !important;
+   }
 }
 
 .theme-subtopic {
@@ -123,6 +127,12 @@ $overlayElementFgColor: 240, 240, 240 !default;
     margin-left: 100px;
     color: $cebrapgreen !important;
     text-align: left;
+  }
+}
+
+.font-size-smallest{
+  p, pre {
+    font-size: 0.7em;
   }
 }
 
