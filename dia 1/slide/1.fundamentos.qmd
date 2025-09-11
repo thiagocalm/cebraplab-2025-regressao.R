@@ -1,0 +1,246 @@
+---
+title: "Regressão para pesquisas sociais"
+subtitle: "<span style='font-size:1em;'> Aula 1 - Fundamentos para modelagem de dados quantitativos </span>"
+author: "Thiago Cordeiro Almeida"
+institute: "Doutorando, Centre d'Estudis Demogràfics (CED, Espanha) <br> Pesquisador Assistente, Cebrap <br>"
+date: today
+date-format: long
+footer: "cebrap.lab - Introdução à análise de regressão para pesquisas sociais"
+logo: "images/cebrap-imagem.png"
+code-link: true
+format:
+  revealjs:
+    theme: template/cebrap2025.scss
+    math: mathjax
+    # scrollable: true
+    # standalone: true
+    # embed-resources: true
+    chalkboard: true
+    transition: fade
+    background-transition: fade
+    highlight-style: ayu-mirage
+    slide-number: "c"
+    controls-layout: bottom-right
+    fig-cap-location: top
+    # fig-format: svg
+    pdf-separate-fragments: false
+    auto-stretch: true
+    #incremental: true
+    # fig-align: center
+editor: visual
+execute:
+  freeze: auto
+  echo: true
+---
+
+# Antes de começar...
+
+lista de presença!
+
+![](images/attention.gif){.absolute bottom=10 right=50 width="240" height="240"}
+
+## Estrutura da aula {.theme-next}
+::: columns
+
+::: {.column width="30%"}
+Tópicos que vamos cobrir hoje são:
+:::
+
+::: {.column width="70%"}
+::: {style="text-align: left;"}
+- Definições e noções acerca de dados quantitativos
+
+- Conceitos estatísticos importantes
+
+- Noção de correlação e causalidade
+
+- Modelagem de fenônemos sociais
+
+  - Intuição
+
+  - Limites
+
+  - Fundamentos
+
+:::
+:::
+:::
+
+# Algumas definições acerca de dados quantitativos {.theme-first}
+
+:::{style="text-align: left;"}
+Natureza dos dados quantitativos
+:::
+
+## Natureza dos dados quantitativos {.theme-subtopic .smaller}
+está ligada à forma de classificação dos tipos de dados existentes.
+
+:::: columns
+
+:::{.column width="50%"}
+Qualitativa
+
+  - Passível de ser compreendida
+
+  - Passível de ser "interpretada"
+
+  - Possível de ser **s**ubjetivamente captada
+
+**Exemplos**: [expressões culturais, interações sociais]{.gap}
+:::
+:::{.column width="50%" .fragment}
+Quantitativa
+
+  - Passível de ser contada/enumerada
+
+  - Passível de ser "precisada"
+
+  - Possível de ser **o**bjetivamente captada
+
+**Exemplos**: [Fluxos de atividades culturais, peso das pessoas ao nascer]{.gap}
+:::
+::::
+
+![](images/question.gif){.absolute bottom=20 right=400 width="300" height="300"}
+
+# Algumas definições acerca de dados quantitativos {.theme-first}
+
+:::{style="text-align: left;"}
+Tipos de dados quantitativos
+:::
+
+## Tipos de dados quantitativos {.theme-subtopic .smaller}
+
+podem ser divididos entre **primários X secundários**, **públicos X privados**, ...
+
+::: columns
+
+::: {.column width="50%"}
+### Dados primários
+Associado à coleta *direta* dos dados de interesse.
+
+- Observação (não) participante;
+
+- Questionário;
+
+- Entrevistas; etc.
+:::
+
+::: {.column width="50%"}
+
+### Dados secundários
+Outro/a pesquisador/a ou instituição coletou o dado anteriormente sem a participação do/a pesquisador/a ou projeto que o utilizará.
+
+- Podem ser dados quantitativos ou qualitativos (!!!)
+
+:::
+:::
+
+## Tipos de dados quantitativos {.theme-subtopic .smaller}
+
+podem ser divididos entre **primários X secundários**, **públicos X privados**, ...
+
+::: columns
+### Dados públicos
+::: {.column width="50%"}
+
+São fontes de informação produzidas por instituições governamentais ou que estão sob a governança de instituições do governo.
+
+*Em geral...*
+
+- Permitem acesso mais rápido e fácil às informações;
+
+- Garantem uma maior confiabilidade dos dados;
+
+- Asseguram um maior rigor metodológico de sua coleta.
+
+
+:::
+
+::: {.column width="50%"}
+
+Limitações
+
+- Coleta dos dados não segue exatamente a proposta do uso do/a pesquisador/a;
+
+- Questões éticas envolvidas;
+
+- Validade dos dados; ...
+
+
+:::
+:::
+
+## Tipos de dados quantitativos {.theme-subtopic}
+
+#### Brainstorming de dados públicos!:
+
+# Conceitos estatísticos importantes {.theme-first}
+
+## População e amostra {.theme-subtopic .smaller}
+
+Não somente relacionado ao desenho de coleta dos dados, mas todas as estatísticas que calculamos estão associadas a esses conceitos
+
+### População
+
+Um conjunto de elementos (animados ou inanimados) que compartilham de alguma característica definida e que seja relevante para o/a pesquisador/a ou pesquisa.
+
+### Amostra
+
+Um fragmento, parte, subconjunto da população estudada. É definida, em geral, através de critérios explícitos.
+
+
+![](images/pop-amostra.png){.absolute bottom=20 right=50 width="500" height="300" .r-stretch}
+
+## Variáveis {.theme-subtopic .smaller}
+
+São características específicas extraídas de uma determinada população ou amostra.
+
+**Exemplos:**
+
+- sexo,
+
+- raça,
+
+- renda,
+
+- peso,
+
+- ano de nascimento,
+
+- local de residência,
+
+- número de animais de estimação em casa, ...
+
+No mundo real, é necessário que "simplifiquemos" sua complexidade para que seja possível a sua análise.
+
+## Natureza das variáveis {.theme-subtopic .smaller}
+
+São categorizações excludentes, *todavia, uma variável pode ser transformada em outra natureza/tipo*.
+
+:::: columns
+
+:::{.column width="50%"}
+### Qualitativa{style="text-align: center;"}
+Valores apresentam atributos ou qualidades.
+
+- **Nominal** (não ordenado) - pode ainda ser dividida em binária ou não.
+  
+  - Ex.: estados, sexo, nomes.
+  
+- **Ordinal** (ordenado)
+  - Ex.: nível de escolaridade, faixa de renda, faixa de tamanho de cidade
+::::
+
+:::{.column width="50%"}
+### Quantitativa{style="text-align: center;"}
+Valores são expressos em números, apresentam quantidades.
+
+- **Discreta** (contagem) - expressa em números inteiros.
+
+  - Ex.: anos de estudos, número de irmãos, número de domicílios.
+  
+- **Contínua** (medidas) - expressa em números infinitesimais.
+  
+  - Ex.: Altura, peso, renda
+::::
