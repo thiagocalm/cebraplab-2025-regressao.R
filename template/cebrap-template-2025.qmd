@@ -99,8 +99,27 @@ Quarto enables you to weave together content and executable code into a finished
 
 When you click the **Render** button a document will be generated that includes:
 
--   Content authored with markdown
--   Output from executable code
+- Content authored with markdown
+- Output from executable code
+
+  - Level 2
+  - Level 2
+
+    - Level 3
+    - Level 3
+    
+## Bullets with font size smallest {.font-size-smallest}
+
+When you click the **Render** button a document will be generated that includes:
+
+- Content authored with markdown
+- Output from executable code
+
+  - Level 2
+  - Level 2
+
+    - Level 3
+    - Level 3
 
 # Pausa! {.theme-stop}
 
