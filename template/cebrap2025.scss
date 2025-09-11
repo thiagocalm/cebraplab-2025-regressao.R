@@ -104,6 +104,28 @@ $overlayElementFgColor: 240, 240, 240 !default;
     text-align: left;
   }
 }
+
+.theme-stop {
+  &:is(.slide-background) {
+    background-color: $base3;
+  }
+  h1 {
+    color: $cebrapgreen !important;
+    text-align: left;
+  }
+  h2 {
+    margin-left: 100px;
+    color: $cebrapgreen !important;
+    text-align: right;
+  }
+
+  h3, h4, h5, p, pre {
+    margin-left: 100px;
+    color: $cebrapgreen !important;
+    text-align: left;
+  }
+}
+
 .cebrap-fim {
   h1{
     text-align: center;

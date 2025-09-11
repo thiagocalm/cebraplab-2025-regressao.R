@@ -102,6 +102,15 @@ When you click the **Render** button a document will be generated that includes:
 -   Content authored with markdown
 -   Output from executable code
 
+# Pausa! {.theme-stop}
+
+<div style="display: flex; justify-content: flex-end; align-items: center; height: 100vh;">
+  <img src="stop/stop.gif" 
+       style="border-radius: 50%; border:5px solid #708d81; width:450px; height:auto;" />
+</div>
+
+
+
 ## Code
 
 When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
