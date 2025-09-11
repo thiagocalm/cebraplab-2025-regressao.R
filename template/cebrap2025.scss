@@ -25,45 +25,96 @@ $base00: #657b83;
 $base0: #839496;
 $base1: #93a1a1;
 $base2: #f7f7f7;
-$base3: #ecede8;
+$base3: #fbfbfa;
 $yellow: #b58900;
 $orange: #cb4b16;
+$orangelight: #fcece5;
 $red: #dc322f;
 $magenta: #d33682;
 $violet: #6c71c4;
 $blue: #268bd2;
 $cyan: #2aa198;
 $green: #859900;
-$cebrap.green: #708d81;
-$cebrap.green.light: #d3dfce
+$cebrapgreen: #708d81;
+$cebrapgreenlight: #d3dfce;
+
 // Override theme settings
-$body-color: $base00 !default;
+$body-color: $cebrapgreen !default;
 $link-color: $orange !default;
 $selection-bg: $cyan !default;
 
 // headings
 $presentation-heading-font: "League Gothic", sans-serif !default; // from settings.scss
-$presentation-heading-color: $base01 !default;
+$presentation-heading-color: $cebrapgreen !default;
 $presentation-heading-text-transform: uppercase !default; // from settings.scss
 $presentation-heading-text-shadow: none !default;
 $presentation-heading-font-weight: normal !default;
+
+
+// background
 $body-bg: $base3 !default;
-
-
 
 $overlayElementBgColor: 0, 0, 0 !default;
 $overlayElementFgColor: 240, 240, 240 !default;
 
 // different slide backgrounds
-.topic-background {
-    background-color: #447099 !important;
+//.next-class {
+//    background-color: $cebrapgreen !important;
+//    color: $base3 !important;
+//}
+
+.theme-first {
+  &:is(.slide-background) {
+    background-color: $cebrapgreen;
+  }
+  h1 {
+    color: $base3 !important;
+  }
+  h2, h3, h4, h5, p, pre {
+    margin-left: 100px;
+    color: $base3 !important;
+    text-align: center;
+  }
 }
-.subtopic-background {
-    background-color: #447099 !important;
+
+.theme-next {
+  &:is(.slide-background) {
+    background-color: $cebrapgreen;
+  }
+  h2, h3, h4, h5, p, pre {
+    margin-left: 100px;
+    color: $base3 !important;
+    text-align: center;
+  }
 }
-.break-background {
-    background-color: #447099 !important;
+
+.theme-subtopic {
+  &:is(.slide-background) {
+    background-color: $base3;
+  }
+  h2 {
+    margin-left: 100px;
+    color: $cebrapgreen !important;
+    text-align: left;
+  }
+
+  h3, h4, h5, p, pre {
+    margin-left: 100px;
+    color: $cebrapgreen !important;
+    text-align: left;
+  }
 }
+.cebrap-fim {
+  h1{
+    text-align: center;
+  }
+  h2, h3, h4, h5 {
+    text-align: left;
+    margin-left: 100px;
+  }
+
+}
+
 /**
  * example of how to apply it... ## Slide Background {.topic-background}
  */
