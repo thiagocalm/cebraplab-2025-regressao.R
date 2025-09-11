@@ -10,7 +10,7 @@ logo: "images/cebrap-imagem.png"
 code-link: true
 format:
   revealjs:
-    theme: cebrap2025.scss
+    theme: template/cebrap2025.scss
     math: mathjax
     # scrollable: true
     # standalone: true
