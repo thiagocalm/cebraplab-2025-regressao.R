@@ -1,0 +1,246 @@
+---
+title: "Regressão para pesquisas sociais"
+subtitle: "<span style='font-size:2em;'> Introdução </span>"
+author: "Thiago Cordeiro Almeida"
+institute: "Doutorando, Centre d'Estudis Demogràfics (CED, Espanha) <br> Pesquisador Assistente (Cebrap) <br>"
+date: today
+date-format: long
+footer: "cebrap.lab - Introdução à análise de regressão para pesquisas sociais"
+logo: "cebrap-imagem.png"
+code-link: true
+format:
+  revealjs:
+    theme: cebrap2025.scss
+    math: mathjax
+    # scrollable: true
+    # standalone: true
+    # embed-resources: true
+    transition: fade
+    background-transition: fade
+    highlight-style: ayu-mirage
+    slide-number: "c"
+    controls-layout: bottom-right
+    fig-cap-location: top
+    # fig-format: svg
+    pdf-separate-fragments: false
+    # fig-align: center
+editor: visual
+execute:
+  freeze: auto
+  echo: true
+---
+
+# Sejam bem-vinds! {.theme-first}
+
+## Estrutura do curso {.theme-next}
+::: columns
+
+::: {.column width="30%"}
+Forma de organização em termos dos dias:
+:::
+
+::: {.column width="70%"}
+Dia 1 - Segunda, 15 de Setembro - Síncrono
+
+Dia 2 - Terça, 16 de Setembro - Síncrono
+
+Dia 3 - Quarta, 17 de Setembro - Assíncrono
+
+Dia 4 - Quinta, 18 de Setembro - Síncrono
+
+Dia 5 - Sexta, 19 de Setembro - Assíncrono (e opcional)
+:::
+
+:::
+
+## Dia 1, Segunda {.theme-subtopic}
+
+### Fundamentos para modelagem de dados quantitativos
+
+::: {.incremental}
+
+- Definições e noções acerca de dados quantitativos
+
+- Conceitos estatísticos importantes
+
+- Noção de correlação e causalidade
+
+- Modelagem de fenônemos sociais
+
+  - Intuição
+  
+  - Limites
+  
+  - Fundamentos
+
+:::
+
+## Dia 2, Terça {.theme-subtopic}
+
+### Modelagem de dados contínuos - regressão linear
+
+::: {.incremental}
+
+- Conceitos, noções e jargões utilizados em econometria
+
+- Fluxo de análise de dados contínuos com o uso de modelagem
+
+- Regressão linear simples
+
+  - Intuição
+  
+  - Formalização
+  
+  - Propriedade e pressupostos
+  
+  - Mão na massa!
+
+- Regressão linear multivariada
+
+  - Intuição
+  
+  - Formalização
+  
+  - Novidades em relação à regressão linear simples
+  
+  - Mão na massa!: interpretação
+
+:::
+
+## Dia 3, Quarta {.theme-subtopic}
+
+### Modelagem de dados contínuos - regressão linear multivariada com variáveis independentes qualitativas
+
+::: {.incremental}
+
+- Exercício de interpretação dos modelos de regressão linear multivariada
+
+- Leituras
+
+  - Variáveis independentes qualitativas
+  
+    - Variável binária (*dummy*) em modelos de regressão linear
+
+:::
+
+## Dia 4, Quinta {.theme-subtopic}
+
+### Modelagem de variáveis binárias - regressão logística
+
+::: {.incremental}
+
+- Modelagem de fenômenos sociais categóricos
+
+- Conceitos e definições adaptados à nova configuração da variável de interesse
+
+- Regressão logística
+
+  - Introdução aos modelos lineares generalizados (MLG)
+
+  - Intuição
+  
+  - Formalização
+  
+  - Propriedade e pressupostos
+  
+  - Mão na massa!
+
+- Regressão logística multivariada
+
+  - Intuição
+  
+  - Formalização
+  
+  - Mão na massa!: interpretação
+
+:::
+
+## Dia 5, Sexta {.theme-subtopic}
+
+### Próximos passos e aplicação na vida real
+
+::: {.incremental}
+
+- Apresentação dos próximos passos de estudo e aprofundamentos
+
+- Exercício de aplicação empírica
+
+  - Exercício a ser explicado na aula anterior
+
+:::
+
+
+## Novo tópico - Tópico 1 {.theme-next}
+
+::: columns
+
+::: {.column width="30%"}
+Tópicos que vamos cobrir hoje são:
+:::
+
+::: {.column width="70%"}
+
+::: {.fragment}
+Topico 1
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+Tópico 2
+:::
+
+::: {.fragment .fade-in-then-semi-out}
+Tópico 3
+:::
+
+:::
+:::
+
+## Subtopic {.theme-subtopic}
+
+### First subtopic to be treated
+
+:::: {.columns}
+
+::: {.column width="40%"}
+contents...
+:::
+
+::: {.column width="60%"}
+contents...
+:::
+
+::::
+
+
+## Another slide
+Quarto enables you to weave together content and executable code into a finished presentation. To learn more about Quarto presentations see <https://quarto.org/docs/presentations/>.
+
+## Bullets
+
+When you click the **Render** button a document will be generated that includes:
+
+-   Content authored with markdown
+-   Output from executable code
+
+# Pausa! {.theme-stop}
+
+<div style="display: flex; justify-content: flex-end; align-items: center; height: 100vh;">
+  <img src="stop/stop.gif" 
+       style="border-radius: 50%; border:5px solid #708d81; width:450px; height:auto;" />
+</div>
+
+
+
+## Code
+
+When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
+
+```{r}
+1 + 1
+```
+
+# Cebrap - fim {.cebrap-fim}
+
+Mudar as informações contidas em cada linha aqui.
+
+Podemos colocar outras aqui
