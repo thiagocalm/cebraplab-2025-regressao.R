@@ -538,3 +538,61 @@ Qual a conclusão que teríamos?
 a. Um aumento da renda teria um efeito direto de 50% no aumento da nota de matemática.
 
 b. Um aumento da nota de matemática teria um efeito direto de 50% no aumento da renda.
+
+# Relação entre fenômenos sociais: associação ou efeito? {.theme-first}
+
+Correlação e causalidade
+
+## Correlação e causalidade {.theme-subtopic .smaller}
+
+Em pesquisas sociais, o estabelecimento da relação entre um determinado fenômeno $X$ e $Y$ é tema de muitas áreas de pesquisa.
+
+### Correlação{style="text-align: center;"}
+Estabelece uma relação entre dois fenômenos, apresentando sua significância estatística, força da relação e direção, **sem afirmar a ordem desta relação**.
+
+:::: columns
+
+:::{.column width="50%"}
+
+#### Potencialidades{style="text-align: center;"}
+- Sabe-se em que medida ambos os fenômenos se interagem!
+
+:::
+
+:::{.column width="50%"}
+
+#### Limitações{style="text-align: center;"}
+- Não se sabe se mudanças em $X$ levam a mudanças em $Y$ ou o contrário.
+
+:::
+
+::::
+
+## Correlação e causalidade {.theme-subtopic .smaller .font-size-smallest}
+
+Em pesquisas sociais, o estabelecimento da relação entre um determinado fenômeno $X$ e $Y$ é tema de muitas áreas de pesquisa.
+
+### Causalidade{style="text-align: center;"}
+Além de estabelecer significância, força da relação e direção, também pressupõe o estabelecimento de uma ordem para que a relação seja observada.
+
+:::: columns
+
+:::{.column width="50%"}
+
+#### Potencialidades{style="text-align: center;"}
+- Mudanças em $X$ levam à mudanças em $Y$ e não o contrário.
+
+- É muito mais poderoso quando se pensa em alocação de recursos públicos, privados ou até mesmo o estabelecimento de relações teóricas.
+
+:::
+
+:::{.column width="50%"}
+
+#### Limitações{style="text-align: center;"}
+- Embora poderoso, estabelecer relações diretas entre fenômenos sociais é quase impossível de ser feito na vida real de pesquisa.
+
+- Fenômenos sociais estão intrínsecamente relacionados entre eles, sendo necessário abordagens mais complexas para endereçar a causalidade (e até mesmo a associação).
+
+:::
+
+::::
