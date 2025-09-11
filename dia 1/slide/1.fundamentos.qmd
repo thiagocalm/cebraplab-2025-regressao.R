@@ -31,6 +31,8 @@ editor: visual
 execute:
   freeze: auto
   echo: true
+editor_options: 
+  chunk_output_type: console
 ---
 
 # Antes de começar...
@@ -229,7 +231,7 @@ Valores apresentam atributos ou qualidades.
   - Ex.: estados, sexo, nomes.
   
 - **Ordinal** (ordenado)
-  - Ex.: nível de escolaridade, faixa de renda, faixa de tamanho de cidade
+  - Ex.: nível de escolaridade, [faixa de renda]{.fragment .highlight-red}, faixa de tamanho de cidade
 ::::
 
 :::{.column width="50%"}
@@ -242,5 +244,167 @@ Valores são expressos em números, apresentam quantidades.
   
 - **Contínua** (medidas) - expressa em números infinitesimais.
   
-  - Ex.: Altura, peso, renda
+  - Ex.: Altura, peso, [renda]{.fragment .highlight-red}
+:::
+::::
+
+## Tipos de medidas {.theme-subtopic .smaller}
+
+Para cada tipo de variável, há um tipo de medida que se adequa melhor à sua análise.
+
+- **Números absolutos**
+
+- **Números relativos** (distribuição relativa; composição)
+
+- **Proporção** (numerador está contido no denominador)
+
+- **Taxa** (numerador **não** está contido no denominador)
+
+- **Razão** (divisão de duas grandezas quaisquer)
+
+- **Medidas de tendência central** (média, moda, mediana)
+
+- **Medidas de variabilidade/dispersão** (variância, desvio padrão, coeficiente de variação)
+
+## Tipos de análises {.theme-subtopic .smaller}
+
+Há níveis de análises que são necessários de serem explorados na interação de fenômenos/variáveis.
+
+:::: columns
+
+:::{.column width="30%"}
+### Univariada{style="text-align: center;"}
+
+Variável qualitativa (binária, ordinal)
+
+Variável quantitativa (contínua, discreta)
+
+::::
+
+:::{.column width="30%"}
+### Bivariada{style="text-align: center;"}
+
+Quali X Quanti
+
+Quali X Quali
+
+Quanti X Quanti
+
+:::
+
+:::{.column width="30%"}
+### Multivariada{style="text-align: center;"}
+
+Quali X Quali X Quali
+
+Quali X Quali X Quanti
+
+Quanti X Quanti X Quali
+
+Quanti X Quanti X Quati
+
+:::
+::::
+
+## Tipos de análises {.theme-subtopic .smaller}
+
+Há níveis de análises que são necessários de serem explorados na interação de fenômenos/variáveis.
+
+:::: columns
+
+:::{.column width="30%"}
+### Univariada{style="text-align: center;"}
+
+```{r, echo=FALSE}
+data("iris")
+library(pacman)
+p_load(ggplot2,dplyr)
+
+# plot
+iris |> 
+  ggplot() +
+  aes(x = Sepal.Width) +
+  geom_density(linewidth = 1.5) +
+  labs(x="",y="") +
+  theme_minimal()
+```
+
+```{r, echo=FALSE}
+data("iris")
+library(pacman)
+p_load(ggplot2,dplyr)
+
+# plot
+iris |> 
+  filter(Sepal.Width >= 3.2) |> 
+  mutate(value = 1) |>
+  summarise(n = sum(value), .by = Species) |> 
+  ggplot() +
+  aes(x = Species, y = n) +
+  geom_col() +
+  labs(x="",y="") +
+  theme_minimal() +
+  theme(axis.text = element_blank())
+```
+
+::::
+
+:::{.column width="30%"}
+### Bivariada{style="text-align: center;"}
+
+```{r, echo=FALSE}
+data("iris")
+library(pacman)
+p_load(ggplot2,dplyr)
+
+# plot
+iris |> 
+  ggplot() +
+  aes(x = Sepal.Width, y = Sepal.Length) +
+  geom_point(size = 3) +
+  labs(x="",y="") +
+  theme_minimal()
+```
+
+```{r, echo=FALSE}
+data("iris")
+library(pacman)
+p_load(ggplot2,dplyr)
+
+# plot
+iris |> 
+  filter(Sepal.Width >= 3.2) |> 
+  mutate(value = 1, grande = ifelse(Sepal.Width >= 3.300, "Sim", "Não")) |>
+  summarise(n = sum(value), .by = c(Species, grande)) |> 
+  ggplot() +
+  aes(x = Species, y = n, fill = grande) +
+  geom_col(show.legend = FALSE) +
+  coord_flip() +
+  labs(x="",y="") +
+  scale_fill_viridis_d() +
+  theme_minimal() +
+  theme(axis.text = element_blank())
+```
+
+:::
+
+:::{.column width="30%"}
+### Multivariada{style="text-align: center;"}
+
+```{r, echo=FALSE}
+data("iris")
+library(pacman)
+p_load(ggplot2,dplyr)
+
+# plot
+iris |> 
+  ggplot() +
+  aes(x = Sepal.Width, y = Sepal.Length, color = Species) +
+  geom_point(size = 3, show.legend = FALSE) +
+  labs(x="",y="") +
+  scale_color_viridis_d() +
+  theme_minimal()
+```
+
+:::
 ::::
