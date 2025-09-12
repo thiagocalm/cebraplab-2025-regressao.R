@@ -1,0 +1,96 @@
+---
+title: "Regressão para pesquisas sociais"
+subtitle: "<span style='font-size:1em;'> Aula 2 - Modelagem de dados de natureza contínua </span>"
+author: "Thiago Cordeiro Almeida"
+institute: "Doutorando, Centre d'Estudis Demogràfics (CED, Espanha) <br> Pesquisador Assistente, Cebrap <br>"
+date: today
+date-format: long
+footer: "cebrap.lab - Introdução à análise de regressão para pesquisas sociais"
+logo: "images/cebrap-imagem.png"
+code-link: true
+format:
+  revealjs:
+    theme: template/cebrap2025.scss
+    math: mathjax
+    # scrollable: true
+    # standalone: true
+    # embed-resources: true
+    chalkboard: true
+    transition: fade
+    background-transition: fade
+    highlight-style: ayu-mirage
+    slide-number: "c"
+    controls-layout: bottom-right
+    fig-cap-location: top
+    # fig-format: svg
+    pdf-separate-fragments: false
+    auto-stretch: true
+    #incremental: true
+    # fig-align: center
+editor: visual
+execute:
+  freeze: auto
+  echo: true
+editor_options: 
+  chunk_output_type: console
+---
+
+# Antes de começar...
+
+lista de presença!
+
+![](images/attention.gif){.absolute bottom="10" right="50" width="240" height="240"}
+
+# Antes de começar (2)...
+
+- Dúvidas gerais sobre a aula anterior?
+
+- Exercício da aula anterior: dúvidas, comentários, considerações?
+
+![](images/question.gif){.absolute bottom="-150" right="0" width="200" height="200"}
+
+## Estrutura da aula {.theme-next .smaller}
+
+:::::: columns
+::: {.column width="30%"}
+Tópicos que vamos cobrir hoje são:
+:::
+
+:::: {.column width="70%"}
+::: {style="text-align: left;"}
+
+- Fluxo de análise de dados contínuos com o uso de modelagem
+
+- Conceitos, noções (e jargões) econométricos
+
+- Exemplo empírico do dia
+
+- Regressão linear simples
+
+  - Intuição e formalização
+
+  - Propriedade e pressupostos
+  
+  - Mão na massa!
+
+- Regressão linear multivariada
+
+  - Intuição e formalização
+
+  - Novidades em relação à regressão linear simples
+  
+  - Mão na massa!: interpretação
+:::
+::::
+::::::
+
+# Fluxo de análise de dados contínuos {.theme-first}
+
+::: {style="text-align: left;"}
+A partir do uso de modelos
+:::
+
+## Fluxo de análise de dados {.theme-subtopic .smaller}
+
+![](images/fluxo-analise.png){.absolute bottom="40" right="75" width="1000" height="600"}
+
