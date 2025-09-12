@@ -680,3 +680,56 @@ Se não há um embasamento teórico ou empírico suficiente para estabelecer as 
 
 #### Conhecimento técnico sobre a relação entre fenômenos
 Mesmo havendo conhecimento teórico suficiente, em muitos casos, o conhecimento técnico dos modelos que conhecemos não permitem que testemos certas hipóteses.
+
+## Isso é tudo para hoje! {.theme-next}
+
+Para próxima aula:
+
+1. Exercício sobre correlação espúria
+2. Leitura de material para aula de hoje (caso não tenha lido)
+3. Leitura de material para a aula seguinte (Ver ementa)
+
+# {.cebrap-fim .smaller}
+
+![](images/cebrap50.png){.absolute top=-90 right=460 width="100" height="100"}
+
+::::columns
+:::{.column width="50%"}
+::: {style="text-align: right;"}
+**Presidência**
+
+**Diretoria Administrativa**
+
+**Diretoria Científica**
+
+**Coordenação de Seminários**
+
+**Coordenação de Cursos**
+:::
+:::
+:::{.column width="50%"}
+Adrian Gurza Lavalle
+
+Victor Callil
+
+Arilson Favareto
+
+Bianca Tavolari
+
+Monise Fernandes Picanço
+
+:::
+::::
+::: {style="text-align: center;"}
+**Curso**
+
+Introdução à análise de regressão para pesquisas sociais
+
+**Ministrante**
+
+Thiago Cordeiro Almeida
+
+E-mail: [thiagocordalmeida@gmail.com](thiagocordalmeida@gmail.com)
+
+Github: [@thiagocalm](github.com/thiagocalm)
+:::

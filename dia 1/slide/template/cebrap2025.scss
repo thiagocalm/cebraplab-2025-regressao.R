@@ -90,6 +90,11 @@ $overlayElementFgColor: 240, 240, 240 !default;
      text-align: left;
      color: $base3 !important;
    }
+
+   ul, li, ol {
+    color: $base3  !important;
+    margin-bottom: auto;
+   }
 }
 
 .theme-subtopic {
