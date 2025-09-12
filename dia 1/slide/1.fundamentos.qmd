@@ -596,3 +596,87 @@ Além de estabelecer significância, força da relação e direção, também pr
 :::
 
 ::::
+
+# Modelagem de fenômenos sociais {.theme-first}
+
+Intuição
+
+## O que é e por que modelar? {.theme-subtopic .r-fit-text .smaller}
+
+![](images/models-augmented-reality.png){.absolute bottom=20 right=5 width="300" height="300" }
+A modelagem estatística é um exercício de estabelecimento da relação entre diferentes fenômenos, neste caso sociais.
+
+Isso parte do pressuposto de que *conhecemos* a *verdadeira* **fórmula/lei** que rege a relação entre os fenômenos estabelecidos. Elas podem ser:
+
+- Lineares;
+
+- Quadráticas;
+
+- Logarítmicas;
+
+- Exponenciais; ...
+
+#### "Todos os modelos estão errados, mas alguns são úteis" George E. P. Box
+
+## O que é e por que modelar? {.theme-subtopic .r-fit-text .smaller}
+
+A partir da realidade em que conhecemos, formulamos uma relação matemática que nos permita avaliar e, *se assegurados alguns pressupostos*, generalizar as relações estabelecidas em uma pequena **amostra** da realidade para toda a **população** a que nossos dados são representativos.
+
+Para isso, precisamos:
+
+1. Saber o motivo pelo qual estamos modelando: qual a motivação?
+
+2. Estabelecer a relação entre os fenômenos a serem modelados: qual tipo de relação eles têm?
+
+3. Explorar e descrever a relação entre eles: análise exploratória dos dados!
+
+4. Construir o modelo para a população a que queremos generalizar
+
+5. Implementar o modelo populacionar para a amostra da população que temos acesso
+
+6. Avaliar a validade do nosso modelo
+
+7. Estabelecer as conclusões possíveis com nossos modelos
+
+## Motivações para se modelar fenômenos sociais {.theme-subtopic .r-fit-text .smaller .font-size-smallest}
+
+Pode-se estar interessado em predizer tendências futuras para determinado fenômeno sociais de interesse ou compreender em que medida um fenômeno afeta outro.
+
+:::: columns
+
+:::{.column width="50%"}
+### Predição{style="text-align: center;"}
+Sabendo-se quais são os determinantes de um determinado fenômeno social $Y$, pode-se predizer o comportamento futuro $\hat{Y}$ com base nas mudanças que ocorrerão em seus determinantes.
+
+- São chamados de modelos preditivos.
+
+- Muito utilizados, atualmente, em modelos de aprendizado de máquina (*machine learning*)^[Ver texto complementar na leitura da aula de hoje.].
+
+:::
+
+:::{.column width="50%"}
+### Relação entre fenômenos{style="text-align: center;"}
+Mais comuns em estudos de políticas públicas para desenho de programas sociais, em estudos acadêmicos ou em estudos de mercado, esses modelos buscam estabelcer a relação entre um fenômeno $X_1$ e o fenômeno de interesse $Y$ a partir do *controle* por outras variáveis que também podem afetar $Y$^[Ver texto do ENAP (2019) presente na leitura da aula de hoje.].
+
+:::
+
+::::
+
+## Limites {.theme-subtopic .r-fit-text .smaller}
+
+Quais são os limites da modelagem de dados?
+
+![](images/question.gif){.absolute bottom=20 right=50 width="300" height="300"}
+
+## Limites {.theme-subtopic .r-fit-text .smaller}
+
+Quais são os limites da modelagem de dados?
+
+#### Dados disponíveis
+Se não há dados ou os dados são ruins, a modelagem vai ser diretamente afetada por isso.
+
+#### Conhecimento teórico sobre a relação entre fenômenos
+Se não há um embasamento teórico ou empírico suficiente para estabelecer as relações entre os fenômenos, o modelo terá alcance limitado.
+
+#### Conhecimento técnico sobre a relação entre fenômenos
+Mesmo havendo conhecimento teórico suficiente, em muitos casos, o conhecimento técnico dos modelos que conhecemos não permitem que testemos certas hipóteses.

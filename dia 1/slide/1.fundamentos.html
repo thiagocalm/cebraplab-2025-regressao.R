@@ -510,13 +510,13 @@ Thiago Cordeiro Almeida
     Pearson's product-moment correlation
 
 data:  renda and enem_mat
-t = 16.353, df = 998, p-value &lt; 2.2e-16
+t = 18.997, df = 998, p-value &lt; 2.2e-16
 alternative hypothesis: true correlation is not equal to 0
 95 percent confidence interval:
- 0.4093881 0.5072509
+ 0.4683139 0.5594647
 sample estimates:
-     cor 
-0.459714 </code></pre>
+      cor 
+0.5153454 </code></pre>
 </div>
 </div>
 <p>Qual a conclusão que teríamos?</p>
@@ -559,6 +559,54 @@ sample estimates:
 <li><p>Fenômenos sociais estão intrínsecamente relacionados entre eles, sendo necessário abordagens mais complexas para endereçar a causalidade (e até mesmo a associação).</p></li>
 </ul>
 </div></div>
+</section></section><section><section id="modelagem-de-fenômenos-sociais" class="title-slide slide level1 theme-first center"><h1>Modelagem de fenômenos sociais</h1>
+<p>Intuição</p>
+</section><section id="o-que-é-e-por-que-modelar" class="slide level2 theme-subtopic smaller"><h2>O que é e por que modelar?</h2>
+<p><img data-src="images/models-augmented-reality.png" class="absolute" style="bottom: 20px; right: 5px; width: 300px; height: 300px; "> A modelagem estatística é um exercício de estabelecimento da relação entre diferentes fenômenos, neste caso sociais.</p>
+<p>Isso parte do pressuposto de que <em>conhecemos</em> a <em>verdadeira</em> <strong>fórmula/lei</strong> que rege a relação entre os fenômenos estabelecidos. Elas podem ser:</p>
+<ul>
+<li><p>Lineares;</p></li>
+<li><p>Quadráticas;</p></li>
+<li><p>Logarítmicas;</p></li>
+<li><p>Exponenciais; …</p></li>
+</ul>
+<h4 id="todos-os-modelos-estão-errados-mas-alguns-são-úteis-george-e.-p.-box">“Todos os modelos estão errados, mas alguns são úteis” George E. P. Box</h4>
+</section><section id="o-que-é-e-por-que-modelar-1" class="slide level2 theme-subtopic smaller"><h2>O que é e por que modelar?</h2>
+<p>A partir da realidade em que conhecemos, formulamos uma relação matemática que nos permita avaliar e, <em>se assegurados alguns pressupostos</em>, generalizar as relações estabelecidas em uma pequena <strong>amostra</strong> da realidade para toda a <strong>população</strong> a que nossos dados são representativos.</p>
+<p>Para isso, precisamos:</p>
+<ol type="1">
+<li><p>Saber o motivo pelo qual estamos modelando: qual a motivação?</p></li>
+<li><p>Estabelecer a relação entre os fenômenos a serem modelados: qual tipo de relação eles têm?</p></li>
+<li><p>Explorar e descrever a relação entre eles: análise exploratória dos dados!</p></li>
+<li><p>Construir o modelo para a população a que queremos generalizar</p></li>
+<li><p>Implementar o modelo populacionar para a amostra da população que temos acesso</p></li>
+<li><p>Avaliar a validade do nosso modelo</p></li>
+<li><p>Estabelecer as conclusões possíveis com nossos modelos</p></li>
+</ol></section><section id="motivações-para-se-modelar-fenômenos-sociais" class="slide level2 theme-subtopic smaller font-size-smallest"><h2>Motivações para se modelar fenômenos sociais</h2>
+<p>Pode-se estar interessado em predizer tendências futuras para determinado fenômeno sociais de interesse ou compreender em que medida um fenômeno afeta outro.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 style="text-align: center;" id="predição">Predição</h3>
+<p>Sabendo-se quais são os determinantes de um determinado fenômeno social <span class="math inline">\(Y\)</span>, pode-se predizer o comportamento futuro <span class="math inline">\(\hat{Y}\)</span> com base nas mudanças que ocorrerão em seus determinantes.</p>
+<ul>
+<li><p>São chamados de modelos preditivos.</p></li>
+<li><p>Muito utilizados, atualmente, em modelos de aprendizado de máquina (<em>machine learning</em>)<sup>1</sup>.</p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h3 style="text-align: center;" id="relação-entre-fenômenos">Relação entre fenômenos</h3>
+<p>Mais comuns em estudos de políticas públicas para desenho de programas sociais, em estudos acadêmicos ou em estudos de mercado, esses modelos buscam estabelcer a relação entre um fenômeno <span class="math inline">\(X_1\)</span> e o fenômeno de interesse <span class="math inline">\(Y\)</span> a partir do <em>controle</em> por outras variáveis que também podem afetar <span class="math inline">\(Y\)</span><sup>2</sup>.</p>
+</div></div>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>Ver texto complementar na leitura da aula de hoje.</p></li><li id="fn2"><p>Ver texto do ENAP (2019) presente na leitura da aula de hoje.</p></li></ol></aside></section><section id="limites" class="slide level2 theme-subtopic smaller"><h2>Limites</h2>
+<p>Quais são os limites da modelagem de dados?</p>
+<p><img data-src="images/question.gif" class="absolute" style="bottom: 20px; right: 50px; width: 300px; height: 300px; "></p>
+</section><section id="limites-1" class="slide level2 theme-subtopic smaller"><h2>Limites</h2>
+<p>Quais são os limites da modelagem de dados?</p>
+<h4 id="dados-disponíveis">Dados disponíveis</h4>
+<p>Se não há dados ou os dados são ruins, a modelagem vai ser diretamente afetada por isso.</p>
+<h4 id="conhecimento-teórico-sobre-a-relação-entre-fenômenos">Conhecimento teórico sobre a relação entre fenômenos</h4>
+<p>Se não há um embasamento teórico ou empírico suficiente para estabelecer as relações entre os fenômenos, o modelo terá alcance limitado.</p>
+<h4 id="conhecimento-técnico-sobre-a-relação-entre-fenômenos">Conhecimento técnico sobre a relação entre fenômenos</h4>
+<p>Mesmo havendo conhecimento teórico suficiente, em muitos casos, o conhecimento técnico dos modelos que conhecemos não permitem que testemos certas hipóteses.</p>
 
 
 </section></section>
