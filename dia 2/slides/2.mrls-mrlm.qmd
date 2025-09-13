@@ -92,5 +92,5 @@ A partir do uso de modelos
 
 ## Fluxo de análise de dados {.theme-subtopic .smaller}
 
-![](images/fluxo-analise.png){.absolute bottom="40" right="75" width="1000" height="600"}
+![](images/fluxo-analise.png){.absolute bottom="10" right="75" width="1300" height="650"}
 
