@@ -10,7 +10,7 @@
   <meta name="generator" content="quarto-1.6.42">
 
   <meta name="author" content="Thiago Cordeiro Almeida">
-  <meta name="dcterms.date" content="2025-09-13">
+  <meta name="dcterms.date" content="2025-09-14">
   <title>Regressão para pesquisas sociais</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -30,7 +30,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="2.mrls-mrlm_files/libs/revealjs/dist/theme/quarto-c44a319cd0c48131f6bbe6e85cd4a0f7.css">
+  <link rel="stylesheet" href="2.mrls-mrlm_files/libs/revealjs/dist/theme/quarto-31728c5718a60723539d583603c05548.css">
   <link href="2.mrls-mrlm_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="2.mrls-mrlm_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="2.mrls-mrlm_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -144,7 +144,7 @@ Thiago Cordeiro Almeida
     </div>
 </div>
 
-  <p class="date">September 13, 2025</p>
+  <p class="date">September 14, 2025</p>
 </section>
 <section id="antes-de-começar" class="title-slide slide level1 center">
 <h1>Antes de começar…</h1>
@@ -198,9 +198,86 @@ Thiago Cordeiro Almeida
 <section id="fluxo-de-análise-de-dados" class="slide level2 theme-subtopic smaller">
 <h2>Fluxo de análise de dados</h2>
 <p><img data-src="images/fluxo-analise.png" class="absolute" style="bottom: 10px; right: 75px; width: 1300px; height: 650px; "></p>
-
-
 </section></section>
+<section>
+<section id="conceitos-e-definições-estatísticas-importantes" class="title-slide slide level1 theme-first center">
+<h1>Conceitos e definições estatísticas importantes</h1>
+<div style="text-align: left;">
+<p>Modelos probabilísticos</p>
+</div>
+</section>
+<section id="modelos-probabilísticos" class="slide level2">
+<h2><span class="theme-subtopic smaller">Modelos probabilísticos</span></h2>
+<ul>
+<li><p>Na aula anterior, exploramos diferentes formas de analisar descritivamente a distribuição de determinado fenômeno através de diferentes tipos de medida.</p></li>
+<li><p>Em termos estatísticos, para cada distribuição observada em uma amostra, há (<em>ou haveria</em>) um modelo teórico que descreveria estatísticamente essa mesma distribuição.</p></li>
+</ul>
+</section>
+<section id="modelos-probabilísticos-1" class="slide level2 font-size-smallest">
+<h2><span class="theme-subtopic">Modelos probabilísticos</span></h2>
+<p><strong>Exemplo:</strong> programa pé-de-meia.</p>
+<p>Estamos interessados em saber a parcela dos estudantes que tiveram nota em matemática acima da média no ENEM dentro do universo de pessoas que participaram do programa.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h4 id="abordagem-empírica">Abordagem empírica</h4>
+<ol type="1">
+<li>Calcularia a proporção de pessoas que tiveram a média acima como: <span class="math display">\[p(X)=\frac{e}{n}\]</span></li>
+</ol>
+<p>Em que,</p>
+<ul>
+<li><span class="math inline">\(e\)</span>: evento, no caso, num. acima da média;</li>
+<li><span class="math inline">\(n\)</span>: observações, no caso, num. estudantes no ENEM.</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h4 id="abordagem-probabilística">Abordagem probabilística</h4>
+<ol type="1">
+<li>Estabeleceria o evento de interesse e o universo amostral de análise</li>
+</ol>
+<ul>
+<li><p><strong>Evento</strong>: proporção de estudantes que participaram do ENEM <strong>e</strong> do programa os quais tiveram nota acima da média em matemática.</p></li>
+<li><p><strong>Universo amostral</strong>: estudantes que participaram do ENEM e do programa.</p></li>
+</ul>
+<ol start="2" type="1">
+<li><p>Estabeleceria o modelo probabilístico que se associa ao evento de interesse</p></li>
+<li><p>Estimaria a probabilidade desse evento de interesse ocorrer.</p></li>
+</ol>
+</div></div>
+</section>
+<section id="modelos-probabilísticos-2" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Modelos probabilísticos</span></h2>
+<p>Sob o pressuposto de que nossa amostra de estudantes que participaram do ENEM e do programa são <strong>i.i.d.</strong><sup>1</sup>, o que obteríamos calculando via abordagem empírica seria <em>exatamente</em> o mesmo ao calcular via abordagem probabilística!!!</p>
+<p>Ou seja,</p>
+<ul>
+<li><p>Podemos estudar propriedades estatísticas dos fenômenos sociais em que trabalhamos não só restritos a uma determinada amostra em que temos, mas fazendo <em>generalizações</em> desses fenômenos;</p></li>
+<li><p>Utilizando modelos que representem esses fenômenos, conseguimos ter estimativas do comportamento deles que incorporem <em>incertezas</em> inerentes a eles.</p></li>
+<li><p>Modelagens são formas de adicionar complexidade ao estudo desses fenômenos a partir das suas interações com outros fenômenos sociais.</p></li>
+</ul>
+<aside><ol class="aside-footnotes"><li id="fn1"><p><strong>i.i.d.</strong> = <strong>i</strong>ndependentes e <strong>i</strong>dênticamente <strong>d</strong>istribuídas.</p></li></ol></aside></section>
+<section id="modelos-probabilísticos-3" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Modelos probabilísticos</span></h2>
+<h3 id="relação-entre-modelos-probabilísticos-e-modelos-de-regressão">Relação entre modelos probabilísticos e modelos de regressão</h3>
+<p>O que fazemos em nossos modelos de regressão é, basicamente, estudar as propriedades da nossa <strong>variável de estudo</strong> através de relações associadas ao melhor modelo probabilístico que a descreve.</p>
+<p>Com isso, podemos:</p>
+<ul>
+<li><p>Prever resultados futuros condicionados a um conjunto de outras variáveis (probabilidade condicional a um conjunto de <span class="math inline">\(X\)</span>)</p></li>
+<li><p>Estabelecer em que medida variando uma das variáveis, seus valores são afetados (probabilidade condicional a <span class="math inline">\(X\)</span>)</p></li>
+<li><p>Obter valores esperados e variabilidade de seus resultados (esperança e variância)</p></li>
+</ul>
+</section></section>
+<section id="conceitos-e-definições-estatísticas-importantes-1" class="title-slide slide level1 theme-first center">
+<h1>Conceitos e definições estatísticas importantes</h1>
+<div style="text-align: left;">
+<p>Variável aleatória (<em>v.a.</em>)</p>
+</div>
+</section>
+
+<section id="variável-aleatória" class="title-slide slide level1 theme-first center">
+<h1>Variável aleatória</h1>
+
+
+</section>
+
+
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="images/cebrap-imagem.png" class="slide-logo"></p>

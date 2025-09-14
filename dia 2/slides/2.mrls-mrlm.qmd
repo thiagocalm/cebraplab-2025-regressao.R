@@ -86,11 +86,94 @@ Tópicos que vamos cobrir hoje são:
 
 # Fluxo de análise de dados contínuos {.theme-first}
 
-::: {style="text-align: left;"}
+:::{style="text-align: left;"}
 A partir do uso de modelos
 :::
 
 ## Fluxo de análise de dados {.theme-subtopic .smaller}
 
 ![](images/fluxo-analise.png){.absolute bottom="10" right="75" width="1300" height="650"}
+
+# Conceitos e definições estatísticas importantes {.theme-first}
+
+:::{style="text-align: left;"}
+Modelos probabilísticos
+:::
+
+## [Modelos probabilísticos]{.theme-subtopic .smaller}
+
+- Na aula anterior, exploramos diferentes formas de analisar descritivamente a distribuição de determinado fenômeno através de diferentes tipos de medida.
+
+- Em termos estatísticos, para cada distribuição observada em uma amostra, há (*ou haveria*) um modelo teórico que descreveria estatísticamente essa mesma distribuição.
+
+## [Modelos probabilísticos]{.theme-subtopic}{.font-size-smallest}
+
+**Exemplo:** programa pé-de-meia.
+
+Estamos interessados em saber a parcela dos estudantes que tiveram nota em matemática acima da média no ENEM dentro do universo de pessoas que participaram do programa.
+
+:::: columns
+::: {.column width="50%"}
+
+#### Abordagem empírica
+
+1. Calcularia a proporção de pessoas que tiveram a média acima como: $$p(X)=\frac{e}{n}$$
+
+Em que,
+
+- $e$: evento, no caso, num. acima da média;
+- $n$: observações, no caso, num. estudantes no ENEM.
+
+:::
+
+::: {.column width="50%"}
+
+#### Abordagem probabilística
+
+1. Estabeleceria o evento de interesse e o universo amostral de análise
+
+- **Evento**: proporção de estudantes que participaram do ENEM **e** do programa os quais tiveram nota acima da média em matemática.
+
+- **Universo amostral**: estudantes que participaram do ENEM e do programa.
+
+2. Estabeleceria o modelo probabilístico que se associa ao evento de interesse
+
+3. Estimaria a probabilidade desse evento de interesse ocorrer.
+:::
+
+::::
+
+## [Modelos probabilísticos]{.theme-subtopic}{.smaller}
+
+Sob o pressuposto de que nossa amostra de estudantes que participaram do ENEM e do programa são **i.i.d.**^[**i.i.d.** = **i**ndependentes e **i**dênticamente **d**istribuídas.], o que obteríamos calculando via abordagem empírica seria *exatamente* o mesmo ao calcular via abordagem probabilística!!!
+
+Ou seja,
+
+- Podemos estudar propriedades estatísticas dos fenômenos sociais em que trabalhamos não só restritos a uma determinada amostra em que temos, mas fazendo *generalizações* desses fenômenos;
+
+- Utilizando modelos que representem esses fenômenos, conseguimos ter estimativas do comportamento deles que incorporem *incertezas* inerentes a eles.
+
+- Modelagens são formas de adicionar complexidade ao estudo desses fenômenos a partir das suas interações com outros fenômenos sociais.
+
+## [Modelos probabilísticos]{.theme-subtopic}{.smaller}
+
+### Relação entre modelos probabilísticos e modelos de regressão
+
+O que fazemos em nossos modelos de regressão é, basicamente, estudar as propriedades da nossa **variável de estudo** através de relações associadas ao melhor modelo probabilístico que a descreve.
+
+Com isso, podemos:
+
+- Prever resultados futuros condicionados a um conjunto de outras variáveis (probabilidade condicional a um conjunto de $X$)
+
+- Estabelecer em que medida variando uma das variáveis, seus valores são afetados (probabilidade condicional a $X$)
+
+- Obter valores esperados e variabilidade de seus resultados (esperança e variância)
+
+# Conceitos e definições estatísticas importantes {.theme-first}
+
+:::{style="text-align: left;"}
+Variável aleatória (*v.a.*)
+:::
+
+# Variável aleatória {.theme-first}
 
