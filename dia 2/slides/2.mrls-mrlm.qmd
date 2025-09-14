@@ -145,7 +145,7 @@ Em que,
 
 ## [Modelos probabilísticos]{.theme-subtopic}{.smaller}
 
-Sob o pressuposto de que nossa amostra de estudantes que participaram do ENEM e do programa são **i.i.d.**^[**i.i.d.** = **i**ndependentes e **i**dênticamente **d**istribuídas.], o que obteríamos calculando via abordagem empírica seria *exatamente* o mesmo ao calcular via abordagem probabilística!!!
+Sob o pressuposto de que nossa amostra de estudantes que participaram do ENEM e do programa é **i.i.d.**^[**i.i.d.** = **i**ndependente e **i**dênticamente **d**istribuída.], o que obteríamos calculando via abordagem empírica seria *exatamente* o mesmo ao calcular via abordagem probabilística!!!
 
 Ou seja,
 
@@ -167,7 +167,7 @@ Com isso, podemos:
 
 - Estabelecer em que medida variando uma das variáveis, seus valores são afetados (probabilidade condicional a $X$)
 
-- Obter valores esperados e variabilidade de seus resultados (esperança e variância)
+- Obter valores esperados e incerteza de seus resultados (esperança e variância)
 
 # Conceitos e definições estatísticas importantes {.theme-first}
 
@@ -269,5 +269,200 @@ Há muitos casos em que estamos interessados em uma -- ou um conjunto de -- vari
 Modelo de Regressão Linear Simples (RLS)
 :::
 
-## [Modelo de Regressão Linear Simples]{.theme-subtopic}{.smaller}
+## [Modelo de Regressão Linear Simples (RLS)]{.theme-subtopic}{.smaller}
 
+Nos modelos de regressão em geral, estamos interessados em explicar **como a variação de uma determinada variável afeta a variação de uma outra variável (variável resposta)**.
+
+No caso simplificado do modelo RLS, temos as seguintes características: 
+
+- Uma variável aleatória resposta/dependente de natureza contínua: $Y$
+
+- Uma variável aleatória explicativa: $X$
+
+- Um fator de erro do modelo que nos diz quanto da variabilidade de $Y$ que continua não explicado por $X$: $\epsilon$
+
+## [Modelo de Regressão Linear Simples (RLS)]{.theme-subtopic}{.smaller}
+
+```{r, echo=FALSE}
+# import package
+
+library(pacman)
+p_load(tidyverse) # importando pacote que usaremos, tidyverse
+
+# data
+base <- tibble(
+  anos = c(2000,2001,2002,2003,2004,2005,2006,2007,2008,2009),
+  margarina = c(8.2,7.0,6.5,5.3,5.2,4.0,4.6,4.5,4.2,3.7),
+  divorcio = c(5.0,4.7,4.6,4.4,4.3,4.1,4.2,4.2,4.2,4.1)
+)
+label_margarina = "Consumo per capita de margarina nos EUA" # rótulo da variavel
+label_divorcio = "Taxa de divórcio no estado de Maine (EUA)" # rótulo da variavel
+
+# graph
+base |>
+  ggplot() +
+  aes(x = margarina, y = divorcio, color = anos) +
+  geom_point( size = 4, alpha = .5) +
+  labs(
+    x = label_margarina,
+    y = label_divorcio,
+    caption = "Fonte: https://www.tylervigen.com/spurious/correlation/5920"
+  ) +
+  coord_cartesian(
+    ylim = c(min(base$divorcio)*.95,max(base$divorcio)*1.05),
+    xlim = c(c(min(base$margarina)*.95,max(base$margarina)*1.05))
+  ) +
+  theme_classic() +
+  theme(
+    legend.title = element_blank(),
+    axis.title.y = element_text(color = "grey33",face = "bold"),
+    axis.title.x = element_text(color = "grey33",face = "bold")
+  )
+```
+
+## [Modelo de Regressão Linear Simples (RLS)]{.theme-subtopic}{.smaller}
+
+```{r, echo=FALSE}
+options(scipen = 99999)
+# import package
+
+library(pacman)
+p_load(tidyverse) # importando pacote que usaremos, tidyverse
+
+# data
+base <- tibble(
+  anos = c(2000,2001,2002,2003,2004,2005,2006,2007,2008,2009),
+  margarina = c(8.2,7.0,6.5,5.3,5.2,4.0,4.6,4.5,4.2,3.7),
+  divorcio = c(5.0,4.7,4.6,4.4,4.3,4.1,4.2,4.2,4.2,4.1)
+)
+label_margarina = "Consumo per capita de margarina nos EUA" # rótulo da variavel
+label_divorcio = "Taxa de divórcio no estado de Maine (EUA)" # rótulo da variavel
+
+# graph
+base |>
+  ggplot() +
+  aes(x = margarina, y = divorcio, color = anos) +
+  geom_point( size = 4, alpha = .5) +
+  geom_smooth(method = "lm", color = "red4", linewidth = 1.1, linetype = "dashed", se = FALSE) +
+  labs(
+    x = label_margarina,
+    y = label_divorcio,
+    caption = "Fonte: https://www.tylervigen.com/spurious/correlation/5920"
+  ) +
+  coord_cartesian(
+    ylim = c(min(base$divorcio)*.95,max(base$divorcio)*1.05),
+    xlim = c(c(min(base$margarina)*.95,max(base$margarina)*1.05))
+  ) +
+  theme_classic() +
+  theme(
+    legend.title = element_blank(),
+    axis.title.y = element_text(color = "grey33",face = "bold"),
+    axis.title.x = element_text(color = "grey33",face = "bold")
+  )
+```
+
+## [Modelo de Regressão Linear Simples (RLS)]{.theme-subtopic}{.smaller}
+
+### Formalização
+
+Dizemos que a representação geral (ou populacional) de um determinado modelo de regressão é dada por:
+
+$$Y_i = \alpha + \beta_1 \cdot X_i + \epsilon_i$$
+
+Em que:
+
+- $\alpha$: intercepto do modelo.
+
+  - Nos diz qual valor $Y$ assume quando $X$ é igualado a $0$.
+  
+- $\beta_1$: coeficiente do modelo associado à variável $X$.
+
+  - Nos diz qual a magnitude da mudança em $Y$ quando $X$ varia uma unidade para cima ou para baixo.
+  
+  - É também chamado de **inclinação da reta**, devido à suas propriedades estatísticas do modo em que é calculado^[Não entraremos em detalhes disso no curso, mas nos materiais da aula vocês podem se aprofundar nisso.]
+  
+- $\epsilon_i$: como descrito anteriormente, é o quanto não está sendo explicado em $Y_i$ devido à variação estimada em $X_i$.
+
+## [Modelo de Regressão Linear Simples (RLS)]{.theme-subtopic-assumption }{.smaller}
+
+$$Y_i = \alpha + \beta_1 \cdot X_i + \epsilon_i$$
+
+#### Pressuposto 1 (P1): independência entre erro e variáveis observadas
+
+A **hipótese-chave** é que a média dos erros condicionada na variável explicativa $X_i$ é igual a zero, ou seja: $$E[\epsilon_i|X_i]=0$$
+
+Em outras palavras, estamos assumindo que não há nenhum fator contido em $\epsilon$ que seja correlacionado com $X$, de modo que $\beta$ seja um efeito *puro* de X.
+
+## [Modelo de Regressão Linear Simples (RLS)]{.theme-subtopic-assumption }{.smaller}
+
+Modelo populacional:
+$$Y_i = \alpha + \beta_1 \cdot X_i + \epsilon_i$$
+
+Quando vamos *estimar* os nossos parâmetros para a nossa amostra, assumimos os valores médios observados, isto é:
+
+$$\bar{Y_i} = \hat{\alpha} + \hat{\beta_1} \cdot \bar{X_i} + \hat{\epsilon_i}$$
+
+## [Modelo de Regressão Linear Simples (RLS)]{.theme-subtopic}{.smaller}
+
+### Estimando parâmetros do modelo
+
+Os únicos valores que não conhecemos são referentes a $\alpha$ e $\beta$, uma vez que $\epsilon$ é obtido residualmente.
+
+Tudo o que precisamos fazer é **estimar os parâmetros desconhecidos do modelo populacional**. O modelo a ser estimado consiste em:
+
+$$\bar{Y_i} = \hat{\alpha} + \hat{\beta_1} \cdot \bar{X_i} + \hat{\epsilon_i}$$
+
+#### Mínimos Quadrados Ordinários (MQO)
+
+Os estimadores de MQO asseguram, via relações estatísticas, que tenhamos valores para nossos parâmetros desconhecidos que **minimizem o desvio dos resíduos**.
+
+Isto é, temos a reta que melhor se ajusta aos nossos dados de modo que passe mais perto possível de cada ponto.
+
+## [Modelo de Regressão Linear Simples (RLS)]{.theme-subtopic}{.smaller}
+
+### Estimando parâmetros do modelo
+
+Os únicos valores que não conhecemos são referentes a $\alpha$ e $\beta$, uma vez que $\epsilon$ é obtido residualmente.
+
+Tudo o que precisamos fazer é **estimar os parâmetros desconhecidos do modelo populacional**. O modelo a ser estimado consiste em:
+
+$$\bar{Y_i} = \hat{\alpha} + \hat{\beta_1} \cdot \bar{X_i} + \hat{\epsilon_i}$$
+
+#### Mínimos Quadrados Ordinários (MQO)
+
+Acionando o **P1**, temos:
+
+- $\hat{\alpha} = \bar{Y_i} - [\hat{\beta_1} \cdot \bar{X_i}]$
+
+- $\hat{\beta_1} = \frac{\bar{Y_i} - \hat{\alpha}}{\bar{X_i}}$
+
+## [Modelo de Regressão Linear Simples (RLS)]{.theme-subtopic}{.smaller}
+
+$$\overline{Divorcio} = \hat{\alpha} + \hat{\beta_1} \cdot \overline{Margarina} + \hat{\epsilon}$$
+
+Aplicando em R:
+
+```{r}
+modelo <- lm(divorcio ~ margarina, data = base)
+modelo
+summary(modelo) # indo além nos resultados
+```
+
+## [Modelo de Regressão Linear Simples (RLS)]{.theme-subtopic}{.smaller}
+
+$$\overline{Divorcio} = \hat{\alpha} + \hat{\beta_1} \cdot \overline{Margarina} + \hat{\epsilon}$$
+
+Aplicando em R:
+
+```{r}
+modelo <- lm(divorcio ~ margarina, data = base)
+summary(modelo) # indo além nos resultados
+```
+
+# Modelo de regressão Linear {.theme-first}
+
+Propriedades do MRL
+
+## [Propriedades do MRL]{.theme-subtopic}{.smaller}
+
+Seguir Chein (2019) e Hoffman (2016)...

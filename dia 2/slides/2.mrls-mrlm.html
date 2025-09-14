@@ -10,7 +10,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.6.42">
 <meta name="author" content="Thiago Cordeiro Almeida">
-<meta name="dcterms.date" content="2025-09-14">
+<meta name="dcterms.date" content="2025-09-15">
 <title>Regressão para pesquisas sociais</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -29,8 +29,73 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+      }
+    pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+    div.sourceCode
+      { color: #cbccc6; background-color: #1f2430; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #cbccc6; } /* Normal */
+    code span.al { color: #ff3333; background-color: #332430; font-weight: bold; } /* Alert */
+    code span.an { color: #ffe6b3; } /* Annotation */
+    code span.at { color: #73d0ff; } /* Attribute */
+    code span.bn { color: #ffcc66; } /* BaseN */
+    code span.bu { color: #95e6cb; } /* BuiltIn */
+    code span.cf { color: #ffa759; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #95e6cb; } /* Char */
+    code span.cn { color: #d4bfff; } /* Constant */
+    code span.co { color: #5c6773; font-style: italic; } /* Comment */
+    code span.cv { color: #d4bfff; } /* CommentVar */
+    code span.do { color: #5c6773; } /* Documentation */
+    code span.dt { color: #ffa759; } /* DataType */
+    code span.dv { color: #ffcc66; } /* DecVal */
+    code span.er { color: #ff3333; text-decoration: underline; } /* Error */
+    code span.ex { color: #73d0ff; font-weight: bold; } /* Extension */
+    code span.fl { color: #ffcc66; } /* Float */
+    code span.fu { color: #ffd580; } /* Function */
+    code span.im { color: #bae67e; } /* Import */
+    code span.in { color: #ffcc66; } /* Information */
+    code span.kw { color: #ffa759; font-weight: bold; } /* Keyword */
+    code span.op { color: #f29e74; } /* Operator */
+    code span.ot { color: #5ccfe6; } /* Other */
+    code span.pp { color: #f28779; } /* Preprocessor */
+    code span.re { color: #73d0ff; background-color: #2a4254; } /* RegionMarker */
+    code span.sc { color: #95e6cb; } /* SpecialChar */
+    code span.ss { color: #95e6cb; } /* SpecialString */
+    code span.st { color: #bae67e; } /* String */
+    code span.va { color: #5ccfe6; } /* Variable */
+    code span.vs { color: #bae67e; } /* VerbatimString */
+    code span.wa { color: #f28779; } /* Warning */
   </style>
-<link rel="stylesheet" href="2.mrls-mrlm_files/libs/revealjs/dist/theme/quarto-31728c5718a60723539d583603c05548.css">
+<link rel="stylesheet" href="2.mrls-mrlm_files/libs/revealjs/dist/theme/quarto-c657020212008729acf89e2c786b881b.css">
 <link href="2.mrls-mrlm_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
 <link href="2.mrls-mrlm_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
 <link href="2.mrls-mrlm_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -143,7 +208,7 @@ Thiago Cordeiro Almeida
     </div>
 </div>
 
-  <p class="date">September 14, 2025</p>
+  <p class="date">September 15, 2025</p>
 </section><section id="antes-de-começar" class="title-slide slide level1 center"><h1>Antes de começar…</h1>
 <p>lista de presença!</p>
 <p><img data-src="images/attention.gif" class="absolute" style="bottom: 10px; right: 50px; width: 240px; height: 240px; "></p>
@@ -228,20 +293,20 @@ Thiago Cordeiro Almeida
 </ol>
 </div></div>
 </section><section id="modelos-probabilísticos-2" class="slide level2 smaller"><h2><span class="theme-subtopic">Modelos probabilísticos</span></h2>
-<p>Sob o pressuposto de que nossa amostra de estudantes que participaram do ENEM e do programa são <strong>i.i.d.</strong><sup>1</sup>, o que obteríamos calculando via abordagem empírica seria <em>exatamente</em> o mesmo ao calcular via abordagem probabilística!!!</p>
+<p>Sob o pressuposto de que nossa amostra de estudantes que participaram do ENEM e do programa é <strong>i.i.d.</strong><sup>1</sup>, o que obteríamos calculando via abordagem empírica seria <em>exatamente</em> o mesmo ao calcular via abordagem probabilística!!!</p>
 <p>Ou seja,</p>
 <ul>
 <li><p>Podemos estudar propriedades estatísticas dos fenômenos sociais em que trabalhamos não só restritos a uma determinada amostra em que temos, mas fazendo <em>generalizações</em> desses fenômenos;</p></li>
 <li><p>Utilizando modelos que representem esses fenômenos, conseguimos ter estimativas do comportamento deles que incorporem <em>incertezas</em> inerentes a eles.</p></li>
 <li><p>Modelagens são formas de adicionar complexidade ao estudo desses fenômenos a partir das suas interações com outros fenômenos sociais.</p></li>
-</ul><aside><ol class="aside-footnotes"><li id="fn1"><p><strong>i.i.d.</strong> = <strong>i</strong>ndependentes e <strong>i</strong>dênticamente <strong>d</strong>istribuídas.</p></li></ol></aside></section><section id="modelos-probabilísticos-3" class="slide level2 smaller"><h2><span class="theme-subtopic">Modelos probabilísticos</span></h2>
+</ul><aside><ol class="aside-footnotes"><li id="fn1"><p><strong>i.i.d.</strong> = <strong>i</strong>ndependente e <strong>i</strong>dênticamente <strong>d</strong>istribuída.</p></li></ol></aside></section><section id="modelos-probabilísticos-3" class="slide level2 smaller"><h2><span class="theme-subtopic">Modelos probabilísticos</span></h2>
 <h3 id="relação-entre-modelos-probabilísticos-e-modelos-de-regressão">Relação entre modelos probabilísticos e modelos de regressão</h3>
 <p>O que fazemos em nossos modelos de regressão é, basicamente, estudar as propriedades da nossa <strong>variável de estudo</strong> através de relações associadas ao melhor modelo probabilístico que a descreve.</p>
 <p>Com isso, podemos:</p>
 <ul>
 <li><p>Prever resultados futuros condicionados a um conjunto de outras variáveis (probabilidade condicional a um conjunto de <span class="math inline">\(X\)</span>)</p></li>
 <li><p>Estabelecer em que medida variando uma das variáveis, seus valores são afetados (probabilidade condicional a <span class="math inline">\(X\)</span>)</p></li>
-<li><p>Obter valores esperados e variabilidade de seus resultados (esperança e variância)</p></li>
+<li><p>Obter valores esperados e incerteza de seus resultados (esperança e variância)</p></li>
 </ul></section></section><section><section id="conceitos-e-definições-estatísticas-importantes-1" class="title-slide slide level1 theme-first center"><h1>Conceitos e definições estatísticas importantes</h1>
 <div style="text-align: left;">
 <p>Variável aleatória (<em>v.a.</em>)</p>
@@ -303,7 +368,136 @@ Thiago Cordeiro Almeida
 <p>Há muitos casos em que estamos interessados em uma – ou um conjunto de – variável(is) independente(s). Todavia, por razões das propriedades dos modelos, é importante que insiramos outras variáveis na análise. Estas são chamadas de <strong>variáveis controle/confundidoras</strong>.</p>
 <ul>
 <li>Em geral, seus resultados não são explicados, mas são explicitados.</li>
+</ul></section></section><section><section id="modelo-de-regressão-linear" class="title-slide slide level1 theme-first center"><h1>Modelo de regressão Linear</h1>
+<div style="text-align: left;">
+<p>Modelo de Regressão Linear Simples (RLS)</p>
+</div>
+</section><section id="modelo-de-regressão-linear-simples-rls" class="slide level2 smaller"><h2><span class="theme-subtopic">Modelo de Regressão Linear Simples (RLS)</span></h2>
+<p>Nos modelos de regressão em geral, estamos interessados em explicar <strong>como a variação de uma determinada variável afeta a variação de uma outra variável (variável resposta)</strong>.</p>
+<p>No caso simplificado do modelo RLS, temos as seguintes características:</p>
+<ul>
+<li><p>Uma variável aleatória resposta/dependente de natureza contínua: <span class="math inline">\(Y\)</span></p></li>
+<li><p>Uma variável aleatória explicativa: <span class="math inline">\(X\)</span></p></li>
+<li><p>Um fator de erro do modelo que nos diz quanto da variabilidade de <span class="math inline">\(Y\)</span> que continua não explicado por <span class="math inline">\(X\)</span>: <span class="math inline">\(\epsilon\)</span></p></li>
+</ul></section><section id="modelo-de-regressão-linear-simples-rls-1" class="slide level2 smaller"><h2><span class="theme-subtopic">Modelo de Regressão Linear Simples (RLS)</span></h2>
+
+<img data-src="2.mrls-mrlm_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section><section id="modelo-de-regressão-linear-simples-rls-2" class="slide level2 smaller"><h2><span class="theme-subtopic">Modelo de Regressão Linear Simples (RLS)</span></h2>
+
+<img data-src="2.mrls-mrlm_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section><section id="modelo-de-regressão-linear-simples-rls-3" class="slide level2 smaller"><h2><span class="theme-subtopic">Modelo de Regressão Linear Simples (RLS)</span></h2>
+<h3 id="formalização">Formalização</h3>
+<p>Dizemos que a representação geral (ou populacional) de um determinado modelo de regressão é dada por:</p>
+<p><span class="math display">\[Y_i = \alpha + \beta_1 \cdot X_i + \epsilon_i\]</span></p>
+<p>Em que:</p>
+<ul>
+<li>
+<p><span class="math inline">\(\alpha\)</span>: intercepto do modelo.</p>
+<ul>
+<li>Nos diz qual valor <span class="math inline">\(Y\)</span> assume quando <span class="math inline">\(X\)</span> é igualado a <span class="math inline">\(0\)</span>.</li>
 </ul>
+</li>
+<li>
+<p><span class="math inline">\(\beta_1\)</span>: coeficiente do modelo associado à variável <span class="math inline">\(X\)</span>.</p>
+<ul>
+<li><p>Nos diz qual a magnitude da mudança em <span class="math inline">\(Y\)</span> quando <span class="math inline">\(X\)</span> varia uma unidade para cima ou para baixo.</p></li>
+<li><p>É também chamado de <strong>inclinação da reta</strong>, devido à suas propriedades estatísticas do modo em que é calculado<sup>1</sup></p></li>
+</ul>
+</li>
+<li><p><span class="math inline">\(\epsilon_i\)</span>: como descrito anteriormente, é o quanto não está sendo explicado em <span class="math inline">\(Y_i\)</span> devido à variação estimada em <span class="math inline">\(X_i\)</span>.</p></li>
+</ul><aside><ol class="aside-footnotes"><li id="fn2"><p>Não entraremos em detalhes disso no curso, mas nos materiais da aula vocês podem se aprofundar nisso.</p></li></ol></aside></section><section id="modelo-de-regressão-linear-simples-rls-4" class="slide level2 smaller"><h2><span class="theme-subtopic-assumption">Modelo de Regressão Linear Simples (RLS)</span></h2>
+<p><span class="math display">\[Y_i = \alpha + \beta_1 \cdot X_i + \epsilon_i\]</span></p>
+<h4 id="pressuposto-1-p1-independência-entre-erro-e-variáveis-observadas">Pressuposto 1 (P1): independência entre erro e variáveis observadas</h4>
+<p>A <strong>hipótese-chave</strong> é que a média dos erros condicionada na variável explicativa <span class="math inline">\(X_i\)</span> é igual a zero, ou seja: <span class="math display">\[E[\epsilon_i|X_i]=0\]</span></p>
+<p>Em outras palavras, estamos assumindo que não há nenhum fator contido em <span class="math inline">\(\epsilon\)</span> que seja correlacionado com <span class="math inline">\(X\)</span>, de modo que <span class="math inline">\(\beta\)</span> seja um efeito <em>puro</em> de X.</p>
+</section><section id="modelo-de-regressão-linear-simples-rls-5" class="slide level2 smaller"><h2><span class="theme-subtopic-assumption">Modelo de Regressão Linear Simples (RLS)</span></h2>
+<p>Modelo populacional: <span class="math display">\[Y_i = \alpha + \beta_1 \cdot X_i + \epsilon_i\]</span></p>
+<p>Quando vamos <em>estimar</em> os nossos parâmetros para a nossa amostra, assumimos os valores médios observados, isto é:</p>
+<p><span class="math display">\[\bar{Y_i} = \hat{\alpha} + \hat{\beta_1} \cdot \bar{X_i} + \hat{\epsilon_i}\]</span></p>
+</section><section id="modelo-de-regressão-linear-simples-rls-6" class="slide level2 smaller"><h2><span class="theme-subtopic">Modelo de Regressão Linear Simples (RLS)</span></h2>
+<h3 id="estimando-parâmetros-do-modelo">Estimando parâmetros do modelo</h3>
+<p>Os únicos valores que não conhecemos são referentes a <span class="math inline">\(\alpha\)</span> e <span class="math inline">\(\beta\)</span>, uma vez que <span class="math inline">\(\epsilon\)</span> é obtido residualmente.</p>
+<p>Tudo o que precisamos fazer é <strong>estimar os parâmetros desconhecidos do modelo populacional</strong>. O modelo a ser estimado consiste em:</p>
+<p><span class="math display">\[\bar{Y_i} = \hat{\alpha} + \hat{\beta_1} \cdot \bar{X_i} + \hat{\epsilon_i}\]</span></p>
+<h4 id="mínimos-quadrados-ordinários-mqo">Mínimos Quadrados Ordinários (MQO)</h4>
+<p>Os estimadores de MQO asseguram, via relações estatísticas, que tenhamos valores para nossos parâmetros desconhecidos que <strong>minimizem o desvio dos resíduos</strong>.</p>
+<p>Isto é, temos a reta que melhor se ajusta aos nossos dados de modo que passe mais perto possível de cada ponto.</p>
+</section><section id="modelo-de-regressão-linear-simples-rls-7" class="slide level2 smaller"><h2><span class="theme-subtopic">Modelo de Regressão Linear Simples (RLS)</span></h2>
+<h3 id="estimando-parâmetros-do-modelo-1">Estimando parâmetros do modelo</h3>
+<p>Os únicos valores que não conhecemos são referentes a <span class="math inline">\(\alpha\)</span> e <span class="math inline">\(\beta\)</span>, uma vez que <span class="math inline">\(\epsilon\)</span> é obtido residualmente.</p>
+<p>Tudo o que precisamos fazer é <strong>estimar os parâmetros desconhecidos do modelo populacional</strong>. O modelo a ser estimado consiste em:</p>
+<p><span class="math display">\[\bar{Y_i} = \hat{\alpha} + \hat{\beta_1} \cdot \bar{X_i} + \hat{\epsilon_i}\]</span></p>
+<h4 id="mínimos-quadrados-ordinários-mqo-1">Mínimos Quadrados Ordinários (MQO)</h4>
+<p>Acionando o <strong>P1</strong>, temos:</p>
+<ul>
+<li><p><span class="math inline">\(\hat{\alpha} = \bar{Y_i} - [\hat{\beta_1} \cdot \bar{X_i}]\)</span></p></li>
+<li><p><span class="math inline">\(\hat{\beta_1} = \frac{\bar{Y_i} - \hat{\alpha}}{\bar{X_i}}\)</span></p></li>
+</ul></section><section id="modelo-de-regressão-linear-simples-rls-8" class="slide level2 smaller"><h2><span class="theme-subtopic">Modelo de Regressão Linear Simples (RLS)</span></h2>
+<p><span class="math display">\[\overline{Divorcio} = \hat{\alpha} + \hat{\beta_1} \cdot \overline{Margarina} + \hat{\epsilon}\]</span></p>
+<p>Aplicando em R:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a>modelo <span class="ot">&lt;-</span> <span class="fu">lm</span>(divorcio <span class="sc">~</span> margarina, <span class="at">data =</span> base)</span>
+<span id="cb1-2"><a href=""></a>modelo</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = divorcio ~ margarina, data = base)
+
+Coefficients:
+(Intercept)    margarina  
+     3.3086       0.2014  </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a><span class="fu">summary</span>(modelo) <span class="co"># indo além nos resultados</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = divorcio ~ margarina, data = base)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.05583 -0.01816 -0.01452  0.03601  0.04625 
+
+Coefficients:
+            Estimate Std. Error t value        Pr(&gt;|t|)    
+(Intercept) 3.308626   0.048032   68.88 0.0000000000022 ***
+margarina   0.201386   0.008735   23.05 0.0000000132968 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.03841 on 8 degrees of freedom
+Multiple R-squared:  0.9852,    Adjusted R-squared:  0.9833 
+F-statistic: 531.5 on 1 and 8 DF,  p-value: 0.0000000133</code></pre>
+</div>
+</div>
+</section><section id="modelo-de-regressão-linear-simples-rls-9" class="slide level2 smaller"><h2><span class="theme-subtopic">Modelo de Regressão Linear Simples (RLS)</span></h2>
+<p><span class="math display">\[\overline{Divorcio} = \hat{\alpha} + \hat{\beta_1} \cdot \overline{Margarina} + \hat{\epsilon}\]</span></p>
+<p>Aplicando em R:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href=""></a>modelo <span class="ot">&lt;-</span> <span class="fu">lm</span>(divorcio <span class="sc">~</span> margarina, <span class="at">data =</span> base)</span>
+<span id="cb5-2"><a href=""></a><span class="fu">summary</span>(modelo) <span class="co"># indo além nos resultados</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Call:
+lm(formula = divorcio ~ margarina, data = base)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.05583 -0.01816 -0.01452  0.03601  0.04625 
+
+Coefficients:
+            Estimate Std. Error t value        Pr(&gt;|t|)    
+(Intercept) 3.308626   0.048032   68.88 0.0000000000022 ***
+margarina   0.201386   0.008735   23.05 0.0000000132968 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 0.03841 on 8 degrees of freedom
+Multiple R-squared:  0.9852,    Adjusted R-squared:  0.9833 
+F-statistic: 531.5 on 1 and 8 DF,  p-value: 0.0000000133</code></pre>
+</div>
+</div>
+</section></section><section><section id="modelo-de-regressão-linear-1" class="title-slide slide level1 theme-first center"><h1>Modelo de regressão Linear</h1>
+<p>Propriedades do MRL</p>
+</section><section id="propriedades-do-mrl" class="slide level2 smaller"><h2><span class="theme-subtopic">Propriedades do MRL</span></h2>
+<p>Seguir Chein (2019) e Hoffman (2016)…</p>
 
 
 </section></section>
