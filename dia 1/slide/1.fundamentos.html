@@ -10,7 +10,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.6.42">
 <meta name="author" content="Thiago Cordeiro Almeida">
-<meta name="dcterms.date" content="2025-09-12">
+<meta name="dcterms.date" content="2025-09-14">
 <title>Regressão para pesquisas sociais</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -95,7 +95,7 @@
     code span.vs { color: #bae67e; } /* VerbatimString */
     code span.wa { color: #f28779; } /* Warning */
   </style>
-<link rel="stylesheet" href="1.fundamentos_files/libs/revealjs/dist/theme/quarto-c44a319cd0c48131f6bbe6e85cd4a0f7.css">
+<link rel="stylesheet" href="1.fundamentos_files/libs/revealjs/dist/theme/quarto-31728c5718a60723539d583603c05548.css">
 <link href="1.fundamentos_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
 <link href="1.fundamentos_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
 <link href="1.fundamentos_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -207,7 +207,7 @@ Thiago Cordeiro Almeida
     </div>
 </div>
 
-  <p class="date">September 12, 2025</p>
+  <p class="date">September 14, 2025</p>
 </section><section><section id="antes-de-começar" class="title-slide slide level1 center"><h1>Antes de começar…</h1>
 <p>lista de presença!</p>
 <p><img data-src="images/attention.gif" class="absolute" style="bottom: 10px; right: 50px; width: 240px; height: 240px; "></p>
@@ -218,15 +218,15 @@ Thiago Cordeiro Almeida
 </div><div class="column" style="width:70%;">
 <div style="text-align: left;">
 <ul>
-<li><p>Definições e noções acerca de dados quantitativos</p></li>
-<li><p>Conceitos estatísticos importantes</p></li>
-<li><p>Noção de correlação e causalidade</p></li>
-<li>
+<li class="fragment"><p>Definições e noções acerca de dados quantitativos</p></li>
+<li class="fragment"><p>Conceitos estatísticos importantes</p></li>
+<li class="fragment"><p>Noção de correlação e causalidade</p></li>
+<li class="fragment">
 <p>Modelagem de fenônemos sociais</p>
 <ul>
-<li><p>Intuição</p></li>
-<li><p>Limites</p></li>
-<li><p>Fundamentos</p></li>
+<li class="fragment"><p>Intuição</p></li>
+<li class="fragment"><p>Limites</p></li>
+<li class="fragment"><p>Fundamentos</p></li>
 </ul>
 </li>
 </ul>
@@ -240,6 +240,7 @@ Thiago Cordeiro Almeida
 <p>está ligada à forma de classificação dos tipos de dados existentes.</p>
 <div class="columns">
 <div class="column" style="width:50%;">
+<div>
 <p>Qualitativa</p>
 <ul>
 <li><p>Passível de ser compreendida</p></li>
@@ -247,7 +248,9 @@ Thiago Cordeiro Almeida
 <li><p>Possível de ser <strong>s</strong>ubjetivamente captada</p></li>
 </ul>
 <p><strong>Exemplos</strong>: <span class="gap">expressões culturais, interações sociais</span></p>
+</div>
 </div><div class="column fragment" style="width:50%;">
+<div>
 <p>Quantitativa</p>
 <ul>
 <li><p>Passível de ser contada/enumerada</p></li>
@@ -255,8 +258,33 @@ Thiago Cordeiro Almeida
 <li><p>Possível de ser <strong>o</strong>bjetivamente captada</p></li>
 </ul>
 <p><strong>Exemplos</strong>: <span class="gap">Fluxos de atividades culturais, peso das pessoas ao nascer</span></p>
+</div>
 </div></div>
-<p><img data-src="images/question.gif" class="absolute" style="bottom: 20px; right: 400px; width: 300px; height: 300px; "></p>
+</section><section id="natureza-dos-dados-quantitativos-1" class="slide level2 theme-subtopic smaller"><h2>Natureza dos dados quantitativos</h2>
+<p>está ligada à forma de classificação dos tipos de dados existentes.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div>
+<p>Qualitativa</p>
+<ul>
+<li><p>Passível de ser compreendida</p></li>
+<li><p>Passível de ser “interpretada”</p></li>
+<li><p>Possível de ser <strong>s</strong>ubjetivamente captada</p></li>
+</ul>
+<p><strong>Exemplos</strong>: <span class="gap">expressões culturais, interações sociais</span></p>
+</div>
+</div><div class="column fragment" style="width:50%;">
+<div>
+<p>Quantitativa</p>
+<ul>
+<li><p>Passível de ser contada/enumerada</p></li>
+<li><p>Passível de ser “precisada”</p></li>
+<li><p>Possível de ser <strong>o</strong>bjetivamente captada</p></li>
+</ul>
+<p><strong>Exemplos</strong>: <span class="gap">Fluxos de atividades culturais, peso das pessoas ao nascer</span></p>
+</div>
+</div></div>
+<p><img data-src="images/question.gif" class="absolute" style="bottom: 20px; right: 450px; width: 300px; height: 300px; "></p>
 </section></section><section><section id="algumas-definições-acerca-de-dados-quantitativos-1" class="title-slide slide level1 theme-first center"><h1>Algumas definições acerca de dados quantitativos</h1>
 <div style="text-align: left;">
 <p>Tipos de dados quantitativos</p>
@@ -268,15 +296,15 @@ Thiago Cordeiro Almeida
 <h3 id="dados-primários">Dados primários</h3>
 <p>Associado à coleta <em>direta</em> dos dados de interesse.</p>
 <ul>
-<li><p>Observação (não) participante;</p></li>
-<li><p>Questionário;</p></li>
-<li><p>Entrevistas; etc.</p></li>
+<li class="fragment"><p>Observação (não) participante;</p></li>
+<li class="fragment"><p>Questionário;</p></li>
+<li class="fragment"><p>Entrevistas; etc.</p></li>
 </ul>
 </div><div class="column" style="width:50%;">
 <h3 id="dados-secundários">Dados secundários</h3>
 <p>Outro/a pesquisador/a ou instituição coletou o dado anteriormente sem a participação do/a pesquisador/a ou projeto que o utilizará.</p>
 <ul>
-<li>Podem ser dados quantitativos ou qualitativos (!!!)</li>
+<li class="fragment">Podem ser dados quantitativos ou qualitativos (!!!)</li>
 </ul>
 </div></div>
 </section><section id="tipos-de-dados-quantitativos-1" class="slide level2 theme-subtopic smaller"><h2>Tipos de dados quantitativos</h2>
@@ -287,16 +315,16 @@ Thiago Cordeiro Almeida
 <p>São fontes de informação produzidas por instituições governamentais ou que estão sob a governança de instituições do governo.</p>
 <p><em>Em geral…</em></p>
 <ul>
-<li><p>Permitem acesso mais rápido e fácil às informações;</p></li>
-<li><p>Garantem uma maior confiabilidade dos dados;</p></li>
-<li><p>Asseguram um maior rigor metodológico de sua coleta.</p></li>
+<li class="fragment"><p>Permitem acesso mais rápido e fácil às informações;</p></li>
+<li class="fragment"><p>Garantem uma maior confiabilidade dos dados;</p></li>
+<li class="fragment"><p>Asseguram um maior rigor metodológico de sua coleta.</p></li>
 </ul>
 </div><div class="column" style="width:50%;">
 <p>Limitações</p>
 <ul>
-<li><p>Coleta dos dados não segue exatamente a proposta do uso do/a pesquisador/a;</p></li>
-<li><p>Questões éticas envolvidas;</p></li>
-<li><p>Validade dos dados; …</p></li>
+<li class="fragment"><p>Coleta dos dados não segue exatamente a proposta do uso do/a pesquisador/a;</p></li>
+<li class="fragment"><p>Questões éticas envolvidas;</p></li>
+<li class="fragment"><p>Validade dos dados; …</p></li>
 </ul>
 </div></div>
 </section><section id="tipos-de-dados-quantitativos-2" class="slide level2 theme-subtopic"><h2>Tipos de dados quantitativos</h2>
@@ -310,6 +338,7 @@ Thiago Cordeiro Almeida
 <h3 id="amostra">Amostra</h3>
 <p>Um fragmento, parte, subconjunto da população estudada. É definida, em geral, através de critérios explícitos.</p>
 <img data-src="images/pop-amostra.png" class="absolute r-stretch" style="bottom: 20px; right: 50px; width: 500px; height: 300px; "></section><section id="variáveis" class="slide level2 theme-subtopic smaller"><h2>Variáveis</h2>
+<div>
 <p>São características específicas extraídas de uma determinada população ou amostra.</p>
 <p><strong>Exemplos:</strong></p>
 <ul>
@@ -322,6 +351,7 @@ Thiago Cordeiro Almeida
 <li><p>número de animais de estimação em casa, …</p></li>
 </ul>
 <p>No mundo real, é necessário que “simplifiquemos” sua complexidade para que seja possível a sua análise.</p>
+</div>
 </section><section id="natureza-das-variáveis" class="slide level2 theme-subtopic smaller"><h2>Natureza das variáveis</h2>
 <p>São categorizações excludentes, <em>todavia, uma variável pode ser transformada em outra natureza/tipo</em>.</p>
 <div class="columns">
@@ -329,16 +359,16 @@ Thiago Cordeiro Almeida
 <h3 style="text-align: center;" id="qualitativa">Qualitativa</h3>
 <p>Valores apresentam atributos ou qualidades.</p>
 <ul>
-<li>
+<li class="fragment">
 <p><strong>Nominal</strong> (não ordenado) - pode ainda ser dividida em binária ou não.</p>
 <ul>
-<li>Ex.: estados, sexo, nomes.</li>
+<li class="fragment">Ex.: estados, sexo, nomes.</li>
 </ul>
 </li>
-<li>
+<li class="fragment">
 <p><strong>Ordinal</strong> (ordenado)</p>
 <ul>
-<li>Ex.: nível de escolaridade, <span class="fragment highlight-red">faixa de renda</span>, faixa de tamanho de cidade</li>
+<li class="fragment">Ex.: nível de escolaridade, <span class="fragment highlight-red">faixa de renda</span>, faixa de tamanho de cidade</li>
 </ul>
 </li>
 </ul>
@@ -346,16 +376,16 @@ Thiago Cordeiro Almeida
 <h3 style="text-align: center;" id="quantitativa">Quantitativa</h3>
 <p>Valores são expressos em números, apresentam quantidades.</p>
 <ul>
-<li>
+<li class="fragment">
 <p><strong>Discreta</strong> (contagem) - expressa em números inteiros.</p>
 <ul>
-<li>Ex.: anos de estudos, número de irmãos, número de domicílios.</li>
+<li class="fragment">Ex.: anos de estudos, número de irmãos, número de domicílios.</li>
 </ul>
 </li>
-<li>
+<li class="fragment">
 <p><strong>Contínua</strong> (medidas) - expressa em números infinitesimais.</p>
 <ul>
-<li>Ex.: Altura, peso, <span class="fragment highlight-red">renda</span>
+<li class="fragment">Ex.: Altura, peso, <span class="fragment highlight-red">renda</span>
 </li>
 </ul>
 </li>
@@ -364,13 +394,13 @@ Thiago Cordeiro Almeida
 </section><section id="tipos-de-medidas" class="slide level2 theme-subtopic smaller"><h2>Tipos de medidas</h2>
 <p>Para cada tipo de variável, há um tipo de medida que se adequa melhor à sua análise.</p>
 <ul>
-<li><p><strong>Números absolutos</strong></p></li>
-<li><p><strong>Números relativos</strong> (distribuição relativa; composição)</p></li>
-<li><p><strong>Proporção</strong> (numerador está contido no denominador)</p></li>
-<li><p><strong>Taxa</strong> (numerador <strong>não</strong> está contido no denominador)</p></li>
-<li><p><strong>Razão</strong> (divisão de duas grandezas quaisquer)</p></li>
-<li><p><strong>Medidas de tendência central</strong> (média, moda, mediana)</p></li>
-<li><p><strong>Medidas de variabilidade/dispersão</strong> (variância, desvio padrão, coeficiente de variação)</p></li>
+<li class="fragment"><p><strong>Números absolutos</strong></p></li>
+<li class="fragment"><p><strong>Números relativos</strong> (distribuição relativa; composição)</p></li>
+<li class="fragment"><p><strong>Proporção</strong> (numerador está contido no denominador)</p></li>
+<li class="fragment"><p><strong>Taxa</strong> (numerador <strong>não</strong> está contido no denominador)</p></li>
+<li class="fragment"><p><strong>Razão</strong> (divisão de duas grandezas quaisquer)</p></li>
+<li class="fragment"><p><strong>Medidas de tendência central</strong> (média, moda, mediana)</p></li>
+<li class="fragment"><p><strong>Medidas de variabilidade/dispersão</strong> (variância, desvio padrão, coeficiente de variação)</p></li>
 </ul></section><section id="tipos-de-análises" class="slide level2 theme-subtopic smaller"><h2>Tipos de análises</h2>
 <p>Há níveis de análises que são necessários de serem explorados na interação de fenômenos/variáveis.</p>
 <div class="columns">
@@ -442,24 +472,25 @@ Thiago Cordeiro Almeida
 </div></div>
 </section></section><section id="pausa" class="title-slide slide level1 theme-stop center"><h1>Pausa!</h1>
 <div style="display: flex; justify-content: flex-end; align-items: center; height: 100vh;">
-<p><img src="images/stop.gif" style="border-radius: 50%; border:5px solid #708d81; width:450px; height:auto;"></p>
+<img src="images/stop.gif" style="border-radius: 50%; border:5px solid #708d81; width:450px; height:auto;">
 </div>
 </section><section><section id="relação-entre-fenômenos-sociais-associação-ou-efeito" class="title-slide slide level1 theme-first center"><h1>Relação entre fenômenos sociais: associação ou efeito?</h1>
 <p>Quando e como podemos dizer que um fenômeno social interage com o outro?</p>
 </section><section id="formas-de-se-captar-a-interação-entre-fenômenos-sociais" class="slide level2 theme-subtopic"><h2>Formas de se captar a interação entre fenômenos sociais</h2>
 <p>O principal intuíto por trás da ideia de analisar dois fenômenos sociais conjuntamente está na possível <strong>relação entre eles</strong>.</p>
 <ul>
-<li><p>Isso carrega uma ideia subjacente de que eles apresentam uma <strong>dependência</strong>/<strong>interação</strong> um com o outro.</p></li>
-<li><p>Partindo dessa ideia, como se quantifica a interação entre fenômenos sociais?</p></li>
+<li class="fragment"><p>Isso carrega uma ideia subjacente de que eles apresentam uma <strong>dependência</strong>/<strong>interação</strong> um com o outro.</p></li>
+<li class="fragment"><p>Partindo dessa ideia, como se quantifica a interação entre fenômenos sociais?</p></li>
 </ul></section><section id="formas-de-se-captar-a-interação-entre-fenômenos-sociais-1" class="slide level2 theme-subtopic smaller font-size-smallest"><h2>Formas de se captar a interação entre fenômenos sociais</h2>
 <p>Quantificação da interação entre fenômenos sociais</p>
 <ol type="1">
-<li>Estabeleça a natureza da relação entre eles</li>
+<li class="fragment">Estabeleça a natureza da relação entre eles</li>
 </ol>
 <ul>
-<li>Em geral, podemos estabelecer a relação entre fenômenos sociais através de: (i) <strong>abordagem teórica</strong>; (ii) <strong>evidênciais empíricas</strong>; ou (iii) ambos!</li>
+<li class="fragment">Em geral, podemos estabelecer a relação entre fenômenos sociais através de: (i) <strong>abordagem teórica</strong>; (ii) <strong>evidênciais empíricas</strong>; ou (iii) ambos!</li>
 </ul>
-<img data-src="images/programa-pe-meia.png" class="absolute r-stretch" style="bottom: 20px; right: 150px; "></section><section id="formas-de-se-captar-a-interação-entre-fenômenos-sociais-2" class="slide level2 theme-subtopic smaller"><h2>Formas de se captar a interação entre fenômenos sociais</h2>
+<p><img data-src="images/programa-pe-meia.png" class="absolute" style="bottom: 20px; right: 150px; width: 500px; height: 300px; "></p>
+</section><section id="formas-de-se-captar-a-interação-entre-fenômenos-sociais-2" class="slide level2 theme-subtopic smaller"><h2>Formas de se captar a interação entre fenômenos sociais</h2>
 <p>Quantificação da interação entre fenômenos sociais</p>
 <p>.2. Explore a relação entre eles empíricamente</p>
 <div class="columns">
@@ -478,11 +509,11 @@ Thiago Cordeiro Almeida
 </section><section id="formas-de-se-captar-a-interação-entre-fenômenos-sociais-3" class="slide level2 theme-subtopic smaller"><h2>Formas de se captar a interação entre fenômenos sociais</h2>
 <p>Quantificação da interação entre fenômenos sociais</p>
 <ol start="3" type="1">
-<li>Avalie a magnitude da interação estatísticamente</li>
+<li class="fragment">Avalie a magnitude da interação estatísticamente</li>
 </ol>
 <ul>
-<li><p>Há diferentes medidas estatísticas para avaliar se há e a magnitude da relação entre fenômenos sociais.</p></li>
-<li><p>Elas nos apontam (i) se há diferença estatisticamente significativa; (ii) a força dessa diferença; e (iii) a direção dessa diferença.</p></li>
+<li class="fragment"><p>Há diferentes medidas estatísticas para avaliar se há e a magnitude da relação entre fenômenos sociais.</p></li>
+<li class="fragment"><p>Elas nos apontam (i) se há diferença estatisticamente significativa; (ii) a força dessa diferença; e (iii) a direção dessa diferença.</p></li>
 </ul></section><section id="formas-de-se-captar-a-interação-entre-fenômenos-sociais-4" class="slide level2 theme-subtopic smaller font-size-smallest"><h2>Formas de se captar a interação entre fenômenos sociais</h2>
 <p>Quantificação da interação entre fenômenos sociais</p>
 <div class="columns">
@@ -497,8 +528,8 @@ Thiago Cordeiro Almeida
 <h3 class="r-fit-text" style="text-align: center;" id="direção-da-diferença">Direção da diferença</h3>
 <p>A direção da relação nos diz se é:</p>
 <ul>
-<li><p><strong>Relação direta:</strong> aumento em <span class="math inline">\(X\)</span> leva a um aumento em <span class="math inline">\(Y\)</span> (vice-versa).</p></li>
-<li><p><strong>Relação indireta:</strong> aumento em <span class="math inline">\(X\)</span> leva a uma redução em <span class="math inline">\(Y\)</span> (vice-versa).</p></li>
+<li class="fragment"><p><strong>Relação direta:</strong> aumento em <span class="math inline">\(X\)</span> leva a um aumento em <span class="math inline">\(Y\)</span> (vice-versa).</p></li>
+<li class="fragment"><p><strong>Relação indireta:</strong> aumento em <span class="math inline">\(X\)</span> leva a uma redução em <span class="math inline">\(Y\)</span> (vice-versa).</p></li>
 </ul>
 </div></div>
 </section><section id="formas-de-se-captar-a-interação-entre-fenômenos-sociais-5" class="slide level2 theme-subtopic smaller font-size-smallest"><h2>Formas de se captar a interação entre fenômenos sociais</h2>
@@ -510,19 +541,19 @@ Thiago Cordeiro Almeida
     Pearson's product-moment correlation
 
 data:  renda and enem_mat
-t = 17.109, df = 998, p-value &lt; 2.2e-16
+t = 15.613, df = 998, p-value &lt; 2.2e-16
 alternative hypothesis: true correlation is not equal to 0
 95 percent confidence interval:
- 0.4268270 0.5227786
+ 0.3918396 0.4915611
 sample estimates:
       cor 
-0.4762192 </code></pre>
+0.4430699 </code></pre>
 </div>
 </div>
 <p>Qual a conclusão que teríamos?</p>
 <ol type="a">
-<li><p>Um aumento da renda teria um efeito direto de 50% no aumento da nota de matemática.</p></li>
-<li><p>Um aumento da nota de matemática teria um efeito direto de 50% no aumento da renda.</p></li>
+<li class="fragment"><p>Um aumento da renda teria um efeito direto de 50% no aumento da nota de matemática.</p></li>
+<li class="fragment"><p>Um aumento da nota de matemática teria um efeito direto de 50% no aumento da renda.</p></li>
 </ol></section></section><section><section id="relação-entre-fenômenos-sociais-associação-ou-efeito-1" class="title-slide slide level1 theme-first center"><h1>Relação entre fenômenos sociais: associação ou efeito?</h1>
 <p>Correlação e causalidade</p>
 </section><section id="correlação-e-causalidade" class="slide level2 theme-subtopic smaller"><h2>Correlação e causalidade</h2>
@@ -533,12 +564,12 @@ sample estimates:
 <div class="column" style="width:50%;">
 <h4 style="text-align: center;" id="potencialidades">Potencialidades</h4>
 <ul>
-<li>Sabe-se em que medida ambos os fenômenos se interagem!</li>
+<li class="fragment">Sabe-se em que medida ambos os fenômenos se interagem!</li>
 </ul>
 </div><div class="column" style="width:50%;">
 <h4 style="text-align: center;" id="limitações">Limitações</h4>
 <ul>
-<li>Não se sabe se mudanças em <span class="math inline">\(X\)</span> levam a mudanças em <span class="math inline">\(Y\)</span> ou o contrário.</li>
+<li class="fragment">Não se sabe se mudanças em <span class="math inline">\(X\)</span> levam a mudanças em <span class="math inline">\(Y\)</span> ou o contrário.</li>
 </ul>
 </div></div>
 </section><section id="correlação-e-causalidade-1" class="slide level2 theme-subtopic smaller font-size-smallest"><h2>Correlação e causalidade</h2>
@@ -549,14 +580,14 @@ sample estimates:
 <div class="column" style="width:50%;">
 <h4 style="text-align: center;" id="potencialidades-1">Potencialidades</h4>
 <ul>
-<li><p>Mudanças em <span class="math inline">\(X\)</span> levam à mudanças em <span class="math inline">\(Y\)</span> e não o contrário.</p></li>
-<li><p>É muito mais poderoso quando se pensa em alocação de recursos públicos, privados ou até mesmo o estabelecimento de relações teóricas.</p></li>
+<li class="fragment"><p>Mudanças em <span class="math inline">\(X\)</span> levam à mudanças em <span class="math inline">\(Y\)</span> e não o contrário.</p></li>
+<li class="fragment"><p>É muito mais poderoso quando se pensa em alocação de recursos públicos, privados ou até mesmo o estabelecimento de relações teóricas.</p></li>
 </ul>
 </div><div class="column" style="width:50%;">
 <h4 style="text-align: center;" id="limitações-1">Limitações</h4>
 <ul>
-<li><p>Embora poderoso, estabelecer relações diretas entre fenômenos sociais é quase impossível de ser feito na vida real de pesquisa.</p></li>
-<li><p>Fenômenos sociais estão intrínsecamente relacionados entre eles, sendo necessário abordagens mais complexas para endereçar a causalidade (e até mesmo a associação).</p></li>
+<li class="fragment"><p>Embora poderoso, estabelecer relações diretas entre fenômenos sociais é quase impossível de ser feito na vida real de pesquisa.</p></li>
+<li class="fragment"><p>Fenômenos sociais estão intrínsecamente relacionados entre eles, sendo necessário abordagens mais complexas para endereçar a causalidade (e até mesmo a associação).</p></li>
 </ul>
 </div></div>
 </section></section><section><section id="modelagem-de-fenômenos-sociais" class="title-slide slide level1 theme-first center"><h1>Modelagem de fenômenos sociais</h1>
@@ -565,23 +596,23 @@ sample estimates:
 <p><img data-src="images/models-augmented-reality.png" class="absolute" style="bottom: 20px; right: 5px; width: 300px; height: 300px; "> A modelagem estatística é um exercício de estabelecimento da relação entre diferentes fenômenos, neste caso sociais.</p>
 <p>Isso parte do pressuposto de que <em>conhecemos</em> a <em>verdadeira</em> <strong>fórmula/lei</strong> que rege a relação entre os fenômenos estabelecidos. Elas podem ser:</p>
 <ul>
-<li><p>Lineares;</p></li>
-<li><p>Quadráticas;</p></li>
-<li><p>Logarítmicas;</p></li>
-<li><p>Exponenciais; …</p></li>
+<li class="fragment"><p>Lineares;</p></li>
+<li class="fragment"><p>Quadráticas;</p></li>
+<li class="fragment"><p>Logarítmicas;</p></li>
+<li class="fragment"><p>Exponenciais; …</p></li>
 </ul>
 <h4 id="todos-os-modelos-estão-errados-mas-alguns-são-úteis-george-e.-p.-box">“Todos os modelos estão errados, mas alguns são úteis” George E. P. Box</h4>
 </section><section id="o-que-é-e-por-que-modelar-1" class="slide level2 theme-subtopic smaller"><h2>O que é e por que modelar?</h2>
 <p>A partir da realidade em que conhecemos, formulamos uma relação matemática que nos permita avaliar e, <em>se assegurados alguns pressupostos</em>, generalizar as relações estabelecidas em uma pequena <strong>amostra</strong> da realidade para toda a <strong>população</strong> a que nossos dados são representativos.</p>
 <p>Para isso, precisamos:</p>
 <ol type="1">
-<li><p>Saber o motivo pelo qual estamos modelando: qual a motivação?</p></li>
-<li><p>Estabelecer a relação entre os fenômenos a serem modelados: qual tipo de relação eles têm?</p></li>
-<li><p>Explorar e descrever a relação entre eles: análise exploratória dos dados!</p></li>
-<li><p>Construir o modelo para a população a que queremos generalizar</p></li>
-<li><p>Implementar o modelo populacionar para a amostra da população que temos acesso</p></li>
-<li><p>Avaliar a validade do nosso modelo</p></li>
-<li><p>Estabelecer as conclusões possíveis com nossos modelos</p></li>
+<li class="fragment"><p>Saber o motivo pelo qual estamos modelando: qual a motivação?</p></li>
+<li class="fragment"><p>Estabelecer a relação entre os fenômenos a serem modelados: qual tipo de relação eles têm?</p></li>
+<li class="fragment"><p>Explorar e descrever a relação entre eles: análise exploratória dos dados!</p></li>
+<li class="fragment"><p>Construir o modelo para a população a que queremos generalizar</p></li>
+<li class="fragment"><p>Implementar o modelo populacionar para a amostra da população que temos acesso</p></li>
+<li class="fragment"><p>Avaliar a validade do nosso modelo</p></li>
+<li class="fragment"><p>Estabelecer as conclusões possíveis com nossos modelos</p></li>
 </ol></section><section id="motivações-para-se-modelar-fenômenos-sociais" class="slide level2 theme-subtopic smaller font-size-smallest"><h2>Motivações para se modelar fenômenos sociais</h2>
 <p>Pode-se estar interessado em predizer tendências futuras para determinado fenômeno sociais de interesse ou compreender em que medida um fenômeno afeta outro.</p>
 <div class="columns">
@@ -589,8 +620,8 @@ sample estimates:
 <h3 style="text-align: center;" id="predição">Predição</h3>
 <p>Sabendo-se quais são os determinantes de um determinado fenômeno social <span class="math inline">\(Y\)</span>, pode-se predizer o comportamento futuro <span class="math inline">\(\hat{Y}\)</span> com base nas mudanças que ocorrerão em seus determinantes.</p>
 <ul>
-<li><p>São chamados de modelos preditivos.</p></li>
-<li><p>Muito utilizados, atualmente, em modelos de aprendizado de máquina (<em>machine learning</em>)<sup>1</sup>.</p></li>
+<li class="fragment"><p>São chamados de modelos preditivos.</p></li>
+<li class="fragment"><p>Muito utilizados, atualmente, em modelos de aprendizado de máquina (<em>machine learning</em>)<sup>1</sup>.</p></li>
 </ul>
 </div><div class="column" style="width:50%;">
 <h3 style="text-align: center;" id="relação-entre-fenômenos">Relação entre fenômenos</h3>
@@ -610,10 +641,17 @@ sample estimates:
 </section><section id="isso-é-tudo-para-hoje" class="slide level2 theme-next"><h2>Isso é tudo para hoje!</h2>
 <p>Para próxima aula:</p>
 <ol type="1">
-<li>Exercício sobre correlação espúria</li>
-<li>Leitura de material para aula de hoje (caso não tenha lido)</li>
-<li>Leitura de material para a aula seguinte (Ver ementa)</li>
-</ol></section></section><section id="section" class="title-slide slide level1 cebrap-fim smaller center"><h1></h1>
+<li class="fragment">Exercício sobre correlação espúria</li>
+<li class="fragment">Leitura de material para aula de hoje (caso não tenha lido)</li>
+<li class="fragment">Leitura de material para a aula seguinte (Ver ementa)</li>
+</ol></section><section id="isso-é-tudo-para-hoje-1" class="slide level2 theme-next"><h2>Isso é tudo para hoje!</h2>
+<p>Orientações sobre o exercício:</p>
+<ul>
+<li class="fragment"><p>Explore os dados contidos na pasta <code>pratica &gt; dados_correlacao.csv</code></p></li>
+<li class="fragment"><p>Plot um gráfico das duas variáveis disponíveis</p></li>
+<li class="fragment"><p>Analise a correlação de Pearson</p></li>
+<li class="fragment"><p>Apresente suas hipóteses sobre o que explica isso.</p></li>
+</ul></section></section><section id="section" class="title-slide slide level1 cebrap-fim smaller center"><h1></h1>
 <p><img data-src="images/cebrap50.png" class="absolute" style="top: -90px; right: 460px; width: 100px; height: 100px; "></p>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -637,7 +675,7 @@ sample estimates:
 <p><strong>Ministrante</strong></p>
 <p>Thiago Cordeiro Almeida</p>
 <p>E-mail: <a href="thiagocordalmeida@gmail.com">thiagocordalmeida@gmail.com</a></p>
-<p>Github: <a href="github.com/thiagocalm"><span class="citation" data-cites="thiagocalm">@thiagocalm</span></a></p>
+<p>Github: <a href="github.com/thiagocalm">@thiagocalm</a></p>
 </div>
 
 
