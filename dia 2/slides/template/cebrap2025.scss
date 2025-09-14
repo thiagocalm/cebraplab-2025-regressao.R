@@ -114,6 +114,28 @@ $overlayElementFgColor: 240, 240, 240 !default;
   }
 }
 
+.theme-subtopic-assumption {
+  &:is(.slide-background) {
+    background-color: $base3;
+  }
+  h2 {
+    margin-left: 100px;
+    color: $cebrapgreen !important;
+    text-align: left;
+  }
+
+  h3, p, pre {
+    margin-left: 100px;
+    color: $cebrapgreen !important;
+    text-align: left;
+  }
+  h4, h5 {
+    margin-left: 100px;
+    color: $orange !important;
+    text-align: left;
+  }
+}
+
 .theme-stop {
   &:is(.slide-background) {
     background-color: $base3;
