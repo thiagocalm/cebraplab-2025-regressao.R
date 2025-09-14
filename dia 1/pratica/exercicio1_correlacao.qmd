@@ -66,8 +66,7 @@ ifelse(!require(pacman),install.packages("pacman"),require(pacman))
 p_load(tidyverse) # importando pacote que usaremos, tidyverse
 
 # importando dados
-margarina = c(8.2,7,6.5,5.3,5.2,4,4.6,4.5,4.2,3.7) # dados de margarina
-divorcio = c(5,4.7,4.6,4.4,4.3,4.1,4.2,4.2,4.2,4.1) # dados de divorcio
+base <- read_csv2("dados_correlacao.csv")
 anos = seq(from = 2000,to = 2009,by = 1) # anos
 label_margarina = "Consumo per capita de margarina nos EUA" # rótulo da variavel
 label_divorcio = "Taxa de divórcio no estado de Maine (EUA)" # rótulo da variavel
@@ -82,11 +81,13 @@ Agora que criamos as variáveis com os dados, vamos criar uma base
 # obs: vamos criar uma base de classe 'tibble'
 # por ser mais facil de trabalhar com pipelines
 
-base <- tibble(
-  margarina,
-  divorcio,
-  anos
-)
+# base <- tibble(
+#   margarina,
+#   divorcio,
+#   anos
+# )
+
+base <- as.tibble(base)
 
 ```
 

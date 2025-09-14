@@ -2,34 +2,24 @@
 # ajustes gerais
 options(scipen = 99999)
 
-# pacotes necessarios
-library(pacman)
-p_load(tidyverse)
+## pacotes necessarios
+# instalando pacote de gerenciador de pacotes, pacman
+ifelse(!require(pacman),install.packages("pacman"),require(pacman))
+p_load(tidyverse) # importando pacote que usaremos, tidyverse
 
 # importando dados
-margarina = c(8.2,7,6.5,5.3,5.2,4,4.6,4.5,4.2,3.7)
-divorcio = c(5,4.7,4.6,4.4,4.3,4.1,4.2,4.2,4.2,4.1)
-anos = seq(from = 2000,to = 2009,by = 1)
-label_margarina = "Consumo per capita de margarina nos EUA"
-label_divorcio = "Taxa de divórcio no estado de Maine (EUA)"
+base <- read_csv2("dados_correlacao.csv")
+anos = seq(from = 2000,to = 2009,by = 1) # anos
+label_margarina = "Consumo per capita de margarina nos EUA" # rótulo da variavel
+label_divorcio = "Taxa de divórcio no estado de Maine (EUA)" # rótulo da variavel
 
 # criando base de dados com essas informações
 # obs: vamos criar uma base de classe 'tibble' por ser mais facil de trabalhar com pipelines
 
-base <- tibble(
-  margarina,
-  divorcio,
-  anos
-)
-
-
-
-## plotando ambos em um mesmo gráfico
-
-# plot graph of them here!!!!!!!
+base <- as.tibble(base)
 
 ## Exploração dos dados
-# Querosene X Esquilo
+# Margarina X divorcio
 
 # Como são duas variáveis contínuas, optarei por plotar ambas em um gráfico de dispersão
 
