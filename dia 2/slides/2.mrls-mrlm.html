@@ -6,18 +6,18 @@
 <script src="2.mrls-mrlm_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="2.mrls-mrlm_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="2.mrls-mrlm_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="2.mrls-mrlm_files/libs/quarto-html/quarto-syntax-highlighting-d2bbf9acb00b033fb60fab8fa7f66143.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.6.42">
-
-  <meta name="author" content="Thiago Cordeiro Almeida">
-  <meta name="dcterms.date" content="2025-09-14">
-  <title>Regressão para pesquisas sociais</title>
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="2.mrls-mrlm_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="2.mrls-mrlm_files/libs/revealjs/dist/reveal.css">
-  <style>
+<link href="2.mrls-mrlm_files/libs/quarto-html/quarto-syntax-highlighting-d2bbf9acb00b033fb60fab8fa7f66143.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.42">
+<meta name="author" content="Thiago Cordeiro Almeida">
+<meta name="dcterms.date" content="2025-09-14">
+<title>Regressão para pesquisas sociais</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+<link rel="stylesheet" href="2.mrls-mrlm_files/libs/revealjs/dist/reset.css">
+<link rel="stylesheet" href="2.mrls-mrlm_files/libs/revealjs/dist/reveal.css">
+<style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -30,14 +30,14 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="2.mrls-mrlm_files/libs/revealjs/dist/theme/quarto-31728c5718a60723539d583603c05548.css">
-  <link href="2.mrls-mrlm_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="2.mrls-mrlm_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="2.mrls-mrlm_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="2.mrls-mrlm_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
-  <link href="2.mrls-mrlm_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
-  <link href="2.mrls-mrlm_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
-  <style type="text/css">
+<link rel="stylesheet" href="2.mrls-mrlm_files/libs/revealjs/dist/theme/quarto-31728c5718a60723539d583603c05548.css">
+<link href="2.mrls-mrlm_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+<link href="2.mrls-mrlm_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+<link href="2.mrls-mrlm_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+<link href="2.mrls-mrlm_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+<link href="2.mrls-mrlm_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+<link href="2.mrls-mrlm_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+<style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
       overflow: auto;
@@ -124,13 +124,13 @@
       margin-right: 0; 
     }
   </style>
+<script src="2.mrls-mrlm_files/libs/kePrint-0.0.1/kePrint.js"></script><link href="2.mrls-mrlm_files/libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Regressão para pesquisas sociais</h1>
+<section id="title-slide" class="quarto-title-block center"><h1 class="title">Regressão para pesquisas sociais</h1>
   <p class="subtitle"><span style="font-size:1em;"> Aula 2 - Modelagem de dados de natureza contínua </span></p>
 
 <div class="quarto-title-authors">
@@ -139,30 +139,21 @@
 Thiago Cordeiro Almeida 
 </div>
         <p class="quarto-title-affiliation">
-            Doutorando, Centre d’Estudis Demogràfics (CED, Espanha) <br> Pesquisador Assistente, Cebrap <br>
-          </p>
+            Doutorando, Centre d’Estudis Demogràfics (CED, Espanha) <br> Pesquisador Assistente, Cebrap <br></p>
     </div>
 </div>
 
   <p class="date">September 14, 2025</p>
-</section>
-<section id="antes-de-começar" class="title-slide slide level1 center">
-<h1>Antes de começar…</h1>
+</section><section id="antes-de-começar" class="title-slide slide level1 center"><h1>Antes de começar…</h1>
 <p>lista de presença!</p>
 <p><img data-src="images/attention.gif" class="absolute" style="bottom: 10px; right: 50px; width: 240px; height: 240px; "></p>
-</section>
-
-<section>
-<section id="antes-de-começar-2" class="title-slide slide level1 center">
-<h1>Antes de começar (2)…</h1>
+</section><section><section id="antes-de-começar-2" class="title-slide slide level1 center"><h1>Antes de começar (2)…</h1>
 <ul>
 <li><p>Dúvidas gerais sobre a aula anterior?</p></li>
 <li><p>Exercício da aula anterior: dúvidas, comentários, considerações?</p></li>
 </ul>
 <p><img data-src="images/question.gif" class="absolute" style="bottom: -150px; right: 0px; width: 200px; height: 200px; "></p>
-</section>
-<section id="estrutura-da-aula" class="slide level2 theme-next smaller">
-<h2>Estrutura da aula</h2>
+</section><section id="estrutura-da-aula" class="slide level2 theme-next smaller"><h2>Estrutura da aula</h2>
 <div class="columns">
 <div class="column" style="width:30%;">
 <p>Tópicos que vamos cobrir hoje são:</p>
@@ -172,61 +163,55 @@ Thiago Cordeiro Almeida
 <li><p>Fluxo de análise de dados contínuos com o uso de modelagem</p></li>
 <li><p>Conceitos, noções (e jargões) econométricos</p></li>
 <li><p>Exemplo empírico do dia</p></li>
-<li><p>Regressão linear simples</p>
+<li>
+<p>Regressão linear simples</p>
 <ul>
 <li><p>Intuição e formalização</p></li>
 <li><p>Propriedade e pressupostos</p></li>
 <li><p>Mão na massa!</p></li>
-</ul></li>
-<li><p>Regressão linear multivariada</p>
+</ul>
+</li>
+<li>
+<p>Regressão linear multivariada</p>
 <ul>
 <li><p>Intuição e formalização</p></li>
 <li><p>Novidades em relação à regressão linear simples</p></li>
 <li><p>Mão na massa!: interpretação</p></li>
-</ul></li>
+</ul>
+</li>
 </ul>
 </div>
 </div></div>
-</section></section>
-<section>
-<section id="fluxo-de-análise-de-dados-contínuos" class="title-slide slide level1 theme-first center">
-<h1>Fluxo de análise de dados contínuos</h1>
+</section></section><section><section id="fluxo-de-análise-de-dados-contínuos" class="title-slide slide level1 theme-first center"><h1>Fluxo de análise de dados contínuos</h1>
 <div style="text-align: left;">
 <p>A partir do uso de modelos</p>
 </div>
-</section>
-<section id="fluxo-de-análise-de-dados" class="slide level2 theme-subtopic smaller">
-<h2>Fluxo de análise de dados</h2>
+</section><section id="fluxo-de-análise-de-dados" class="slide level2 theme-subtopic smaller"><h2>Fluxo de análise de dados</h2>
 <p><img data-src="images/fluxo-analise.png" class="absolute" style="bottom: 10px; right: 75px; width: 1300px; height: 650px; "></p>
-</section></section>
-<section>
-<section id="conceitos-e-definições-estatísticas-importantes" class="title-slide slide level1 theme-first center">
-<h1>Conceitos e definições estatísticas importantes</h1>
+</section></section><section><section id="conceitos-e-definições-estatísticas-importantes" class="title-slide slide level1 theme-first center"><h1>Conceitos e definições estatísticas importantes</h1>
 <div style="text-align: left;">
 <p>Modelos probabilísticos</p>
 </div>
-</section>
-<section id="modelos-probabilísticos" class="slide level2">
-<h2><span class="theme-subtopic smaller">Modelos probabilísticos</span></h2>
+</section><section id="modelos-probabilísticos" class="slide level2"><h2><span class="theme-subtopic smaller">Modelos probabilísticos</span></h2>
 <ul>
 <li><p>Na aula anterior, exploramos diferentes formas de analisar descritivamente a distribuição de determinado fenômeno através de diferentes tipos de medida.</p></li>
 <li><p>Em termos estatísticos, para cada distribuição observada em uma amostra, há (<em>ou haveria</em>) um modelo teórico que descreveria estatísticamente essa mesma distribuição.</p></li>
-</ul>
-</section>
-<section id="modelos-probabilísticos-1" class="slide level2 font-size-smallest">
-<h2><span class="theme-subtopic">Modelos probabilísticos</span></h2>
+</ul></section><section id="modelos-probabilísticos-1" class="slide level2 font-size-smallest"><h2><span class="theme-subtopic">Modelos probabilísticos</span></h2>
 <p><strong>Exemplo:</strong> programa pé-de-meia.</p>
 <p>Estamos interessados em saber a parcela dos estudantes que tiveram nota em matemática acima da média no ENEM dentro do universo de pessoas que participaram do programa.</p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <h4 id="abordagem-empírica">Abordagem empírica</h4>
 <ol type="1">
-<li>Calcularia a proporção de pessoas que tiveram a média acima como: <span class="math display">\[p(X)=\frac{e}{n}\]</span></li>
+<li>Calcularia a proporção de pessoas que tiveram a média acima como: <span class="math display">\[p(X)=\frac{e}{n}\]</span>
+</li>
 </ol>
 <p>Em que,</p>
 <ul>
-<li><span class="math inline">\(e\)</span>: evento, no caso, num. acima da média;</li>
-<li><span class="math inline">\(n\)</span>: observações, no caso, num. estudantes no ENEM.</li>
+<li>
+<span class="math inline">\(e\)</span>: evento, no caso, num. acima da média;</li>
+<li>
+<span class="math inline">\(n\)</span>: observações, no caso, num. estudantes no ENEM.</li>
 </ul>
 </div><div class="column" style="width:50%;">
 <h4 id="abordagem-probabilística">Abordagem probabilística</h4>
@@ -242,19 +227,14 @@ Thiago Cordeiro Almeida
 <li><p>Estimaria a probabilidade desse evento de interesse ocorrer.</p></li>
 </ol>
 </div></div>
-</section>
-<section id="modelos-probabilísticos-2" class="slide level2 smaller">
-<h2><span class="theme-subtopic">Modelos probabilísticos</span></h2>
+</section><section id="modelos-probabilísticos-2" class="slide level2 smaller"><h2><span class="theme-subtopic">Modelos probabilísticos</span></h2>
 <p>Sob o pressuposto de que nossa amostra de estudantes que participaram do ENEM e do programa são <strong>i.i.d.</strong><sup>1</sup>, o que obteríamos calculando via abordagem empírica seria <em>exatamente</em> o mesmo ao calcular via abordagem probabilística!!!</p>
 <p>Ou seja,</p>
 <ul>
 <li><p>Podemos estudar propriedades estatísticas dos fenômenos sociais em que trabalhamos não só restritos a uma determinada amostra em que temos, mas fazendo <em>generalizações</em> desses fenômenos;</p></li>
 <li><p>Utilizando modelos que representem esses fenômenos, conseguimos ter estimativas do comportamento deles que incorporem <em>incertezas</em> inerentes a eles.</p></li>
 <li><p>Modelagens são formas de adicionar complexidade ao estudo desses fenômenos a partir das suas interações com outros fenômenos sociais.</p></li>
-</ul>
-<aside><ol class="aside-footnotes"><li id="fn1"><p><strong>i.i.d.</strong> = <strong>i</strong>ndependentes e <strong>i</strong>dênticamente <strong>d</strong>istribuídas.</p></li></ol></aside></section>
-<section id="modelos-probabilísticos-3" class="slide level2 smaller">
-<h2><span class="theme-subtopic">Modelos probabilísticos</span></h2>
+</ul><aside><ol class="aside-footnotes"><li id="fn1"><p><strong>i.i.d.</strong> = <strong>i</strong>ndependentes e <strong>i</strong>dênticamente <strong>d</strong>istribuídas.</p></li></ol></aside></section><section id="modelos-probabilísticos-3" class="slide level2 smaller"><h2><span class="theme-subtopic">Modelos probabilísticos</span></h2>
 <h3 id="relação-entre-modelos-probabilísticos-e-modelos-de-regressão">Relação entre modelos probabilísticos e modelos de regressão</h3>
 <p>O que fazemos em nossos modelos de regressão é, basicamente, estudar as propriedades da nossa <strong>variável de estudo</strong> através de relações associadas ao melhor modelo probabilístico que a descreve.</p>
 <p>Com isso, podemos:</p>
@@ -262,23 +242,72 @@ Thiago Cordeiro Almeida
 <li><p>Prever resultados futuros condicionados a um conjunto de outras variáveis (probabilidade condicional a um conjunto de <span class="math inline">\(X\)</span>)</p></li>
 <li><p>Estabelecer em que medida variando uma das variáveis, seus valores são afetados (probabilidade condicional a <span class="math inline">\(X\)</span>)</p></li>
 <li><p>Obter valores esperados e variabilidade de seus resultados (esperança e variância)</p></li>
-</ul>
-</section></section>
-<section id="conceitos-e-definições-estatísticas-importantes-1" class="title-slide slide level1 theme-first center">
-<h1>Conceitos e definições estatísticas importantes</h1>
+</ul></section></section><section><section id="conceitos-e-definições-estatísticas-importantes-1" class="title-slide slide level1 theme-first center"><h1>Conceitos e definições estatísticas importantes</h1>
 <div style="text-align: left;">
 <p>Variável aleatória (<em>v.a.</em>)</p>
 </div>
-</section>
+</section><section id="variável-aleatória" class="slide level2 smaller"><h2><span class="theme-subtopic">Variável aleatória</span></h2>
+<p>Uma variável <span class="math inline">\(X\)</span> é aleatória se cada um de seus valores – ou um intervalo entre valores – está associado a uma probabilidade <span class="math inline">\(p(X)\)</span>.</p>
+<h3 id="exemplo">Exemplo</h3>
+<p>Vamos voltar ao <strong>pé-de-meia</strong>.</p>
+<p>Poderíamos dizer que para a variável <span class="math inline">\(X\)</span> definida como ter nota de matemática no ENEM acima da média dos demais participantes do programa, há uma probabilidade <span class="math inline">\(p(X)\)</span>, de modo que:</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table caption-top" data-quarto-postprocess="true" style="margin-left: auto; margin-right: auto;">
+<thead><tr class="header">
+<th style="text-align: center;" data-quarto-table-cell-role="th">x</th>
+<th style="text-align: center;" data-quarto-table-cell-role="th">px</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">Abaixo (x = 0)</td>
+<td style="text-align: center;">0.67</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">Acima (x = 1)</td>
+<td style="text-align: center;">0.33</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section><section id="variável-aleatória-1" class="slide level2 smaller"><h2><span class="theme-subtopic">Variável aleatória</span></h2>
+<p>Variáveis aleatórias <span class="math inline">\(v.a.\)</span> apresentam algumas propiedades que serão importantes nos modelos que utilizaremos:</p>
+<h4 id="esperança-de-x">Esperança de X</h4>
+<p>Se uma determinada variável é aleatória e o seu seu modelo de probabilidade é conhecido, a sua <em>Esperança</em> – também chamada de média – pode ser conhecida.</p>
+<p>Geralmente é apresentada enquanto: <span class="math inline">\(E(X)\)</span>, sendo <span class="math inline">\(X\)</span> uma variável aleatória.</p>
+<h4 id="variabilidade-de-x">Variabilidade de X</h4>
+<p>Do mesmo modo, se uma determinada variável é aleatória e é conhecido o seu modelo de probabilidade, a sua <em>variância</em> – ou sua variabilidade em torno da média – também pode ser conhecido.</p>
+<p>Geralmente é apresentada enquanto: <span class="math inline">\(V(X) = E[X - E(X)]^2\)</span>, sendo <span class="math inline">\(X\)</span> uma variável aleatória.</p>
+</section><section id="variável-aleatória-2" class="slide level2 smaller"><h2><span class="theme-subtopic">Variável aleatória</span></h2>
+<h4 id="relação-entre-variáveis-aleatórias">Relação entre variáveis aleatórias</h4>
+<p>Conhecendo-se as propriedades de uma variável aleatória, pode-se relacionar duas ou mais variáveis aleatórias, de modo que:</p>
+<p><span class="math display">\[Y = f(X_1, X_2, X_3, X_4,...,X_n) = X_1 + X_2 + X_3 + X_4 + ... + X_n\]</span></p>
+<p>Desse modo,</p>
+<p><span class="math display">\[E(Y) = E(X_1 + X_2 + X_3 + X_4 + ... + X_n)\]</span></p>
+<p><span class="math display">\[E(Y) = E(X_1) + E(X_2) + E(X_3) + E(X_4) + ... + E(X_n)\]</span></p>
+<p>Portanto, tudo o que precisamos saber é qual o modelo probabilístico – <span class="math inline">\(f(\cdot)\)</span> – associado à determinado fenômeno social – que trataremos como uma <span class="math inline">\(v.a.\)</span>. A partir disso, podemos relacionar esse fenômeno social de interesse com outros fenômenos – outras <span class="math inline">\(v.a.\)</span></p>
+</section><section id="tipos-de-variável-aleatória" class="slide level2 smaller"><h2><span class="theme-subtopic">Tipos de Variável Aleatória</span></h2>
+<p>As <span class="math inline">\(v.a.\)</span> podem ser divididas entre <strong>discretas</strong> e <strong>contínuas</strong></p>
+<p><img data-src="images/distributions.png" class="absolute" style="bottom: 10px; right: 75px; width: 1000px; height: 550px; "></p>
+</section></section><section><section id="conceitos-e-definições-estatísticas-importantes-2" class="title-slide slide level1 theme-first center"><h1>Conceitos e definições estatísticas importantes</h1>
+<div style="text-align: left;">
+<p>Algumas nomenclaturas</p>
+</div>
+</section><section id="algumas-nomenclaturas" class="slide level2 smaller"><h2><span class="theme-subtopic">Algumas nomenclaturas</span></h2>
+<h4 id="variável-a-ser-estudada">Variável a ser estudada</h4>
+<p><span class="math inline">\(Y\)</span>: Variável dependente - variável a ser medida - variável a ser testada - variável resposta - variável resultado</p>
+<h4 id="variáveis-que-explicam-a-variável-de-estudo">Variáveis que explicam a variável de estudo</h4>
+<p><span class="math inline">\(X\)</span>: Variável independente - variável explicativa - variável preditora</p>
+<h4 id="variáveis-independentes-que-não-estamos-interessados-em-analisar">Variáveis independentes que não estamos interessados em analisar</h4>
+<p>Há muitos casos em que estamos interessados em uma – ou um conjunto de – variável(is) independente(s). Todavia, por razões das propriedades dos modelos, é importante que insiramos outras variáveis na análise. Estas são chamadas de <strong>variáveis controle/confundidoras</strong>.</p>
+<ul>
+<li>Em geral, seus resultados não são explicados, mas são explicitados.</li>
+</ul>
 
-<section id="variável-aleatória" class="title-slide slide level1 theme-first center">
-<h1>Variável aleatória</h1>
 
-
-</section>
-
-
-    </div>
+</section></section>
+</div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="images/cebrap-imagem.png" class="slide-logo"></p>
 <div class="footer footer-default">
@@ -286,24 +315,7 @@ Thiago Cordeiro Almeida
 </div>
 </div></div>
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="2.mrls-mrlm_files/libs/revealjs/dist/reveal.js"></script>
-  <!-- reveal.js plugins -->
-  <script src="2.mrls-mrlm_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="2.mrls-mrlm_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="2.mrls-mrlm_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="2.mrls-mrlm_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="2.mrls-mrlm_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
-  <script src="2.mrls-mrlm_files/libs/revealjs/plugin/quarto-support/support.js"></script>
-  
-
-  <script src="2.mrls-mrlm_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="2.mrls-mrlm_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="2.mrls-mrlm_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="2.mrls-mrlm_files/libs/revealjs/plugin/math/math.js"></script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
-
-  <script>
+  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="2.mrls-mrlm_files/libs/revealjs/dist/reveal.js"></script><!-- reveal.js plugins --><script src="2.mrls-mrlm_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script><script src="2.mrls-mrlm_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script><script src="2.mrls-mrlm_files/libs/revealjs/plugin/reveal-menu/menu.js"></script><script src="2.mrls-mrlm_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script><script src="2.mrls-mrlm_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script><script src="2.mrls-mrlm_files/libs/revealjs/plugin/quarto-support/support.js"></script><script src="2.mrls-mrlm_files/libs/revealjs/plugin/notes/notes.js"></script><script src="2.mrls-mrlm_files/libs/revealjs/plugin/search/search.js"></script><script src="2.mrls-mrlm_files/libs/revealjs/plugin/zoom/zoom.js"></script><script src="2.mrls-mrlm_files/libs/revealjs/plugin/math/math.js"></script><script>window.define = window.backupDefine; window.backupDefine = undefined;</script><script>
 
       // Full list of configuration options available at:
       // https://revealjs.com/config/
@@ -495,8 +507,42 @@ Thiago Cordeiro Almeida
           RevealZoom
         ]
       });
-    </script>
-    <script id="quarto-html-after-body" type="application/javascript">
+    </script><script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+    
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+    
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+    
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+    
+      })();
+    </script><script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
         const mode = bsSheetEl.getAttribute("data-mode");
@@ -681,6 +727,6 @@ Thiago Cordeiro Almeida
       }
     });
     </script>
-    
+
 
 </body></html>

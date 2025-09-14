@@ -175,5 +175,99 @@ Com isso, podemos:
 Variável aleatória (*v.a.*)
 :::
 
-# Variável aleatória {.theme-first}
+## [Variável aleatória]{.theme-subtopic}{.smaller}
+
+Uma variável $X$ é aleatória se cada um de seus valores -- ou um intervalo entre valores -- está associado a uma probabilidade $p(X)$.
+
+### Exemplo
+
+Vamos voltar ao **pé-de-meia**.
+
+Poderíamos dizer que para a variável $X$ definida como ter nota de matemática no ENEM acima da média dos demais participantes do programa, há uma probabilidade $p(X)$, de modo que:
+
+```{r,echo=FALSE}
+
+# bibliotecas
+library(pacman)
+p_load(dplyr)
+
+px = c((1-0.33),0.33)
+x = c("Abaixo (x = 0)","Acima (x = 1)")
+
+tibble(x,px) |> 
+  knitr::kable(
+               booktabs = T,
+               longtable=T,
+               align = 'c',
+  ) %>%
+  kableExtra::kable_styling(latex_options = c("hold_position"))
+```
+
+## [Variável aleatória]{.theme-subtopic}{.smaller}
+
+Variáveis aleatórias $v.a.$ apresentam algumas propiedades que serão importantes nos modelos que utilizaremos:
+
+#### Esperança de X
+
+Se uma determinada variável é aleatória e o seu seu modelo de probabilidade é conhecido, a sua *Esperança* -- também chamada de média -- pode ser conhecida.
+
+Geralmente é apresentada enquanto: $E(X)$, sendo $X$ uma variável aleatória.
+
+#### Variabilidade de X
+
+Do mesmo modo, se uma determinada variável é aleatória e é conhecido o seu modelo de probabilidade, a sua *variância* -- ou sua variabilidade em torno da média -- também pode ser conhecido.
+
+Geralmente é apresentada enquanto: $V(X) = E[X - E(X)]^2$, sendo $X$ uma variável aleatória.
+
+## [Variável aleatória]{.theme-subtopic}{.smaller}
+
+#### Relação entre variáveis aleatórias
+
+Conhecendo-se as propriedades de uma variável aleatória, pode-se relacionar duas ou mais variáveis aleatórias, de modo que:
+
+$$Y = f(X_1, X_2, X_3, X_4,...,X_n) = X_1 + X_2 + X_3 + X_4 + ... + X_n$$
+
+Desse modo,
+
+$$E(Y) = E(X_1 + X_2 + X_3 + X_4 + ... + X_n)$$
+
+$$E(Y) = E(X_1) + E(X_2) + E(X_3) + E(X_4) + ... + E(X_n)$$
+
+Portanto, tudo o que precisamos saber é qual o modelo probabilístico -- $f(\cdot)$ -- associado à determinado fenômeno social -- que trataremos como uma $v.a.$. A partir disso, podemos relacionar esse fenômeno social de interesse com outros fenômenos -- outras $v.a.$
+
+## [Tipos de Variável Aleatória]{.theme-subtopic}{.smaller}
+
+As $v.a.$ podem ser divididas entre **discretas** e **contínuas**
+
+![](images/distributions.png){.absolute bottom="10" right="75" width="1000" height="550"}
+
+# Conceitos e definições estatísticas importantes {.theme-first}
+
+:::{style="text-align: left;"}
+Algumas nomenclaturas
+:::
+
+## [Algumas nomenclaturas]{.theme-subtopic}{.smaller}
+
+#### Variável a ser estudada
+
+$Y$: Variável dependente - variável a ser medida - variável a ser testada - variável resposta - variável resultado
+
+#### Variáveis que explicam a variável de estudo
+
+$X$: Variável independente - variável explicativa - variável preditora
+
+#### Variáveis independentes que não estamos interessados em analisar
+
+Há muitos casos em que estamos interessados em uma -- ou um conjunto de -- variável(is) independente(s). Todavia, por razões das propriedades dos modelos, é importante que insiramos outras variáveis na análise. Estas são chamadas de **variáveis controle/confundidoras**.
+
+- Em geral, seus resultados não são explicados, mas são explicitados.
+
+# Modelo de regressão Linear {.theme-first}
+
+:::{style="text-align: left;"}
+Modelo de Regressão Linear Simples (RLS)
+:::
+
+## [Modelo de Regressão Linear Simples]{.theme-subtopic}{.smaller}
 
