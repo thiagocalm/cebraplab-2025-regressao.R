@@ -1,0 +1,134 @@
+---
+title: "Regressão para pesquisas sociais"
+subtitle: "Dia 1 - Exercício 1: correlação"
+author: "Thiago Cordeiro Almeida"
+institute: "Centre d'Estudis Demogràfics (CED, Espanha) · Cebrap"
+date: today
+date-format: long
+logo: "images/cebrap-imagem.png"
+footer: "cebrap.lab – Introdução à análise de regressão para pesquisas sociais"
+
+format:
+  pdf:
+    papersize: a4
+    fontsize: 12pt
+    geometry: margin=2.5cm
+    number-sections: true
+    theme: template/cebrap2025.scss
+    math: mathjax
+    header-includes: |
+      \usepackage{fancyhdr}
+      \usepackage{graphicx}
+      \pagestyle{fancy}
+      \fancyhf{}
+      % Logo on the left of footer
+      \fancyfoot[L]{\includegraphics[height=1cm]{images/cebrap-imagem.png}}
+      % Footer text centered
+      \fancyfoot[C]{cebrap.lab – Introdução à análise de regressão para pesquisas sociais}
+      % Page number on the right
+      \fancyfoot[R]{\thepage}
+      % Remove header content
+      \renewcommand{\headrulewidth}{0pt}
+      \renewcommand{\footrulewidth}{0pt}
+      % Section numbering style
+      \renewcommand\thesection{\arabic{section}.}
+
+editor: visual
+execute:
+  freeze: auto
+  echo: true
+  warning: false
+  message: false
+---
+
+## Introdução
+
+Vamos trabalhar neste documento com dados oriundos do site [Correlações Espúrias](https://www.tylervigen.com/spurious-correlations).
+
+Em especial, vamos explorar a seguinte questão: **Qual a relação entre o consumo per capita de margarina nos EUA e a taxa de divórcio no estado de Maine (EUA)??**
+
+Seguindo as etapas que destacamos nos slides, começaremos reproduzindo uma exploração dos dados e, posteriormente, entraremos em detalhes sobre a relação entre as variáveis e, por fim, testando a correlação entre elas.
+
+## Importação dos dados
+
+Ao longo dessas análises, usaremos a gramática de programação `tidyverse`. Caso você ainda não esteja familiarizado/a com essa forma de programação, sugiro a leitura do material da Curso-R que deixei nas referências do curso, há um capítulo sobre isso. Eles, com certeza, te convencerão sobre a potencialidade dessa forma de programção.
+
+Dentro do `tidyverse`, há distintas bibliotecas. Usaremos duas chamadas `dplyr` -- para manipulação dos dados -- e `ggplot2` -- para gráficos.
+
+```{r}
+
+# ajustes gerais
+options(scipen = 99999)
+
+## pacotes necessarios
+# instalando pacote de gerenciador de pacotes, pacman
+ifelse(!require(pacman),install.packages("pacman"),require(pacman))
+p_load(tidyverse) # importando pacote que usaremos, tidyverse
+
+# importando dados
+margarina = c(8.2,7,6.5,5.3,5.2,4,4.6,4.5,4.2,3.7) # dados de margarina
+divorcio = c(5,4.7,4.6,4.4,4.3,4.1,4.2,4.2,4.2,4.1) # dados de divorcio
+anos = seq(from = 2000,to = 2009,by = 1) # anos
+label_margarina = "Consumo per capita de margarina nos EUA" # rótulo da variavel
+label_divorcio = "Taxa de divórcio no estado de Maine (EUA)" # rótulo da variavel
+
+```
+
+Agora que criamos as variáveis com os dados, vamos criar uma base
+
+```{r}
+
+## criando base de dados com essas informações
+# obs: vamos criar uma base de classe 'tibble'
+# por ser mais facil de trabalhar com pipelines
+
+base <- tibble(
+  margarina,
+  divorcio,
+  anos
+)
+
+```
+
+
+## Exploração dos dados
+
+### Distribuição ao longo do tempo para ambas as variáveis
+
+![](images/correlacao-espuria.png){.absolute bottom="10" right="75" width="500" height="300"}
+
+Bom, parece que elas se distribuem de modo similar ao longo dos anos. Vamos relacionar ambas para termos maior certeza disso?
+
+### Distribuição de ambas as variáveis: gráfico de dispersão
+
+```{r}
+base |>
+  ggplot() +
+  aes(x = margarina, y = divorcio, color = anos) +
+  geom_point( size = 4, alpha = .5) +
+  labs(
+    x = label_margarina,
+    y = label_divorcio,
+    caption = "Fonte: https://www.tylervigen.com/spurious/correlation/5920"
+  ) +
+  theme_classic() +
+  theme(
+    legend.title = element_blank(),
+    axis.title.y = element_text(color = "grey33",face = "bold"),
+    axis.title.x = element_text(color = "red4",face = "bold")
+  )
+```
+
+Aparentemente, temos um bom sinal de que descobrimos algo! elas não só aparentam ter uma relação muito semelhante ao longo do tempo, como também apresentam mudanças que segue uma mesma distribuição ao longo dos anos!!!
+
+Para confirmar nossa exploração dos dados, vamos fazer o teste de correlação estatística, utilizando a correlação de Pearson.
+
+### Análise de correlação entre as duas variáveis
+
+```{r}
+cor.test(base$margarina, base$divorcio) # teste de correlação, default 'Pearson'
+```
+
+Uau! Há uma relação quase completa entre elas, com um nível de significância que nos permite dizer que, estatisticamente, elas apresentam uma relação positiva.
+
+Como explicar isso? Façam suas hipóteses!
