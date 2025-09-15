@@ -77,9 +77,9 @@ Natureza dos dados quantitativos
 
 está ligada à forma de classificação dos tipos de dados existentes.
 
-::::: columns
-::: {.column width="50%"}
-:::{.nonincremental}
+::::::: columns
+:::: {.column width="50%"}
+::: nonincremental
 Qualitativa
 
 -   Passível de ser compreendida
@@ -90,10 +90,10 @@ Qualitativa
 
 **Exemplos**: [expressões culturais, interações sociais]{.gap}
 :::
-:::
+::::
 
-::: {.column .fragment width="50%"}
-:::{.nonincremental}
+:::: {.column .fragment width="50%"}
+::: nonincremental
 Quantitativa
 
 -   Passível de ser contada/enumerada
@@ -104,16 +104,16 @@ Quantitativa
 
 **Exemplos**: [Fluxos de atividades culturais, peso das pessoas ao nascer]{.gap}
 :::
-:::
-:::::
+::::
+:::::::
 
 ## Natureza dos dados quantitativos {.theme-subtopic .smaller}
 
 está ligada à forma de classificação dos tipos de dados existentes.
 
-::::: columns
-::: {.column width="50%"}
-:::{.nonincremental}
+::::::: columns
+:::: {.column width="50%"}
+::: nonincremental
 Qualitativa
 
 -   Passível de ser compreendida
@@ -124,10 +124,10 @@ Qualitativa
 
 **Exemplos**: [expressões culturais, interações sociais]{.gap}
 :::
-:::
+::::
 
-::: {.column .fragment width="50%"}
-:::{.nonincremental}
+:::: {.column .fragment width="50%"}
+::: nonincremental
 Quantitativa
 
 -   Passível de ser contada/enumerada
@@ -138,8 +138,8 @@ Quantitativa
 
 **Exemplos**: [Fluxos de atividades culturais, peso das pessoas ao nascer]{.gap}
 :::
-:::
-:::::
+::::
+:::::::
 
 ![](images/question.gif){.absolute bottom="20" right="450" width="300" height="300"}
 
@@ -226,7 +226,8 @@ Um fragmento, parte, subconjunto da população estudada. É definida, em geral,
 ![](images/pop-amostra.png){.absolute .r-stretch bottom="20" right="50" width="500" height="300"}
 
 ## Variáveis {.theme-subtopic .smaller}
-:::{.nonincremental}
+
+::: nonincremental
 São características específicas extraídas de uma determinada população ou amostra.
 
 **Exemplos:**
@@ -247,6 +248,7 @@ São características específicas extraídas de uma determinada população ou 
 
 No mundo real, é necessário que "simplifiquemos" sua complexidade para que seja possível a sua análise.
 :::
+
 ## Natureza das variáveis {.theme-subtopic .smaller}
 
 São categorizações excludentes, *todavia, uma variável pode ser transformada em outra natureza/tipo*.
@@ -455,7 +457,15 @@ O principal intuíto por trás da ideia de analisar dois fenômenos sociais conj
 
 -   Partindo dessa ideia, como se quantifica a interação entre fenômenos sociais?
 
-## Formas de se captar a interação entre fenômenos sociais {.theme-subtopic .smaller .font-size-smallest .r-fit-text}
+## Formas de se captar a interação entre fenômenos sociais {.theme-subtopic .smaller .r-fit-text}
+
+Quantificação da interação entre fenômenos sociais
+
+1.  Estabeleça a natureza da relação entre eles
+
+-   Em geral, podemos estabelecer a relação entre fenômenos sociais através de: (i) **abordagem teórica**; (ii) **evidênciais empíricas**; ou (iii) ambos!
+
+## Formas de se captar a interação entre fenômenos sociais {.theme-subtopic .smaller .r-fit-text}
 
 Quantificação da interação entre fenômenos sociais
 
@@ -466,6 +476,22 @@ Quantificação da interação entre fenômenos sociais
 ![](images/programa-pe-meia.png){.absolute bottom="20" right="150" width="500" height="300"}
 
 ## Formas de se captar a interação entre fenômenos sociais {.theme-subtopic .smaller .r-fit-text}
+
+Quantificação da interação entre fenômenos sociais
+
+.2. Explore a relação entre eles empíricamente
+
+::::: columns
+::: {.column width="40%"}
+Há diferentes tipos de análises que podem ser feitas para explorar a relação entre dois fenômenos sociais a depender da natureza dos fenômenos analisados.
+:::
+
+::: {.column width="60%"}
+
+:::
+:::::
+
+## Formas de se captar a interação entre fenômenos sociais {.theme-subtopic .smaller .r-text-fit}
 
 Quantificação da interação entre fenômenos sociais
 
@@ -514,7 +540,76 @@ Quantificação da interação entre fenômenos sociais
 
 -   Elas nos apontam (i) se há diferença estatisticamente significativa; (ii) a força dessa diferença; e (iii) a direção dessa diferença.
 
-## Formas de se captar a interação entre fenômenos sociais {.theme-subtopic .smaller .font-size-smallest .r-fit-text}
+## Formas de se captar a interação entre fenômenos sociais {.theme-subtopic .smaller .r-fit-text}
+
+Quantificação da interação entre fenômenos sociais
+
+:::::: columns
+::: {.column width="30%"}
+### Significância estatística {.r-fit-text style="text-align: center;"}
+
+:::
+
+::: {.column width="30%"}
+### Força da relação entre elas {.r-fit-text style="text-align: center;"}
+
+:::
+
+::: {.column width="30%"}
+### Direção da diferença {.r-fit-text style="text-align: center;"}
+
+:::
+::::::
+
+## Formas de se captar a interação entre fenômenos sociais {.theme-subtopic .smaller .r-fit-text}
+
+Quantificação da interação entre fenômenos sociais
+
+:::::: columns
+::: {.column width="30%"}
+### Significância estatística {.r-fit-text style="text-align: center;"}
+
+É medida através da diferença entre as distribuições estatísticas das variáveis (Qui-Quadrado, P-Pearson)
+
+Nos dis se temos evidênciais suficientes para aceitar a hipótese de que há diferença entre elas.
+:::
+
+::: {.column width="30%"}
+### Força da relação entre elas {.r-fit-text style="text-align: center;"}
+
+:::
+
+::: {.column width="30%"}
+### Direção da diferença {.r-fit-text style="text-align: center;"}
+
+:::
+::::::
+
+## Formas de se captar a interação entre fenômenos sociais {.theme-subtopic .smaller .r-fit-text}
+
+Quantificação da interação entre fenômenos sociais
+
+:::::: columns
+::: {.column width="30%"}
+### Significância estatística {.r-fit-text style="text-align: center;"}
+
+É medida através da diferença entre as distribuições estatísticas das variáveis (Qui-Quadrado, P-Pearson)
+
+Nos dis se temos evidênciais suficientes para aceitar a hipótese de que há diferença entre elas.
+:::
+
+::: {.column width="30%"}
+### Força da relação entre elas {.r-fit-text style="text-align: center;"}
+
+Após analisar a magnitude, a análise da força nos diz se além de estatisticamente significante, há uma expressiva diferença entre elas.
+:::
+
+::: {.column width="30%"}
+### Direção da diferença {.r-fit-text style="text-align: center;"}
+
+:::
+::::::
+## Formas de se captar a interação entre fenômenos sociais {.theme-subtopic .smaller .r-fit-text}
 
 Quantificação da interação entre fenômenos sociais
 
@@ -544,7 +639,7 @@ A direção da relação nos diz se é:
 :::
 ::::::
 
-## Formas de se captar a interação entre fenômenos sociais {.theme-subtopic .smaller .font-size-smallest .r-fit-text}
+## Formas de se captar a interação entre fenômenos sociais {.theme-subtopic .smaller .r-fit-text}
 
 Quantificação da interação entre fenômenos sociais: **O exemplo do programa pé-de-meia**.
 
@@ -568,6 +663,10 @@ Correlação e causalidade
 
 Em pesquisas sociais, o estabelecimento da relação entre um determinado fenômeno $X$ e $Y$ é tema de muitas áreas de pesquisa.
 
+## Correlação e causalidade {.theme-subtopic .smaller}
+
+Em pesquisas sociais, o estabelecimento da relação entre um determinado fenômeno $X$ e $Y$ é tema de muitas áreas de pesquisa.
+
 ### Correlação {style="text-align: center;"}
 
 Estabelece uma relação entre dois fenômenos, apresentando sua significância estatística, força da relação e direção, **sem afirmar a ordem desta relação**.
@@ -586,9 +685,7 @@ Estabelece uma relação entre dois fenômenos, apresentando sua significância 
 :::
 :::::
 
-## Correlação e causalidade {.theme-subtopic .smaller .font-size-smallest}
-
-Em pesquisas sociais, o estabelecimento da relação entre um determinado fenômeno $X$ e $Y$ é tema de muitas áreas de pesquisa.
+## Correlação e causalidade {.theme-subtopic .smaller}
 
 ### Causalidade {style="text-align: center;"}
 
@@ -606,7 +703,7 @@ Além de estabelecer significância, força da relação e direção, também pr
 ::: {.column width="50%"}
 #### Limitações {style="text-align: center;"}
 
--   Embora poderoso, estabelecer relações diretas entre fenômenos sociais é quase impossível de ser feito na vida real de pesquisa.
+-   Embora poderoso, estabelecer relações diretas entre fenômenos sociais é muito difícil de ser feito na vida real de pesquisa.
 
 -   Fenômenos sociais estão intrínsecamente relacionados entre eles, sendo necessário abordagens mais complexas para endereçar a causalidade (e até mesmo a associação).
 :::
@@ -615,6 +712,28 @@ Além de estabelecer significância, força da relação e direção, também pr
 # Modelagem de fenômenos sociais {.theme-first}
 
 Intuição
+
+## O que é e por que modelar? {.theme-subtopic .r-fit-text .smaller}
+
+![](images/models-augmented-reality.png){.absolute bottom="20" right="5" width="300" height="300"}
+
+A modelagem estatística é um exercício de estabelecimento da relação entre diferentes fenômenos, neste caso sociais.
+
+## O que é e por que modelar? {.theme-subtopic .r-fit-text .smaller}
+
+![](images/models-augmented-reality.png){.absolute bottom="20" right="5" width="300" height="300"} 
+
+A modelagem estatística é um exercício de estabelecimento da relação entre diferentes fenômenos, neste caso sociais.
+
+Isso parte do pressuposto de que *conhecemos* a *verdadeira* **fórmula/lei** que rege a relação entre os fenômenos estabelecidos. Elas podem ser:
+
+-   Lineares;
+
+-   Quadráticas;
+
+-   Logarítmicas;
+
+-   Exponenciais; ...
 
 ## O que é e por que modelar? {.theme-subtopic .r-fit-text .smaller}
 
@@ -652,9 +771,11 @@ Para isso, precisamos:
 
 7.  Estabelecer as conclusões possíveis com nossos modelos
 
-## Motivações para se modelar fenômenos sociais {.theme-subtopic .r-fit-text .smaller .font-size-smallest}
+## Motivações para se modelar fenômenos sociais {.theme-subtopic .r-fit-text .smaller}
 
-Pode-se estar interessado em predizer tendências futuras para determinado fenômeno sociais de interesse ou compreender em que medida um fenômeno afeta outro.
+Pode-se estar interessado em predizer tendências futuras para determinado fenômeno sociais de interesse -- **PREDIÇÃO** -- ou compreender em que medida um fenômeno afeta outro -- **RELAÇÃO ENTRE FENÔMENOS**.
+
+## Motivações para se modelar fenômenos sociais {.theme-subtopic .r-fit-text .smaller}
 
 ::::: columns
 ::: {.column width="50%"}
@@ -692,6 +813,26 @@ Quais são os limites da modelagem de dados?
 
 Se não há dados ou os dados são ruins, a modelagem vai ser diretamente afetada por isso.
 
+## Limites {.theme-subtopic .r-fit-text .smaller}
+
+Quais são os limites da modelagem de dados?
+
+#### Dados disponíveis
+
+Se não há dados ou os dados são ruins, a modelagem vai ser diretamente afetada por isso.
+
+#### Conhecimento teórico sobre a relação entre fenômenos
+
+Se não há um embasamento teórico ou empírico suficiente para estabelecer as relações entre os fenômenos, o modelo terá alcance limitado.
+
+## Limites {.theme-subtopic .r-fit-text .smaller}
+
+Quais são os limites da modelagem de dados?
+
+#### Dados disponíveis
+
+Se não há dados ou os dados são ruins, a modelagem vai ser diretamente afetada por isso.
+
 #### Conhecimento teórico sobre a relação entre fenômenos
 
 Se não há um embasamento teórico ou empírico suficiente para estabelecer as relações entre os fenômenos, o modelo terá alcance limitado.
@@ -712,13 +853,13 @@ Para próxima aula:
 
 Orientações sobre o exercício:
 
-  - Explore os dados contidos na pasta `pratica > dados_correlacao.csv`
-  
-  - Plot um gráfico das duas variáveis disponíveis
-  
-  - Analise a correlação de Pearson
-  
-  - Apresente suas hipóteses sobre o que explica isso.
+-   Explore os dados contidos na pasta `pratica > dados_correlacao.csv`
+
+-   Plot um gráfico das duas variáveis disponíveis
+
+-   Analise a correlação de Pearson
+
+-   Apresente suas hipóteses sobre o que explica isso.
 
 #  {.cebrap-fim .smaller}
 
