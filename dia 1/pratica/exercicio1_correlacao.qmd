@@ -41,7 +41,7 @@ execute:
   message: false
 ---
 
-## Introdução
+# Introdução
 
 Vamos trabalhar neste documento com dados oriundos do site [Correlações Espúrias](https://www.tylervigen.com/spurious-correlations).
 
@@ -49,7 +49,7 @@ Em especial, vamos explorar a seguinte questão: **Qual a relação entre o cons
 
 Seguindo as etapas que destacamos nos slides, começaremos reproduzindo uma exploração dos dados e, posteriormente, entraremos em detalhes sobre a relação entre as variáveis e, por fim, testando a correlação entre elas.
 
-## Importação dos dados
+# Importação dos dados
 
 Ao longo dessas análises, usaremos a gramática de programação `tidyverse`. Caso você ainda não esteja familiarizado/a com essa forma de programação, sugiro a leitura do material da Curso-R que deixei nas referências do curso, há um capítulo sobre isso. Eles, com certeza, te convencerão sobre a potencialidade dessa forma de programção.
 
@@ -91,16 +91,15 @@ base <- as.tibble(base)
 
 ```
 
+# Exploração dos dados
 
-## Exploração dos dados
-
-### Distribuição ao longo do tempo para ambas as variáveis
+## Distribuição ao longo do tempo para ambas as variáveis
 
 ![](images/correlacao-espuria.png){.absolute bottom="10" right="75" width="500" height="300"}
 
 Bom, parece que elas se distribuem de modo similar ao longo dos anos. Vamos relacionar ambas para termos maior certeza disso?
 
-### Distribuição de ambas as variáveis: gráfico de dispersão
+## Distribuição de ambas as variáveis: gráfico de dispersão
 
 ```{r}
 base |>
@@ -124,7 +123,7 @@ Aparentemente, temos um bom sinal de que descobrimos algo! elas não só aparent
 
 Para confirmar nossa exploração dos dados, vamos fazer o teste de correlação estatística, utilizando a correlação de Pearson.
 
-### Análise de correlação entre as duas variáveis
+## Análise de correlação entre as duas variáveis
 
 ```{r}
 cor.test(base$margarina, base$divorcio) # teste de correlação, default 'Pearson'
