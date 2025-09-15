@@ -80,7 +80,7 @@ Forma de organização em termos dos dias:
 
 :::
 
-## Dia 2, Terça {.theme-subtopic .smaller .font-size-smallest}
+## Dia 2, Terça {.theme-subtopic .smaller}
 
 ### Modelagem de dados contínuos - regressão linear
 
@@ -92,9 +92,7 @@ Forma de organização em termos dos dias:
 
 - Regressão linear simples
 
-  - Intuição
-  
-  - Formalização
+  - Intuição e formalização
   
   - Propriedade e pressupostos
   
@@ -102,10 +100,8 @@ Forma de organização em termos dos dias:
 
 - Regressão linear multivariada
 
-  - Intuição
-  
-  - Formalização
-  
+  - Intuição e formalização
+
   - Novidades em relação à regressão linear simples
   
   - Mão na massa!: interpretação
@@ -128,7 +124,7 @@ Forma de organização em termos dos dias:
 
 :::
 
-## Dia 4, Quinta {.theme-subtopic  .smaller .font-size-smallest}
+## Dia 4, Quinta {.theme-subtopic  .smaller}
 
 ### Modelagem de variáveis binárias - regressão logística
 
@@ -142,17 +138,15 @@ Forma de organização em termos dos dias:
 
   - Introdução aos modelos lineares generalizados (MLG)
 
-  - Intuição
-  
-  - Formalização
-  
+  - Intuição e formalização
+
   - Propriedade e pressupostos
   
   - Mão na massa!
 
 - Regressão logística multivariada
 
-  - Intuição
+  - Intuição e formalização
   
   - Formalização
   
@@ -204,17 +198,17 @@ Slide
 ## Regras do curso {.theme-next .smaller}
 ::: {.incremental}
 
-Aulas síncronas com duração de 3 horas, com *uma pausa* durante;
+1. Aulas síncronas com duração de 3 horas, com *uma pausa* durante;
 
-Aulas não podem ser gravadas, são diretrizes do `cebrap.lab`;
+2. Aulas não podem ser gravadas, são diretrizes do `cebrap.lab`;
 
-Há um formulário de confirmação de presença a ser preenchido **em cada aula síncrona**;
+3. Há um formulário de confirmação de presença a ser preenchido **em cada aula síncrona**;
 
-Nos dias de aula assíncrona, fiquem à vontade para fazer contato via e-mail;
+4. Nos dias de aula assíncrona, fiquem à vontade para fazer contato via e-mail;
 
-Nos dias de aula síncrona também fiquem à vontade para fazer contato :);
+5. Nos dias de aula síncrona também fiquem à vontade para fazer contato :);
 
-Certificados serão enviados em até 2 semanas após a finalização das aulas.
+6. Certificados serão enviados em até 2 semanas após a finalização das aulas.
 
 :::
 
