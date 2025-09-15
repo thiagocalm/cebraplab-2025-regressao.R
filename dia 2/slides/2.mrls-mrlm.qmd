@@ -387,7 +387,7 @@ Em que:
 
 $$Y_i = \alpha + \beta_1 \cdot X_i + \epsilon_i$$
 
-#### Pressuposto 1 (P1): independência entre erro e variáveis observadas
+#### Hipótese: independência entre erro e variáveis observadas
 
 A **hipótese-chave** é que a média dos erros condicionada na variável explicativa $X_i$ é igual a zero, ou seja: $$E[\epsilon_i|X_i]=0$$
 
@@ -430,7 +430,7 @@ $$\bar{Y_i} = \hat{\alpha} + \hat{\beta_1} \cdot \bar{X_i} + \hat{\epsilon_i}$$
 
 #### Mínimos Quadrados Ordinários (MQO)
 
-Acionando o **P1**, temos:
+Acionando a **hipótese descrita anteriormente**, temos:
 
 - $\hat{\alpha} = \bar{Y_i} - [\hat{\beta_1} \cdot \bar{X_i}]$
 
@@ -445,7 +445,6 @@ Aplicando em R:
 ```{r}
 modelo <- lm(divorcio ~ margarina, data = base)
 modelo
-summary(modelo) # indo além nos resultados
 ```
 
 ## [Modelo de Regressão Linear Simples (RLS)]{.theme-subtopic}{.smaller}
@@ -459,10 +458,111 @@ modelo <- lm(divorcio ~ margarina, data = base)
 summary(modelo) # indo além nos resultados
 ```
 
+# Pausa! {.theme-stop}
+
+::: {style="display: flex; justify-content: flex-end; align-items: center; height: 100vh;"}
+```{=html}
+<img src="images/stop.gif" 
+       style="border-radius: 50%; border:5px solid #708d81; width:400px; height:auto;" />
+```
+:::
+
 # Modelo de regressão Linear {.theme-first}
 
 Propriedades do MRL
 
 ## [Propriedades do MRL]{.theme-subtopic}{.smaller}
 
-Seguir Chein (2019) e Hoffman (2016)...
+Para assegurar que, através do MQO, tenhamos estimadores **não viesados** e **mais eficientes**, devemos assegurar que 6 hipóteses sejam asseguradas:
+
+1. O modelo é linear nos parâmetros;
+
+2. Amostra é aleatória e segue o modelo populacional descrito em H1;
+
+3. Inexistência variáveis constantes ou que não tenham uma relação linear exata com outra variável explicativa;
+
+4. Independência entre erro e variáveis observadas;
+
+5. Variância do erro constante para todas as variáveis explicativas;
+
+6. O erro segue uma distribuição normal com média 0 e variância constante
+
+## []{.theme-subtopic}{.smaller}
+
+### H1: O modelo é linear nos parâmetros
+
+## []{.theme-subtopic}{.smaller}
+
+### H2: Amostra é aleatória e segue o modelo populacional descrito em H1
+
+## []{.theme-subtopic}{.smaller}
+
+### H3: Inexistência variáveis constantes ou que não tenham uma relação linear exata com outra variável explicativa
+
+## []{.theme-subtopic}{.smaller}
+
+### H4: Independência entre erro e variáveis observadas
+
+## []{.theme-subtopic}{.smaller}
+
+### H5: Variância do erro constante para todas as variáveis explicativas
+
+## []{.theme-subtopic}{.smaller}
+
+### H6: O erro segue uma distribuição normal com média 0 e variância constante
+
+## [Propriedades do MRL]{.theme-subtopic}{.smaller}
+
+### Assegurando a existência de H1-H4
+
+Estimadores MQO **não viesados**. Isto é, representam o que seria o valor a ser obtido na população estudada, mesmo depois de implementar em $N$ diferentes amostras.
+
+### Assegurando a existência de H5
+
+Estimadores MQO sendo **os mais eficientes**. Isto é, asseguram a menor variância possível dentre outros processos de estimação dos parâmetros.
+
+### Assegurando a existência de H1-H5
+Temos os melhores estimadores para o modelo populacional. À medida que aumenta o tamanho da amostra, aproxima-se mais do valor do parâmetro na população e com menor incerteza sobre ele.
+
+## [Propriedades do MRL]{.theme-subtopic}{.smaller}
+
+### Assegurando a existência de H1-H6
+
+É possível fazer inferência sob a significância estatística dos coeficientes estimados em comparação com o valor do parâmetro na população.
+
+# Exemplo da aula! {.theme-first}
+
+...
+
+## [...]{.theme-subtopic}{.smaller}
+
+Explicar o caso
+
+Dados
+
+Quais as etapas seguiremos
+
+# Vamos lá! {.theme-first}
+
+...
+
+::: {style="display: flex; justify-content: flex-end; align-items: center; height: 100vh;"}
+```{=html}
+<img src="images/hands-on.gif" 
+       style="border-radius: 50%; border:5px solid #708d81; width:400px; height:auto;" />
+```
+:::
+
+# Modelo de regressão Linear{.theme-first}
+
+Modelo de Regressão Linear Múltipla (RLM)
+
+## [Modelo de Regressão Linear Múltipla (RLM)]{.theme-subtopic}{.smaller}
+
+Intuição
+
+Formalização
+
+O que muda entre o RLS e RLM?
+
+Ir para exercício para fechar a aula
