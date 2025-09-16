@@ -623,13 +623,17 @@ Temos os melhores estimadores para o modelo populacional. À medida que aumenta 
 # Exemplo da aula!{.theme-first}
 ...
 
-## []{.theme-subtopic}{.smaller}
+## []{.theme-subtopic}
 
-Explicar o caso
+### Acesso ao esgotamento sanitário
 
-Dados
+**PERGUNTA**: Quais os fatores associados ao acesso ao esgotamento sanitário de populações vulneráveis no Brasil?
 
-Quais as etapas seguiremos
+Mais especificamente, qual a associação entre acesso ao Programa Bolsa Família para famílias com jovens entre 15-29 anos e o acesso ao esgotamento sanitário?
+
+#### Dados
+
+Uma base de dados construída com dados do CadÚnico e Censo Demográfico 2010.
 
 ## [Vamos lá!]{.theme-subtopic}
 
@@ -774,11 +778,11 @@ O mesmo estimado no exercício anterior - já temos código e tudo mais!
 
 #### Modelo 2
 
-Adicione ao **Modelo 1**, a variável ...
+Adicione ao **Modelo 1**, a variável informalidade (`informalidade`)
 
 #### Modelo 3
 
-Adicione ao **Modelo 1**, variável ...
+Adicione ao **Modelo 1**, variável frequência ao ensino médio (`em`)
 
 #### Modelo 4
 
@@ -805,7 +809,7 @@ Para próxima aula:
 2.  Leitura de material para aula de hoje (caso não tenha lido)
 3.  Leitura de material para a aula seguinte (Ver ementa)
 
-## Orientações sobre o exercício {.theme-next}
+## Orientações sobre o exercício {.smaller}
 
 Utilizaremos os mesmos dados que utilizamos na aula de hoje.
 
@@ -815,7 +819,7 @@ Utilizaremos os mesmos dados que utilizamos na aula de hoje.
 
 -   Adicione ao Modelo 2, a variável do Modelo 3 da aula de hoje e interprete os resultados de cada variável;
 
--   Adicione a variável XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxxx e interprete os resultados dela;
+-   Adicione a variável `municipio_rural` e interprete os resultados dela;
 
 -   Volte às estatísticas do modelo -- obtidas com `summary()` -- e compare se houve muita mudança nos coeficientes de cada uma das variáveis quando incluída outras variáveis ao modelo. **O que isso nos diz?**
 

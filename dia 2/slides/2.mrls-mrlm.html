@@ -567,10 +567,12 @@ F-statistic: 531.5 on 1 and 8 DF,  p-value: 0.0000000133</code></pre>
 <p>É possível fazer inferência sob a significância estatística dos coeficientes estimados em comparação com o valor do parâmetro na população.</p>
 </section></section><section><section id="exemplo-da-aula" class="title-slide slide level1 theme-first center"><h1>Exemplo da aula!</h1>
 <p>…</p>
-</section><section id="section-19" class="slide level2 smaller"><h2><span class="theme-subtopic"></span></h2>
-<p>Explicar o caso</p>
-<p>Dados</p>
-<p>Quais as etapas seguiremos</p>
+</section><section id="section-19" class="slide level2"><h2><span class="theme-subtopic"></span></h2>
+<h3 id="acesso-ao-esgotamento-sanitário">Acesso ao esgotamento sanitário</h3>
+<p><strong>PERGUNTA</strong>: Quais os fatores associados ao acesso ao esgotamento sanitário de populações vulneráveis no Brasil?</p>
+<p>Mais especificamente, qual a associação entre acesso ao Programa Bolsa Família para famílias com jovens entre 15-29 anos e o acesso ao esgotamento sanitário?</p>
+<h4 id="dados">Dados</h4>
+<p>Uma base de dados construída com dados do CadÚnico e Censo Demográfico 2010.</p>
 </section><section id="vamos-lá" class="slide level2"><h2><span class="theme-subtopic">Vamos lá!</span></h2>
 <p>…</p>
 <div style="display: flex; justify-content: flex-end; align-items: center; height: 100vh;">
@@ -659,9 +661,9 @@ F-statistic: 531.5 on 1 and 8 DF,  p-value: 0.0000000133</code></pre>
 <h4 id="modelo-1">Modelo 1</h4>
 <p>O mesmo estimado no exercício anterior - já temos código e tudo mais!</p>
 <h4 id="modelo-2">Modelo 2</h4>
-<p>Adicione ao <strong>Modelo 1</strong>, a variável …</p>
+<p>Adicione ao <strong>Modelo 1</strong>, a variável informalidade (<code>informalidade</code>)</p>
 <h4 id="modelo-3">Modelo 3</h4>
-<p>Adicione ao <strong>Modelo 1</strong>, variável …</p>
+<p>Adicione ao <strong>Modelo 1</strong>, variável frequência ao ensino médio (<code>em</code>)</p>
 <h4 id="modelo-4">Modelo 4</h4>
 <p>Adicione ao <strong>Modelo 1</strong>, as variáveis que adicionamos no <strong>Modelo 2 e 3</strong></p>
 </section><section id="vamos-lá-1" class="slide level2 theme-subtopic"><h2>Vamos lá!</h2>
@@ -676,13 +678,13 @@ F-statistic: 531.5 on 1 and 8 DF,  p-value: 0.0000000133</code></pre>
 <li>Exercício sobre Regressão Linear Múltipla (próximo slide)</li>
 <li>Leitura de material para aula de hoje (caso não tenha lido)</li>
 <li>Leitura de material para a aula seguinte (Ver ementa)</li>
-</ol></section><section id="orientações-sobre-o-exercício" class="slide level2 theme-next"><h2>Orientações sobre o exercício</h2>
+</ol></section><section id="orientações-sobre-o-exercício" class="slide level2 smaller"><h2>Orientações sobre o exercício</h2>
 <p>Utilizaremos os mesmos dados que utilizamos na aula de hoje.</p>
 <ul>
 <li><p>Rode o Modelo 1 da aula de hoje e interprete os resultados</p></li>
 <li><p>Adicione ao modelo 1, a variável do Modelo 2 da aula de hoje e interprete os resultados de cada variável;</p></li>
 <li><p>Adicione ao Modelo 2, a variável do Modelo 3 da aula de hoje e interprete os resultados de cada variável;</p></li>
-<li><p>Adicione a variável XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxxx e interprete os resultados dela;</p></li>
+<li><p>Adicione a variável <code>municipio_rural</code> e interprete os resultados dela;</p></li>
 <li><p>Volte às estatísticas do modelo – obtidas com <code><a href="https://rdrr.io/r/base/summary.html">summary()</a></code> – e compare se houve muita mudança nos coeficientes de cada uma das variáveis quando incluída outras variáveis ao modelo. <strong>O que isso nos diz?</strong></p></li>
 <li><p>Observe se o <span class="math inline">\(R^2\)</span> – obtidos com <code><a href="https://rdrr.io/r/base/summary.html">summary()</a></code> – apresentou muita mudança entre os modelos. <strong>O que isso nos diz?</strong></p></li>
 </ul></section></section><section id="section-26" class="title-slide slide level1 cebrap-fim smaller center"><h1></h1>
