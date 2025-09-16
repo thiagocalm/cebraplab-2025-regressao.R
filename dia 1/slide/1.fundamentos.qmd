@@ -487,7 +487,6 @@ Há diferentes tipos de análises que podem ser feitas para explorar a relação
 :::
 
 ::: {.column width="60%"}
-
 :::
 :::::
 
@@ -547,17 +546,14 @@ Quantificação da interação entre fenômenos sociais
 :::::: columns
 ::: {.column width="30%"}
 ### Significância estatística {.r-fit-text style="text-align: center;"}
-
 :::
 
 ::: {.column width="30%"}
 ### Força da relação entre elas {.r-fit-text style="text-align: center;"}
-
 :::
 
 ::: {.column width="30%"}
 ### Direção da diferença {.r-fit-text style="text-align: center;"}
-
 :::
 ::::::
 
@@ -576,12 +572,10 @@ Nos dis se temos evidênciais suficientes para aceitar a hipótese de que há di
 
 ::: {.column width="30%"}
 ### Força da relação entre elas {.r-fit-text style="text-align: center;"}
-
 :::
 
 ::: {.column width="30%"}
 ### Direção da diferença {.r-fit-text style="text-align: center;"}
-
 :::
 ::::::
 
@@ -606,9 +600,9 @@ Após analisar a magnitude, a análise da força nos diz se além de estatistica
 
 ::: {.column width="30%"}
 ### Direção da diferença {.r-fit-text style="text-align: center;"}
-
 :::
 ::::::
+
 ## Formas de se captar a interação entre fenômenos sociais {.theme-subtopic .smaller .r-fit-text}
 
 Quantificação da interação entre fenômenos sociais
@@ -655,7 +649,7 @@ a.  Um aumento da renda teria um efeito direto de 50% no aumento da nota de mate
 
 b.  Um aumento da nota de matemática teria um efeito direto de 50% no aumento da renda.
 
-## Slide extra!!!{.theme-subtopic .smaller .r-fit-text}
+## Slide extra!!! {.theme-subtopic .smaller .r-fit-text}
 
 Explicando o código `cor.test()`
 
@@ -667,13 +661,13 @@ cor.test(renda, enem_mat) # teste de correlação, default 'Pearson'
 
 Conforme conversamos em aula, a depender da natureza da variável há tipos de testes de correlação mais adequados:
 
-- `cor.test(VARIAVEL1,VARIAVEL2, method = 'pearson')`: é utilizado quando se tem duas variáveis quantitativas, preferencialmente contínuas.
+-   `cor.test(VARIAVEL1,VARIAVEL2, method = 'pearson')`: é utilizado quando se tem duas variáveis quantitativas, preferencialmente contínuas.
 
-- `cor.test(VARIAVEL1,VARIAVEL2, method = 'spearman')`: é utilizado quando se tem ao menos uma variável ordinal, pode ser usado para discretas também.
+-   `cor.test(VARIAVEL1,VARIAVEL2, method = 'spearman')`: é utilizado quando se tem ao menos uma variável ordinal, pode ser usado para discretas também.
 
-- `cor.test(VARIAVEL1,VARIAVEL2, method = 'kendall')`: assemelha-se ao `spearman`, mas é adequado para pequenas amostras.
+-   `cor.test(VARIAVEL1,VARIAVEL2, method = 'kendall')`: assemelha-se ao `spearman`, mas é adequado para pequenas amostras.
 
-- `chisq.test(VARIAVEL1,VARIAVEL2)`: utilizado quando se tem variáveis qualitativas nominais ou binárias.
+-   `chisq.test(VARIAVEL1,VARIAVEL2)`: utilizado quando se tem variáveis qualitativas nominais ou binárias.
 
 # Relação entre fenômenos sociais: associação ou efeito? {.theme-first}
 
@@ -741,7 +735,7 @@ A modelagem estatística é um exercício de estabelecimento da relação entre 
 
 ## O que é e por que modelar? {.theme-subtopic .r-fit-text .smaller}
 
-![](images/models-augmented-reality.png){.absolute bottom="20" right="5" width="300" height="300"} 
+![](images/models-augmented-reality.png){.absolute bottom="20" right="5" width="300" height="300"}
 
 A modelagem estatística é um exercício de estabelecimento da relação entre diferentes fenômenos, neste caso sociais.
 
