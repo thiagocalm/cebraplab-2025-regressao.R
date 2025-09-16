@@ -159,13 +159,13 @@ Ou seja,
 
 ### Relação entre modelos probabilísticos e modelos de regressão
 
-O que fazemos em nossos modelos de regressão é, basicamente, estudar as propriedades da nossa **variável de estudo** através de relações associadas ao melhor modelo probabilístico que a descreve.
+O que fazemos em nossos modelos de regressão é, basicamente, estudar as propriedades da nossa **variável de estudo** através de relações associadas ao melhor modelo probabilístico que descreve essa variável.
 
 Com isso, podemos:
 
 - Prever resultados futuros condicionados a um conjunto de outras variáveis (probabilidade condicional a um conjunto de $X$)
 
-- Estabelecer em que medida variando uma das variáveis, seus valores são afetados (probabilidade condicional a $X$)
+- Estabelecer em que medida variando uma das variáveis, seus valores são afetados (probabilidade condicional a um $X$)
 
 - Obter valores esperados e incerteza de seus resultados (esperança e variância)
 
@@ -203,7 +203,7 @@ tibble(x,px) |>
   kableExtra::kable_styling(latex_options = c("hold_position"))
 ```
 
-## [Variável aleatória]{.theme-subtopic}{.smaller}
+## []{.theme-subtopic}{.smaller}
 
 Variáveis aleatórias $v.a.$ apresentam algumas propiedades que serão importantes nos modelos que utilizaremos:
 
@@ -219,9 +219,9 @@ Do mesmo modo, se uma determinada variável é aleatória e é conhecido o seu m
 
 Geralmente é apresentada enquanto: $V(X) = E[X - E(X)]^2$, sendo $X$ uma variável aleatória.
 
-## [Variável aleatória]{.theme-subtopic}{.smaller}
+## []{.theme-subtopic}{.smaller}
 
-#### Relação entre variáveis aleatórias
+### Relação entre variáveis aleatórias
 
 Conhecendo-se as propriedades de uma variável aleatória, pode-se relacionar duas ou mais variáveis aleatórias, de modo que:
 
@@ -361,17 +361,17 @@ base |>
   )
 ```
 
-## [Modelo de Regressão Linear Simples (RLS)]{.theme-subtopic}{.smaller}
+## []{.theme-subtopic}{.smaller}
 
-### Formalização
+### Formalização de um MRLS
 
 Dizemos que a representação geral (ou populacional) de um determinado modelo de regressão é dada por:
 
-$$Y_i = \alpha + \beta_1 \cdot X_i + \epsilon_i$$
+$$Y_i = \beta_0 + \beta_1 \cdot X_i + \epsilon_i$$
 
 Em que:
 
-- $\alpha$: intercepto do modelo.
+- $\beta_0$: intercepto do modelo.
 
   - Nos diz qual valor $Y$ assume quando $X$ é igualado a $0$.
   
@@ -379,66 +379,71 @@ Em que:
 
   - Nos diz qual a magnitude da mudança em $Y$ quando $X$ varia uma unidade para cima ou para baixo.
   
-  - É também chamado de **inclinação da reta**, devido à suas propriedades estatísticas do modo em que é calculado^[Não entraremos em detalhes disso no curso, mas nos materiais da aula vocês podem se aprofundar nisso.]
+  - É também chamado de **inclinação da reta**, devido à suas propriedades estatísticas do modo em que é calculado*.
   
 - $\epsilon_i$: como descrito anteriormente, é o quanto não está sendo explicado em $Y_i$ devido à variação estimada em $X_i$.
 
-## [Modelo de Regressão Linear Simples (RLS)]{.theme-subtopic-assumption }{.smaller}
-
-$$Y_i = \alpha + \beta_1 \cdot X_i + \epsilon_i$$
+## []{.theme-subtopic-assumption }{.smaller}
 
 #### Hipótese: independência entre erro e variáveis observadas
+
+Partindo do nosso modelo RLS para a população, 
+$$Y_i = \beta_0 + \beta_1 \cdot X_i + \epsilon_i$$
 
 A **hipótese-chave** é que a média dos erros condicionada na variável explicativa $X_i$ é igual a zero, ou seja: $$E[\epsilon_i|X_i]=0$$
 
 Em outras palavras, estamos assumindo que não há nenhum fator contido em $\epsilon$ que seja correlacionado com $X$, de modo que $\beta$ seja um efeito *puro* de X.
 
-## [Modelo de Regressão Linear Simples (RLS)]{.theme-subtopic-assumption }{.smaller}
+## []{.theme-subtopic-assumption }{.smaller}
 
 Modelo populacional:
-$$Y_i = \alpha + \beta_1 \cdot X_i + \epsilon_i$$
+$$Y_i = \beta_0 + \beta_1 \cdot X_i + \epsilon_i$$
 
-Quando vamos *estimar* os nossos parâmetros para a nossa amostra, assumimos os valores médios observados, isto é:
+Quando vamos *estimar* os nossos parâmetros para a nossa amostra, assumimos os valores médios para os nossos $i$ casos observados, isto é:
 
-$$\bar{Y_i} = \hat{\alpha} + \hat{\beta_1} \cdot \bar{X_i} + \hat{\epsilon_i}$$
+$$\bar{Y} = \hat{\beta_0} + \hat{\beta_1} \cdot \bar{X} + \hat{\epsilon_i}$$
 
-## [Modelo de Regressão Linear Simples (RLS)]{.theme-subtopic}{.smaller}
+Os únicos valores que não conhecemos são referentes a $\beta_0$ e $\beta$, uma vez que $\epsilon$ é obtido residualmente.
+
+Tudo o que precisamos fazer é **estimar os parâmetros desconhecidos do modelo populacional**.
+
+## []{.theme-subtopic}{.smaller}
 
 ### Estimando parâmetros do modelo
 
-Os únicos valores que não conhecemos são referentes a $\alpha$ e $\beta$, uma vez que $\epsilon$ é obtido residualmente.
+O modelo a ser estimado consiste em:
 
-Tudo o que precisamos fazer é **estimar os parâmetros desconhecidos do modelo populacional**. O modelo a ser estimado consiste em:
+$$\bar{Y} = \hat{\beta_0} + \hat{\beta_1} \cdot \bar{X} + \hat{\epsilon_i}$$
 
-$$\bar{Y_i} = \hat{\alpha} + \hat{\beta_1} \cdot \bar{X_i} + \hat{\epsilon_i}$$
-
-#### Mínimos Quadrados Ordinários (MQO)
+#### Estimadores de Mínimos Quadrados Ordinários (MQO)
 
 Os estimadores de MQO asseguram, via relações estatísticas, que tenhamos valores para nossos parâmetros desconhecidos que **minimizem o desvio dos resíduos**.
 
 Isto é, temos a reta que melhor se ajusta aos nossos dados de modo que passe mais perto possível de cada ponto.
 
-## [Modelo de Regressão Linear Simples (RLS)]{.theme-subtopic}{.smaller}
+## []{.theme-subtopic}{.smaller}
 
 ### Estimando parâmetros do modelo
 
-Os únicos valores que não conhecemos são referentes a $\alpha$ e $\beta$, uma vez que $\epsilon$ é obtido residualmente.
+$$\bar{Y} = \hat{\beta_0} + \hat{\beta_1} \cdot \bar{X}$$
 
-Tudo o que precisamos fazer é **estimar os parâmetros desconhecidos do modelo populacional**. O modelo a ser estimado consiste em:
-
-$$\bar{Y_i} = \hat{\alpha} + \hat{\beta_1} \cdot \bar{X_i} + \hat{\epsilon_i}$$
-
-#### Mínimos Quadrados Ordinários (MQO)
+#### Estimadores de Mínimos Quadrados Ordinários (MQO)
 
 Acionando a **hipótese descrita anteriormente**, temos:
 
-- $\hat{\alpha} = \bar{Y_i} - [\hat{\beta_1} \cdot \bar{X_i}]$
+- $\hat{\beta_0} = \bar{Y} - [\hat{\beta_1} \cdot \bar{X}]$
 
-- $\hat{\beta_1} = \frac{\bar{Y_i} - \hat{\alpha}}{\bar{X_i}}$
+- $\hat{\beta_1} = \frac{Cov(x,y)}{Var(x)}$
 
-## [Modelo de Regressão Linear Simples (RLS)]{.theme-subtopic}{.smaller}
+- Valores preditos: $\hat{Y_i} = \hat{\beta_0} + \hat{\beta_1} \cdot X_i$ para $i = 1,...,n$.
 
-$$\overline{Divorcio} = \hat{\alpha} + \hat{\beta_1} \cdot \overline{Margarina} + \hat{\epsilon}$$
+- Resíduos: $\hat{u_i}=y_i-\hat{Y_i}$, para $i=1,...,n$
+
+## []{.theme-subtopic}{.smaller}
+
+Para o exemplo anterior, se partimos do modelo a ser estimado:
+
+$$\overline{Divorcio} = \hat{\beta_0} + \hat{\beta_1} \cdot \overline{Margarina} + \hat{\epsilon}$$
 
 Aplicando em R:
 
@@ -447,9 +452,11 @@ modelo <- lm(divorcio ~ margarina, data = base)
 modelo
 ```
 
-## [Modelo de Regressão Linear Simples (RLS)]{.theme-subtopic}{.smaller}
+## []{.theme-subtopic}{.smaller}
 
-$$\overline{Divorcio} = \hat{\alpha} + \hat{\beta_1} \cdot \overline{Margarina} + \hat{\epsilon}$$
+Para o exemplo anterior, se partimos do modelo a ser estimado:
+
+$$\overline{Divorcio} = \hat{\beta_0} + \hat{\beta_1} \cdot \overline{Margarina} + \hat{\epsilon}$$
 
 Aplicando em R:
 
@@ -487,54 +494,136 @@ Para assegurar que, através do MQO, tenhamos estimadores **não viesados** e **
 
 6. O erro segue uma distribuição normal com média 0 e variância constante
 
-## []{.theme-subtopic}{.smaller}
+## []{.theme-subtopic}
 
 ### H1: O modelo é linear nos parâmetros
 
-## []{.theme-subtopic}{.smaller}
+Os parâmetros -- $\beta$s -- se relacionam de forma linear.
+
+$$Y_i = \beta_0 + \beta_1 \cdot X_i + \epsilon_i$$
+
+
+É por essa propriedade que chamamos os modelos de **modelos lineares**.
+
+## []{.theme-subtopic}
 
 ### H2: Amostra é aleatória e segue o modelo populacional descrito em H1
+
+Para uma dada amostra de tamanho $N$ qualquer, seu processo gerador seguiu uma distribuição aleatória, seguindo o modelo populacional descrito em H1.
+
+Todavia, *em casos onde temos problemas de seletividade amostral*, isso pode afetar essa hipótese.
 
 ## []{.theme-subtopic}{.smaller}
 
 ### H3: Inexistência variáveis constantes ou que não tenham uma relação linear exata com outra variável explicativa
 
-## []{.theme-subtopic}{.smaller}
+Para qualquer variável explicativa $X$, há uma variabilidade de seus resultados em relação a $Y$.
+
+Além disso, determinada variável $X$ não pode estar totalmente correlacionada com outra variável $X$.
+
+- Assegura que não haja perfeita colinearidade,i.e., que toda a variação em $X_1$ esteja associada a $X_2$.
+
+## []{.theme-subtopic}
 
 ### H4: Independência entre erro e variáveis observadas
+
+Mencionado anteriormente: a média dos erros condicionada na variável explicativa $X_i$ é igual a zero, ou seja: $$E[\epsilon_i|X_i]=0$$
+
+Para um determinado valor de $X$, os outros fatores não observados no modelo não afetam o resultado de $X$.
+
+**Não é que $\epsilon$ não afete $Y$**, e sim que **$\epsilon$ não está condicionado a $X$**.
 
 ## []{.theme-subtopic}{.smaller}
 
 ### H5: Variância do erro constante para todas as variáveis explicativas
 
-## []{.theme-subtopic}{.smaller}
+$$Var[\epsilon|X]=\sigma^2$$
+Chamamos essa hipótese de **homocedasticidade** ou **variância constante do erro**.
+
+Pode ser violada em situações de:
+
+- **Outliers para uma variável específica**
+
+- **Distribuições de alguma variável específica** que seguem um distinto padrão.
+
+- ...
+
+## []{.theme-subtopic}
 
 ### H6: O erro segue uma distribuição normal com média 0 e variância constante
 
-## [Propriedades do MRL]{.theme-subtopic}{.smaller}
+Assumindo isso, podemos também assumir, *por propriedades estatísticas*, que qualquer um de nossos parâmetros também têm distribuição normal.
 
-### Assegurando a existência de H1-H4
+Por que assumimos essa hipótese para o erro e não para os parâmetros?
+
+- O erro pode ser estudado e avaliado, os parâmetros não.
+
+## []{.theme-subtopic}{.smaller}
+
+#### Assegurando a existência de H1-H4
 
 Estimadores MQO **não viesados**. Isto é, representam o que seria o valor a ser obtido na população estudada, mesmo depois de implementar em $N$ diferentes amostras.
 
-### Assegurando a existência de H5
+- $E[\hat{\beta_0}|X]=\beta_0$
+
+- $E[\hat{\beta_1}|X]=\beta_1$
+
+## []{.theme-subtopic}{.smaller}
+
+#### Assegurando a existência de H1-H4
+
+Estimadores MQO **não viesados**. Isto é, representam o que seria o valor a ser obtido na população estudada, mesmo depois de implementar em $N$ diferentes amostras.
+
+- $E[\hat{\beta_0}|X]=\beta_0$
+
+- $E[\hat{\beta_1}|X]=\beta_1$
+
+#### Assegurando a existência de H5
 
 Estimadores MQO sendo **os mais eficientes**. Isto é, asseguram a menor variância possível dentre outros processos de estimação dos parâmetros.
 
-### Assegurando a existência de H1-H5
+## []{.theme-subtopic}{.smaller}
+
+#### Assegurando a existência de H1-H4
+
+Estimadores MQO **não viesados**. Isto é, representam o que seria o valor a ser obtido na população estudada, mesmo depois de implementar em $N$ diferentes amostras.
+
+- $E[\hat{\beta_0}|X]=\beta_0$
+
+- $E[\hat{\beta_1}|X]=\beta_1$
+
+#### Assegurando a existência de H5
+
+Estimadores MQO sendo **os mais eficientes**. Isto é, asseguram a menor variância possível dentre outros processos de estimação dos parâmetros.
+
+#### Assegurando a existência de H1-H5
 Temos os melhores estimadores para o modelo populacional. À medida que aumenta o tamanho da amostra, aproxima-se mais do valor do parâmetro na população e com menor incerteza sobre ele.
 
-## [Propriedades do MRL]{.theme-subtopic}{.smaller}
+## []{.theme-subtopic}{.smaller}
 
-### Assegurando a existência de H1-H6
+#### Assegurando a existência de H1-H4
+
+Estimadores MQO **não viesados**. Isto é, representam o que seria o valor a ser obtido na população estudada, mesmo depois de implementar em $N$ diferentes amostras.
+
+- $E[\hat{\beta_0}|X]=\beta_0$
+
+- $E[\hat{\beta_1}|X]=\beta_1$
+
+#### Assegurando a existência de H5
+
+Estimadores MQO sendo **os mais eficientes**. Isto é, asseguram a menor variância possível dentre outros processos de estimação dos parâmetros.
+
+#### Assegurando a existência de H1-H5
+Temos os melhores estimadores para o modelo populacional. À medida que aumenta o tamanho da amostra, aproxima-se mais do valor do parâmetro na população e com menor incerteza sobre ele.
+
+#### Assegurando a existência de H1-H6
 
 É possível fazer inferência sob a significância estatística dos coeficientes estimados em comparação com o valor do parâmetro na população.
 
-# Exemplo da aula! {.theme-first}
-
+# Exemplo da aula!{.theme-first}
 ...
 
-## [...]{.theme-subtopic}{.smaller}
+## []{.theme-subtopic}{.smaller}
 
 Explicar o caso
 
@@ -542,7 +631,7 @@ Dados
 
 Quais as etapas seguiremos
 
-# Vamos lá! {.theme-first}
+## [Vamos lá!]{.theme-subtopic}
 
 ...
 
@@ -557,12 +646,224 @@ Quais as etapas seguiremos
 
 Modelo de Regressão Linear Múltipla (RLM)
 
-## [Modelo de Regressão Linear Múltipla (RLM)]{.theme-subtopic}{.smaller}
+## [Modelo de Regressão Linear Múltipla (RLM)]{.theme-subtopic}
 
-Intuição
+No caso dos modelos RLS, havia somente uma variável explicativa.
 
-Formalização
+Todavia, pode ser que haja outros fenômenos sociais que estejam:
 
-O que muda entre o RLS e RLM?
+1. Associados com a nossa variável de interesse $Y$
 
-Ir para exercício para fechar a aula
+2. Associados com a nossa variável explicativa $X$
+
+
+## []{.theme-subtopic}
+
+### No cenário **1**
+
+Se temos na base de dados a variável explicativa que **sabemos que está associada com $Y$**, por que não a incluir?
+
+:::: columns
+:::{.column width="50%"}
+#### Ganhos de incluir {style="text-align: center;"}
+
+- Reduz a variância não explicada do modelo -- contida em $\epsilon$
+
+- Aumenta a capacidade de predição do modelo
+
+:::
+:::{.column width="50%"}
+#### Perdas de incluir {style="text-align: center;"}
+
+- Parcimônia do modelo: *the simpler, the better!*
+:::
+::::
+
+### No cenário **2**
+
+Se **sabemos que está associada com $X$**, ela deve ser incluída.
+
+:::: columns
+:::{.column width="50%"}
+#### Ganhos de incluir {style="text-align: center;"}
+
+- Não violação de H4 -- independência entre o erro e as variáveis observadas.
+
+- Reduz a variância não explicada do modelo -- contida em $\epsilon$
+
+:::
+:::{.column width="50%"}
+#### Perdas de incluir {style="text-align: center;"}
+
+- Neste caso, não há.
+
+:::
+::::
+
+## []{.theme-subtopic}
+
+### Formalização
+
+$$Y_i = \beta_0 + \beta_1 \cdot X_{1i} + \beta_2 \cdot X_{2i} + ... + \beta_k \cdot X_{ki}  + \epsilon_i$$
+
+Em que:
+
+- $k$ é o número de parâmetros associados às variáveis explicativas incluídas no modelo.
+
+## []{.theme-subtopic}
+
+### O que muda entre RLS e RLM?
+
+Em RLS, temos o modelo populacional descrito como:
+
+$$Y_i = \beta_0 + \beta_1 \cdot X_{1i} + \epsilon_i$$
+
+Enquanto em RLM, temos:
+
+$$Y_i = \beta_0 + \beta_1 \cdot X_{1i} + \beta_2 \cdot X_{2i} + ... + \beta_k \cdot X_{ki}  + \epsilon_i$$
+
+## []{.theme-subtopic}
+
+### O que muda entre RLS e RLM?
+
+Em RLS, temos o modelo populacional descrito como:
+
+$$Y_i = \beta_0 + \beta_1 \cdot X_{1i} + \epsilon_i$$
+
+Enquanto em RLM, temos:
+
+$$Y_i = \beta_0 + \beta_1 \cdot X_{1i} + \beta_2 \cdot X_{2i} + ... + \beta_k \cdot X_{ki}  + \epsilon_i$$
+
+Adicionar mais variáveis ao modelo nos dá maior confiança de que estaremos cumprindo os pressupostos para se ter estimadores **não viesados** e **mais eficientes**.
+
+## []{.theme-subtopic}
+
+### O que muda entre RLS e RLM?
+
+Em RLS, temos o modelo populacional descrito como:
+
+$$Y_i = \beta_0 + \beta_1 \cdot X_{1i} + \epsilon_i$$
+
+Enquanto em RLM, temos:
+
+$$Y_i = \beta_0 + \beta_1 \cdot X_{1i} + \beta_2 \cdot X_{2i} + ... + \beta_k \cdot X_{ki}  + \epsilon_i$$
+
+Adicionar mais variáveis ao modelo nos dá maior confiança de que estaremos cumprindo os pressupostos para se ter estimadores **não viesados** e **mais eficientes**. Aumenta a complexidade dos modelos também...
+
+## []{.theme-subtopic}
+
+### O que muda entre RLS e RLM?
+
+#### Interpretação dos modelos RLM
+
+Nos modelos RLM, temos que invocar a noção de *ceteris paribus* para uma correta interpretação dos resultados.
+
+**CETERIS PARIBUS**: "tudo o mais é constante".
+
+- Mantendo-se todos os outros fatores fixos, constantes, pode-se interpretar como a variação em determinada variável explicativa $X_k$ se relaciona com $Y$.
+
+# Exemplo da aula!{.theme-first}
+Parte 2
+
+## [Vamos fazer o nosso modelo um pouco mais complexo]{.theme-subtopic}{.smaller}
+
+Vamos estimar 3 diferentes modelos:
+
+#### Modelo 1
+O mesmo estimado no exercício anterior - já temos código e tudo mais!
+
+#### Modelo 2
+
+Adicione ao **Modelo 1**, a variável ...
+
+#### Modelo 3
+
+Adicione ao **Modelo 1**, variável ...
+
+#### Modelo 4
+
+Adicione ao **Modelo 1**, as variáveis que adicionamos no **Modelo 2 e 3**
+
+## Vamos lá! {.theme-subtopic}
+
+Dica (código em R para modelo com 2 variáveis explicativas):
+
+`modelo2 = lm(Var_Y ~ Var_X1 + Var_X2, data = dados)`
+
+::: {style="display: flex; justify-content: flex-end; align-items: center; height: 100vh;"}
+```{=html}
+<img src="images/hands-on.gif" 
+       style="border-radius: 50%; border:5px solid #708d81; width:400px; height:auto;" />
+```
+:::
+
+## Isso é tudo para hoje! {.theme-next}
+
+Para próxima aula:
+
+1.  Exercício sobre Regressão Linear Múltipla (próximo slide)
+2.  Leitura de material para aula de hoje (caso não tenha lido)
+3.  Leitura de material para a aula seguinte (Ver ementa)
+
+## Orientações sobre o exercício {.theme-next}
+
+Utilizaremos os mesmos dados que utilizamos na aula de hoje.
+
+-   Rode o Modelo 1 da aula de hoje e interprete os resultados
+
+-   Adicione ao modelo 1, a variável do Modelo 2 da aula de hoje e interprete os resultados de cada variável;
+
+-   Adicione ao Modelo 2, a variável do Modelo 3 da aula de hoje e interprete os resultados de cada variável;
+
+-   Adicione a variável XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxxx e interprete os resultados dela;
+
+-   Volte às estatísticas do modelo -- obtidas com `summary()` -- e compare se houve muita mudança nos coeficientes de cada uma das variáveis quando incluída outras variáveis ao modelo. **O que isso nos diz?**
+
+-   Observe se o $R^2$ -- obtidos com `summary()` -- apresentou muita mudança entre os modelos. **O que isso nos diz?**
+
+#  {.cebrap-fim .smaller}
+
+![](images/cebrap50.png){.absolute top="-90" right="460" width="100" height="100"}
+
+:::::: columns
+:::: {.column width="50%"}
+::: {style="text-align: right;"}
+**Presidência**
+
+**Diretoria Administrativa**
+
+**Diretoria Científica**
+
+**Coordenação de Seminários**
+
+**Coordenação de Cursos**
+:::
+::::
+
+::: {.column width="50%"}
+Adrian Gurza Lavalle
+
+Victor Callil
+
+Arilson Favareto
+
+Bianca Tavolari
+
+Monise Fernandes Picanço
+:::
+::::::
+
+::: {style="text-align: center;"}
+**Curso**
+
+Introdução à análise de regressão para pesquisas sociais
+
+**Ministrante**
+
+Thiago Cordeiro Almeida
+
+E-mail: [thiagocordalmeida\@gmail.com](thiagocordalmeida@gmail.com)
+
+Github: [\@thiagocalm](github.com/thiagocalm)
+:::
+

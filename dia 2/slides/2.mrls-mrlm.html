@@ -10,7 +10,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.7.32">
 <meta name="author" content="Thiago Cordeiro Almeida">
-<meta name="dcterms.date" content="2025-09-15">
+<meta name="dcterms.date" content="2025-09-16">
 <title>Regressão para pesquisas sociais</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -209,7 +209,7 @@ Thiago Cordeiro Almeida
     </div>
 </div>
 
-  <p class="date">September 15, 2025</p>
+  <p class="date">September 16, 2025</p>
 </section><section id="antes-de-começar" class="title-slide slide level1 center"><h1>Antes de começar…</h1>
 <p>lista de presença!</p>
 <p><img data-src="images/attention.gif" class="absolute" style="bottom: 10px; right: 50px; width: 240px; height: 240px; "></p>
@@ -302,11 +302,11 @@ Thiago Cordeiro Almeida
 <li><p>Modelagens são formas de adicionar complexidade ao estudo desses fenômenos a partir das suas interações com outros fenômenos sociais.</p></li>
 </ul><aside><ol class="aside-footnotes"><li id="fn1"><p><strong>i.i.d.</strong> = <strong>i</strong>ndependente e <strong>i</strong>dênticamente <strong>d</strong>istribuída.</p></li></ol></aside></section><section id="modelos-probabilísticos-3" class="slide level2 smaller"><h2><span class="theme-subtopic">Modelos probabilísticos</span></h2>
 <h3 id="relação-entre-modelos-probabilísticos-e-modelos-de-regressão">Relação entre modelos probabilísticos e modelos de regressão</h3>
-<p>O que fazemos em nossos modelos de regressão é, basicamente, estudar as propriedades da nossa <strong>variável de estudo</strong> através de relações associadas ao melhor modelo probabilístico que a descreve.</p>
+<p>O que fazemos em nossos modelos de regressão é, basicamente, estudar as propriedades da nossa <strong>variável de estudo</strong> através de relações associadas ao melhor modelo probabilístico que descreve essa variável.</p>
 <p>Com isso, podemos:</p>
 <ul>
 <li><p>Prever resultados futuros condicionados a um conjunto de outras variáveis (probabilidade condicional a um conjunto de <span class="math inline">\(X\)</span>)</p></li>
-<li><p>Estabelecer em que medida variando uma das variáveis, seus valores são afetados (probabilidade condicional a <span class="math inline">\(X\)</span>)</p></li>
+<li><p>Estabelecer em que medida variando uma das variáveis, seus valores são afetados (probabilidade condicional a um <span class="math inline">\(X\)</span>)</p></li>
 <li><p>Obter valores esperados e incerteza de seus resultados (esperança e variância)</p></li>
 </ul></section></section><section><section id="conceitos-e-definições-estatísticas-importantes-1" class="title-slide slide level1 theme-first center"><h1>Conceitos e definições estatísticas importantes</h1>
 <div style="text-align: left;">
@@ -337,7 +337,7 @@ Thiago Cordeiro Almeida
 </table>
 </div>
 </div>
-</section><section id="variável-aleatória-1" class="slide level2 smaller"><h2><span class="theme-subtopic">Variável aleatória</span></h2>
+</section><section id="section" class="slide level2 smaller"><h2><span class="theme-subtopic"></span></h2>
 <p>Variáveis aleatórias <span class="math inline">\(v.a.\)</span> apresentam algumas propiedades que serão importantes nos modelos que utilizaremos:</p>
 <h4 id="esperança-de-x">Esperança de X</h4>
 <p>Se uma determinada variável é aleatória e o seu seu modelo de probabilidade é conhecido, a sua <em>Esperança</em> – também chamada de média – pode ser conhecida.</p>
@@ -345,8 +345,8 @@ Thiago Cordeiro Almeida
 <h4 id="variabilidade-de-x">Variabilidade de X</h4>
 <p>Do mesmo modo, se uma determinada variável é aleatória e é conhecido o seu modelo de probabilidade, a sua <em>variância</em> – ou sua variabilidade em torno da média – também pode ser conhecido.</p>
 <p>Geralmente é apresentada enquanto: <span class="math inline">\(V(X) = E[X - E(X)]^2\)</span>, sendo <span class="math inline">\(X\)</span> uma variável aleatória.</p>
-</section><section id="variável-aleatória-2" class="slide level2 smaller"><h2><span class="theme-subtopic">Variável aleatória</span></h2>
-<h4 id="relação-entre-variáveis-aleatórias">Relação entre variáveis aleatórias</h4>
+</section><section id="section-1" class="slide level2 smaller"><h2><span class="theme-subtopic"></span></h2>
+<h3 id="relação-entre-variáveis-aleatórias">Relação entre variáveis aleatórias</h3>
 <p>Conhecendo-se as propriedades de uma variável aleatória, pode-se relacionar duas ou mais variáveis aleatórias, de modo que:</p>
 <p><span class="math display">\[Y = f(X_1, X_2, X_3, X_4,...,X_n) = X_1 + X_2 + X_3 + X_4 + ... + X_n\]</span></p>
 <p>Desse modo,</p>
@@ -384,14 +384,14 @@ Thiago Cordeiro Almeida
 
 <img data-src="2.mrls-mrlm_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section><section id="modelo-de-regressão-linear-simples-rls-2" class="slide level2 smaller"><h2><span class="theme-subtopic">Modelo de Regressão Linear Simples (RLS)</span></h2>
 
-<img data-src="2.mrls-mrlm_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section><section id="modelo-de-regressão-linear-simples-rls-3" class="slide level2 smaller"><h2><span class="theme-subtopic">Modelo de Regressão Linear Simples (RLS)</span></h2>
-<h3 id="formalização">Formalização</h3>
+<img data-src="2.mrls-mrlm_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section><section id="section-2" class="slide level2 smaller"><h2><span class="theme-subtopic"></span></h2>
+<h3 id="formalização-de-um-mrls">Formalização de um MRLS</h3>
 <p>Dizemos que a representação geral (ou populacional) de um determinado modelo de regressão é dada por:</p>
-<p><span class="math display">\[Y_i = \alpha + \beta_1 \cdot X_i + \epsilon_i\]</span></p>
+<p><span class="math display">\[Y_i = \beta_0 + \beta_1 \cdot X_i + \epsilon_i\]</span></p>
 <p>Em que:</p>
 <ul>
 <li>
-<p><span class="math inline">\(\alpha\)</span>: intercepto do modelo.</p>
+<p><span class="math inline">\(\beta_0\)</span>: intercepto do modelo.</p>
 <ul>
 <li>Nos diz qual valor <span class="math inline">\(Y\)</span> assume quando <span class="math inline">\(X\)</span> é igualado a <span class="math inline">\(0\)</span>.</li>
 </ul>
@@ -400,39 +400,41 @@ Thiago Cordeiro Almeida
 <p><span class="math inline">\(\beta_1\)</span>: coeficiente do modelo associado à variável <span class="math inline">\(X\)</span>.</p>
 <ul>
 <li><p>Nos diz qual a magnitude da mudança em <span class="math inline">\(Y\)</span> quando <span class="math inline">\(X\)</span> varia uma unidade para cima ou para baixo.</p></li>
-<li><p>É também chamado de <strong>inclinação da reta</strong>, devido à suas propriedades estatísticas do modo em que é calculado<sup>1</sup></p></li>
+<li><p>É também chamado de <strong>inclinação da reta</strong>, devido à suas propriedades estatísticas do modo em que é calculado*.</p></li>
 </ul>
 </li>
 <li><p><span class="math inline">\(\epsilon_i\)</span>: como descrito anteriormente, é o quanto não está sendo explicado em <span class="math inline">\(Y_i\)</span> devido à variação estimada em <span class="math inline">\(X_i\)</span>.</p></li>
-</ul><aside><ol class="aside-footnotes"><li id="fn2"><p>Não entraremos em detalhes disso no curso, mas nos materiais da aula vocês podem se aprofundar nisso.</p></li></ol></aside></section><section id="modelo-de-regressão-linear-simples-rls-4" class="slide level2 smaller"><h2><span class="theme-subtopic-assumption">Modelo de Regressão Linear Simples (RLS)</span></h2>
-<p><span class="math display">\[Y_i = \alpha + \beta_1 \cdot X_i + \epsilon_i\]</span></p>
+</ul></section><section id="section-3" class="slide level2 smaller"><h2><span class="theme-subtopic-assumption"></span></h2>
 <h4 id="hipótese-independência-entre-erro-e-variáveis-observadas">Hipótese: independência entre erro e variáveis observadas</h4>
+<p>Partindo do nosso modelo RLS para a população, <span class="math display">\[Y_i = \beta_0 + \beta_1 \cdot X_i + \epsilon_i\]</span></p>
 <p>A <strong>hipótese-chave</strong> é que a média dos erros condicionada na variável explicativa <span class="math inline">\(X_i\)</span> é igual a zero, ou seja: <span class="math display">\[E[\epsilon_i|X_i]=0\]</span></p>
 <p>Em outras palavras, estamos assumindo que não há nenhum fator contido em <span class="math inline">\(\epsilon\)</span> que seja correlacionado com <span class="math inline">\(X\)</span>, de modo que <span class="math inline">\(\beta\)</span> seja um efeito <em>puro</em> de X.</p>
-</section><section id="modelo-de-regressão-linear-simples-rls-5" class="slide level2 smaller"><h2><span class="theme-subtopic-assumption">Modelo de Regressão Linear Simples (RLS)</span></h2>
-<p>Modelo populacional: <span class="math display">\[Y_i = \alpha + \beta_1 \cdot X_i + \epsilon_i\]</span></p>
-<p>Quando vamos <em>estimar</em> os nossos parâmetros para a nossa amostra, assumimos os valores médios observados, isto é:</p>
-<p><span class="math display">\[\bar{Y_i} = \hat{\alpha} + \hat{\beta_1} \cdot \bar{X_i} + \hat{\epsilon_i}\]</span></p>
-</section><section id="modelo-de-regressão-linear-simples-rls-6" class="slide level2 smaller"><h2><span class="theme-subtopic">Modelo de Regressão Linear Simples (RLS)</span></h2>
+</section><section id="section-4" class="slide level2 smaller"><h2><span class="theme-subtopic-assumption"></span></h2>
+<p>Modelo populacional: <span class="math display">\[Y_i = \beta_0 + \beta_1 \cdot X_i + \epsilon_i\]</span></p>
+<p>Quando vamos <em>estimar</em> os nossos parâmetros para a nossa amostra, assumimos os valores médios para os nossos <span class="math inline">\(i\)</span> casos observados, isto é:</p>
+<p><span class="math display">\[\bar{Y} = \hat{\beta_0} + \hat{\beta_1} \cdot \bar{X} + \hat{\epsilon_i}\]</span></p>
+<p>Os únicos valores que não conhecemos são referentes a <span class="math inline">\(\beta_0\)</span> e <span class="math inline">\(\beta\)</span>, uma vez que <span class="math inline">\(\epsilon\)</span> é obtido residualmente.</p>
+<p>Tudo o que precisamos fazer é <strong>estimar os parâmetros desconhecidos do modelo populacional</strong>.</p>
+</section><section id="section-5" class="slide level2 smaller"><h2><span class="theme-subtopic"></span></h2>
 <h3 id="estimando-parâmetros-do-modelo">Estimando parâmetros do modelo</h3>
-<p>Os únicos valores que não conhecemos são referentes a <span class="math inline">\(\alpha\)</span> e <span class="math inline">\(\beta\)</span>, uma vez que <span class="math inline">\(\epsilon\)</span> é obtido residualmente.</p>
-<p>Tudo o que precisamos fazer é <strong>estimar os parâmetros desconhecidos do modelo populacional</strong>. O modelo a ser estimado consiste em:</p>
-<p><span class="math display">\[\bar{Y_i} = \hat{\alpha} + \hat{\beta_1} \cdot \bar{X_i} + \hat{\epsilon_i}\]</span></p>
-<h4 id="mínimos-quadrados-ordinários-mqo">Mínimos Quadrados Ordinários (MQO)</h4>
+<p>O modelo a ser estimado consiste em:</p>
+<p><span class="math display">\[\bar{Y} = \hat{\beta_0} + \hat{\beta_1} \cdot \bar{X} + \hat{\epsilon_i}\]</span></p>
+<h4 id="estimadores-de-mínimos-quadrados-ordinários-mqo">Estimadores de Mínimos Quadrados Ordinários (MQO)</h4>
 <p>Os estimadores de MQO asseguram, via relações estatísticas, que tenhamos valores para nossos parâmetros desconhecidos que <strong>minimizem o desvio dos resíduos</strong>.</p>
 <p>Isto é, temos a reta que melhor se ajusta aos nossos dados de modo que passe mais perto possível de cada ponto.</p>
-</section><section id="modelo-de-regressão-linear-simples-rls-7" class="slide level2 smaller"><h2><span class="theme-subtopic">Modelo de Regressão Linear Simples (RLS)</span></h2>
+</section><section id="section-6" class="slide level2 smaller"><h2><span class="theme-subtopic"></span></h2>
 <h3 id="estimando-parâmetros-do-modelo-1">Estimando parâmetros do modelo</h3>
-<p>Os únicos valores que não conhecemos são referentes a <span class="math inline">\(\alpha\)</span> e <span class="math inline">\(\beta\)</span>, uma vez que <span class="math inline">\(\epsilon\)</span> é obtido residualmente.</p>
-<p>Tudo o que precisamos fazer é <strong>estimar os parâmetros desconhecidos do modelo populacional</strong>. O modelo a ser estimado consiste em:</p>
-<p><span class="math display">\[\bar{Y_i} = \hat{\alpha} + \hat{\beta_1} \cdot \bar{X_i} + \hat{\epsilon_i}\]</span></p>
-<h4 id="mínimos-quadrados-ordinários-mqo-1">Mínimos Quadrados Ordinários (MQO)</h4>
+<p><span class="math display">\[\bar{Y} = \hat{\beta_0} + \hat{\beta_1} \cdot \bar{X}\]</span></p>
+<h4 id="estimadores-de-mínimos-quadrados-ordinários-mqo-1">Estimadores de Mínimos Quadrados Ordinários (MQO)</h4>
 <p>Acionando a <strong>hipótese descrita anteriormente</strong>, temos:</p>
 <ul>
-<li><p><span class="math inline">\(\hat{\alpha} = \bar{Y_i} - [\hat{\beta_1} \cdot \bar{X_i}]\)</span></p></li>
-<li><p><span class="math inline">\(\hat{\beta_1} = \frac{\bar{Y_i} - \hat{\alpha}}{\bar{X_i}}\)</span></p></li>
-</ul></section><section id="modelo-de-regressão-linear-simples-rls-8" class="slide level2 smaller"><h2><span class="theme-subtopic">Modelo de Regressão Linear Simples (RLS)</span></h2>
-<p><span class="math display">\[\overline{Divorcio} = \hat{\alpha} + \hat{\beta_1} \cdot \overline{Margarina} + \hat{\epsilon}\]</span></p>
+<li><p><span class="math inline">\(\hat{\beta_0} = \bar{Y} - [\hat{\beta_1} \cdot \bar{X}]\)</span></p></li>
+<li><p><span class="math inline">\(\hat{\beta_1} = \frac{Cov(x,y)}{Var(x)}\)</span></p></li>
+<li><p>Valores preditos: <span class="math inline">\(\hat{Y_i} = \hat{\beta_0} + \hat{\beta_1} \cdot X_i\)</span> para <span class="math inline">\(i = 1,...,n\)</span>.</p></li>
+<li><p>Resíduos: <span class="math inline">\(\hat{u_i}=y_i-\hat{Y_i}\)</span>, para <span class="math inline">\(i=1,...,n\)</span></p></li>
+</ul></section><section id="section-7" class="slide level2 smaller"><h2><span class="theme-subtopic"></span></h2>
+<p>Para o exemplo anterior, se partimos do modelo a ser estimado:</p>
+<p><span class="math display">\[\overline{Divorcio} = \hat{\beta_0} + \hat{\beta_1} \cdot \overline{Margarina} + \hat{\epsilon}\]</span></p>
 <p>Aplicando em R:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a>modelo <span class="ot">&lt;-</span> <span class="fu">lm</span>(divorcio <span class="sc">~</span> margarina, <span class="at">data =</span> base)</span>
@@ -447,8 +449,9 @@ Coefficients:
      3.3086       0.2014  </code></pre>
 </div>
 </div>
-</section><section id="modelo-de-regressão-linear-simples-rls-9" class="slide level2 smaller"><h2><span class="theme-subtopic">Modelo de Regressão Linear Simples (RLS)</span></h2>
-<p><span class="math display">\[\overline{Divorcio} = \hat{\alpha} + \hat{\beta_1} \cdot \overline{Margarina} + \hat{\epsilon}\]</span></p>
+</section><section id="section-8" class="slide level2 smaller"><h2><span class="theme-subtopic"></span></h2>
+<p>Para o exemplo anterior, se partimos do modelo a ser estimado:</p>
+<p><span class="math display">\[\overline{Divorcio} = \hat{\beta_0} + \hat{\beta_1} \cdot \overline{Margarina} + \hat{\epsilon}\]</span></p>
 <p>Aplicando em R:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a>modelo <span class="ot">&lt;-</span> <span class="fu">lm</span>(divorcio <span class="sc">~</span> margarina, <span class="at">data =</span> base)</span>
@@ -489,49 +492,228 @@ F-statistic: 531.5 on 1 and 8 DF,  p-value: 0.0000000133</code></pre>
 <li><p>Independência entre erro e variáveis observadas;</p></li>
 <li><p>Variância do erro constante para todas as variáveis explicativas;</p></li>
 <li><p>O erro segue uma distribuição normal com média 0 e variância constante</p></li>
-</ol></section><section id="section" class="slide level2 smaller"><h2><span class="theme-subtopic"></span></h2>
+</ol></section><section id="section-9" class="slide level2"><h2><span class="theme-subtopic"></span></h2>
 <h3 id="h1-o-modelo-é-linear-nos-parâmetros">H1: O modelo é linear nos parâmetros</h3>
-</section><section id="section-1" class="slide level2 smaller"><h2><span class="theme-subtopic"></span></h2>
+<p>Os parâmetros – <span class="math inline">\(\beta\)</span>s – se relacionam de forma linear.</p>
+<p><span class="math display">\[Y_i = \beta_0 + \beta_1 \cdot X_i + \epsilon_i\]</span></p>
+<p>É por essa propriedade que chamamos os modelos de <strong>modelos lineares</strong>.</p>
+</section><section id="section-10" class="slide level2"><h2><span class="theme-subtopic"></span></h2>
 <h3 id="h2-amostra-é-aleatória-e-segue-o-modelo-populacional-descrito-em-h1">H2: Amostra é aleatória e segue o modelo populacional descrito em H1</h3>
-</section><section id="section-2" class="slide level2 smaller"><h2><span class="theme-subtopic"></span></h2>
+<p>Para uma dada amostra de tamanho <span class="math inline">\(N\)</span> qualquer, seu processo gerador seguiu uma distribuição aleatória, seguindo o modelo populacional descrito em H1.</p>
+<p>Todavia, <em>em casos onde temos problemas de seletividade amostral</em>, isso pode afetar essa hipótese.</p>
+</section><section id="section-11" class="slide level2 smaller"><h2><span class="theme-subtopic"></span></h2>
 <h3 id="h3-inexistência-variáveis-constantes-ou-que-não-tenham-uma-relação-linear-exata-com-outra-variável-explicativa">H3: Inexistência variáveis constantes ou que não tenham uma relação linear exata com outra variável explicativa</h3>
-</section><section id="section-3" class="slide level2 smaller"><h2><span class="theme-subtopic"></span></h2>
+<p>Para qualquer variável explicativa <span class="math inline">\(X\)</span>, há uma variabilidade de seus resultados em relação a <span class="math inline">\(Y\)</span>.</p>
+<p>Além disso, determinada variável <span class="math inline">\(X\)</span> não pode estar totalmente correlacionada com outra variável <span class="math inline">\(X\)</span>.</p>
+<ul>
+<li>Assegura que não haja perfeita colinearidade,i.e., que toda a variação em <span class="math inline">\(X_1\)</span> esteja associada a <span class="math inline">\(X_2\)</span>.</li>
+</ul></section><section id="section-12" class="slide level2"><h2><span class="theme-subtopic"></span></h2>
 <h3 id="h4-independência-entre-erro-e-variáveis-observadas">H4: Independência entre erro e variáveis observadas</h3>
-</section><section id="section-4" class="slide level2 smaller"><h2><span class="theme-subtopic"></span></h2>
+<p>Mencionado anteriormente: a média dos erros condicionada na variável explicativa <span class="math inline">\(X_i\)</span> é igual a zero, ou seja: <span class="math display">\[E[\epsilon_i|X_i]=0\]</span></p>
+<p>Para um determinado valor de <span class="math inline">\(X\)</span>, os outros fatores não observados no modelo não afetam o resultado de <span class="math inline">\(X\)</span>.</p>
+<p><strong>Não é que <span class="math inline">\(\epsilon\)</span> não afete <span class="math inline">\(Y\)</span></strong>, e sim que <strong><span class="math inline">\(\epsilon\)</span> não está condicionado a <span class="math inline">\(X\)</span></strong>.</p>
+</section><section id="section-13" class="slide level2 smaller"><h2><span class="theme-subtopic"></span></h2>
 <h3 id="h5-variância-do-erro-constante-para-todas-as-variáveis-explicativas">H5: Variância do erro constante para todas as variáveis explicativas</h3>
-</section><section id="section-5" class="slide level2 smaller"><h2><span class="theme-subtopic"></span></h2>
+<p><span class="math display">\[Var[\epsilon|X]=\sigma^2\]</span> Chamamos essa hipótese de <strong>homocedasticidade</strong> ou <strong>variância constante do erro</strong>.</p>
+<p>Pode ser violada em situações de:</p>
+<ul>
+<li><p><strong>Outliers para uma variável específica</strong></p></li>
+<li><p><strong>Distribuições de alguma variável específica</strong> que seguem um distinto padrão.</p></li>
+<li><p>…</p></li>
+</ul></section><section id="section-14" class="slide level2"><h2><span class="theme-subtopic"></span></h2>
 <h3 id="h6-o-erro-segue-uma-distribuição-normal-com-média-0-e-variância-constante">H6: O erro segue uma distribuição normal com média 0 e variância constante</h3>
-</section><section id="propriedades-do-mrl-1" class="slide level2 smaller"><h2><span class="theme-subtopic">Propriedades do MRL</span></h2>
-<h3 id="assegurando-a-existência-de-h1-h4">Assegurando a existência de H1-H4</h3>
+<p>Assumindo isso, podemos também assumir, <em>por propriedades estatísticas</em>, que qualquer um de nossos parâmetros também têm distribuição normal.</p>
+<p>Por que assumimos essa hipótese para o erro e não para os parâmetros?</p>
+<ul>
+<li>O erro pode ser estudado e avaliado, os parâmetros não.</li>
+</ul></section><section id="section-15" class="slide level2 smaller"><h2><span class="theme-subtopic"></span></h2>
+<h4 id="assegurando-a-existência-de-h1-h4">Assegurando a existência de H1-H4</h4>
 <p>Estimadores MQO <strong>não viesados</strong>. Isto é, representam o que seria o valor a ser obtido na população estudada, mesmo depois de implementar em <span class="math inline">\(N\)</span> diferentes amostras.</p>
-<h3 id="assegurando-a-existência-de-h5">Assegurando a existência de H5</h3>
+<ul>
+<li><p><span class="math inline">\(E[\hat{\beta_0}|X]=\beta_0\)</span></p></li>
+<li><p><span class="math inline">\(E[\hat{\beta_1}|X]=\beta_1\)</span></p></li>
+</ul></section><section id="section-16" class="slide level2 smaller"><h2><span class="theme-subtopic"></span></h2>
+<h4 id="assegurando-a-existência-de-h1-h4-1">Assegurando a existência de H1-H4</h4>
+<p>Estimadores MQO <strong>não viesados</strong>. Isto é, representam o que seria o valor a ser obtido na população estudada, mesmo depois de implementar em <span class="math inline">\(N\)</span> diferentes amostras.</p>
+<ul>
+<li><p><span class="math inline">\(E[\hat{\beta_0}|X]=\beta_0\)</span></p></li>
+<li><p><span class="math inline">\(E[\hat{\beta_1}|X]=\beta_1\)</span></p></li>
+</ul>
+<h4 id="assegurando-a-existência-de-h5">Assegurando a existência de H5</h4>
 <p>Estimadores MQO sendo <strong>os mais eficientes</strong>. Isto é, asseguram a menor variância possível dentre outros processos de estimação dos parâmetros.</p>
-<h3 id="assegurando-a-existência-de-h1-h5">Assegurando a existência de H1-H5</h3>
+</section><section id="section-17" class="slide level2 smaller"><h2><span class="theme-subtopic"></span></h2>
+<h4 id="assegurando-a-existência-de-h1-h4-2">Assegurando a existência de H1-H4</h4>
+<p>Estimadores MQO <strong>não viesados</strong>. Isto é, representam o que seria o valor a ser obtido na população estudada, mesmo depois de implementar em <span class="math inline">\(N\)</span> diferentes amostras.</p>
+<ul>
+<li><p><span class="math inline">\(E[\hat{\beta_0}|X]=\beta_0\)</span></p></li>
+<li><p><span class="math inline">\(E[\hat{\beta_1}|X]=\beta_1\)</span></p></li>
+</ul>
+<h4 id="assegurando-a-existência-de-h5-1">Assegurando a existência de H5</h4>
+<p>Estimadores MQO sendo <strong>os mais eficientes</strong>. Isto é, asseguram a menor variância possível dentre outros processos de estimação dos parâmetros.</p>
+<h4 id="assegurando-a-existência-de-h1-h5">Assegurando a existência de H1-H5</h4>
 <p>Temos os melhores estimadores para o modelo populacional. À medida que aumenta o tamanho da amostra, aproxima-se mais do valor do parâmetro na população e com menor incerteza sobre ele.</p>
-</section><section id="propriedades-do-mrl-2" class="slide level2 smaller"><h2><span class="theme-subtopic">Propriedades do MRL</span></h2>
-<h3 id="assegurando-a-existência-de-h1-h6">Assegurando a existência de H1-H6</h3>
+</section><section id="section-18" class="slide level2 smaller"><h2><span class="theme-subtopic"></span></h2>
+<h4 id="assegurando-a-existência-de-h1-h4-3">Assegurando a existência de H1-H4</h4>
+<p>Estimadores MQO <strong>não viesados</strong>. Isto é, representam o que seria o valor a ser obtido na população estudada, mesmo depois de implementar em <span class="math inline">\(N\)</span> diferentes amostras.</p>
+<ul>
+<li><p><span class="math inline">\(E[\hat{\beta_0}|X]=\beta_0\)</span></p></li>
+<li><p><span class="math inline">\(E[\hat{\beta_1}|X]=\beta_1\)</span></p></li>
+</ul>
+<h4 id="assegurando-a-existência-de-h5-2">Assegurando a existência de H5</h4>
+<p>Estimadores MQO sendo <strong>os mais eficientes</strong>. Isto é, asseguram a menor variância possível dentre outros processos de estimação dos parâmetros.</p>
+<h4 id="assegurando-a-existência-de-h1-h5-1">Assegurando a existência de H1-H5</h4>
+<p>Temos os melhores estimadores para o modelo populacional. À medida que aumenta o tamanho da amostra, aproxima-se mais do valor do parâmetro na população e com menor incerteza sobre ele.</p>
+<h4 id="assegurando-a-existência-de-h1-h6">Assegurando a existência de H1-H6</h4>
 <p>É possível fazer inferência sob a significância estatística dos coeficientes estimados em comparação com o valor do parâmetro na população.</p>
 </section></section><section><section id="exemplo-da-aula" class="title-slide slide level1 theme-first center"><h1>Exemplo da aula!</h1>
 <p>…</p>
-</section><section id="section-6" class="slide level2 smaller"><h2><span class="theme-subtopic">…</span></h2>
+</section><section id="section-19" class="slide level2 smaller"><h2><span class="theme-subtopic"></span></h2>
 <p>Explicar o caso</p>
 <p>Dados</p>
 <p>Quais as etapas seguiremos</p>
-</section></section><section id="vamos-lá" class="title-slide slide level1 theme-first center"><h1>Vamos lá!</h1>
+</section><section id="vamos-lá" class="slide level2"><h2><span class="theme-subtopic">Vamos lá!</span></h2>
 <p>…</p>
 <div style="display: flex; justify-content: flex-end; align-items: center; height: 100vh;">
 <img src="images/hands-on.gif" style="border-radius: 50%; border:5px solid #708d81; width:400px; height:auto;">
 </div>
-</section><section><section id="modelo-de-regressão-linear-2" class="title-slide slide level1 theme-first center"><h1>Modelo de regressão Linear</h1>
+</section></section><section><section id="modelo-de-regressão-linear-2" class="title-slide slide level1 theme-first center"><h1>Modelo de regressão Linear</h1>
 <p>Modelo de Regressão Linear Múltipla (RLM)</p>
-</section><section id="modelo-de-regressão-linear-múltipla-rlm" class="slide level2 smaller"><h2><span class="theme-subtopic">Modelo de Regressão Linear Múltipla (RLM)</span></h2>
-<p>Intuição</p>
-<p>Formalização</p>
-<p>O que muda entre o RLS e RLM?</p>
-<p>Ir para exercício para fechar a aula</p>
+</section><section id="modelo-de-regressão-linear-múltipla-rlm" class="slide level2"><h2><span class="theme-subtopic">Modelo de Regressão Linear Múltipla (RLM)</span></h2>
+<p>No caso dos modelos RLS, havia somente uma variável explicativa.</p>
+<p>Todavia, pode ser que haja outros fenômenos sociais que estejam:</p>
+<ol type="1">
+<li><p>Associados com a nossa variável de interesse <span class="math inline">\(Y\)</span></p></li>
+<li><p>Associados com a nossa variável explicativa <span class="math inline">\(X\)</span></p></li>
+</ol></section><section id="section-20" class="slide level2"><h2><span class="theme-subtopic"></span></h2>
+<h3 id="no-cenário-1">No cenário <strong>1</strong>
+</h3>
+<p>Se temos na base de dados a variável explicativa que <strong>sabemos que está associada com <span class="math inline">\(Y\)</span></strong>, por que não a incluir?</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h4 style="text-align: center;" id="ganhos-de-incluir">Ganhos de incluir</h4>
+<ul>
+<li><p>Reduz a variância não explicada do modelo – contida em <span class="math inline">\(\epsilon\)</span></p></li>
+<li><p>Aumenta a capacidade de predição do modelo</p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h4 style="text-align: center;" id="perdas-de-incluir">Perdas de incluir</h4>
+<ul>
+<li>Parcimônia do modelo: <em>the simpler, the better!</em>
+</li>
+</ul>
+</div></div>
+<h3 id="no-cenário-2">No cenário <strong>2</strong>
+</h3>
+<p>Se <strong>sabemos que está associada com <span class="math inline">\(X\)</span></strong>, ela deve ser incluída.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h4 style="text-align: center;" id="ganhos-de-incluir-1">Ganhos de incluir</h4>
+<ul>
+<li><p>Não violação de H4 – independência entre o erro e as variáveis observadas.</p></li>
+<li><p>Reduz a variância não explicada do modelo – contida em <span class="math inline">\(\epsilon\)</span></p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h4 style="text-align: center;" id="perdas-de-incluir-1">Perdas de incluir</h4>
+<ul>
+<li>Neste caso, não há.</li>
+</ul>
+</div></div>
+</section><section id="section-21" class="slide level2"><h2><span class="theme-subtopic"></span></h2>
+<h3 id="formalização">Formalização</h3>
+<p><span class="math display">\[Y_i = \beta_0 + \beta_1 \cdot X_{1i} + \beta_2 \cdot X_{2i} + ... + \beta_k \cdot X_{ki}  + \epsilon_i\]</span></p>
+<p>Em que:</p>
+<ul>
+<li>
+<span class="math inline">\(k\)</span> é o número de parâmetros associados às variáveis explicativas incluídas no modelo.</li>
+</ul></section><section id="section-22" class="slide level2"><h2><span class="theme-subtopic"></span></h2>
+<h3 id="o-que-muda-entre-rls-e-rlm">O que muda entre RLS e RLM?</h3>
+<p>Em RLS, temos o modelo populacional descrito como:</p>
+<p><span class="math display">\[Y_i = \beta_0 + \beta_1 \cdot X_{1i} + \epsilon_i\]</span></p>
+<p>Enquanto em RLM, temos:</p>
+<p><span class="math display">\[Y_i = \beta_0 + \beta_1 \cdot X_{1i} + \beta_2 \cdot X_{2i} + ... + \beta_k \cdot X_{ki}  + \epsilon_i\]</span></p>
+</section><section id="section-23" class="slide level2"><h2><span class="theme-subtopic"></span></h2>
+<h3 id="o-que-muda-entre-rls-e-rlm-1">O que muda entre RLS e RLM?</h3>
+<p>Em RLS, temos o modelo populacional descrito como:</p>
+<p><span class="math display">\[Y_i = \beta_0 + \beta_1 \cdot X_{1i} + \epsilon_i\]</span></p>
+<p>Enquanto em RLM, temos:</p>
+<p><span class="math display">\[Y_i = \beta_0 + \beta_1 \cdot X_{1i} + \beta_2 \cdot X_{2i} + ... + \beta_k \cdot X_{ki}  + \epsilon_i\]</span></p>
+<p>Adicionar mais variáveis ao modelo nos dá maior confiança de que estaremos cumprindo os pressupostos para se ter estimadores <strong>não viesados</strong> e <strong>mais eficientes</strong>.</p>
+</section><section id="section-24" class="slide level2"><h2><span class="theme-subtopic"></span></h2>
+<h3 id="o-que-muda-entre-rls-e-rlm-2">O que muda entre RLS e RLM?</h3>
+<p>Em RLS, temos o modelo populacional descrito como:</p>
+<p><span class="math display">\[Y_i = \beta_0 + \beta_1 \cdot X_{1i} + \epsilon_i\]</span></p>
+<p>Enquanto em RLM, temos:</p>
+<p><span class="math display">\[Y_i = \beta_0 + \beta_1 \cdot X_{1i} + \beta_2 \cdot X_{2i} + ... + \beta_k \cdot X_{ki}  + \epsilon_i\]</span></p>
+<p>Adicionar mais variáveis ao modelo nos dá maior confiança de que estaremos cumprindo os pressupostos para se ter estimadores <strong>não viesados</strong> e <strong>mais eficientes</strong>. Aumenta a complexidade dos modelos também…</p>
+</section><section id="section-25" class="slide level2"><h2><span class="theme-subtopic"></span></h2>
+<h3 id="o-que-muda-entre-rls-e-rlm-3">O que muda entre RLS e RLM?</h3>
+<h4 id="interpretação-dos-modelos-rlm">Interpretação dos modelos RLM</h4>
+<p>Nos modelos RLM, temos que invocar a noção de <em>ceteris paribus</em> para uma correta interpretação dos resultados.</p>
+<p><strong>CETERIS PARIBUS</strong>: “tudo o mais é constante”.</p>
+<ul>
+<li>Mantendo-se todos os outros fatores fixos, constantes, pode-se interpretar como a variação em determinada variável explicativa <span class="math inline">\(X_k\)</span> se relaciona com <span class="math inline">\(Y\)</span>.</li>
+</ul></section></section><section><section id="exemplo-da-aula-1" class="title-slide slide level1 theme-first center"><h1>Exemplo da aula!</h1>
+<p>Parte 2</p>
+</section><section id="vamos-fazer-o-nosso-modelo-um-pouco-mais-complexo" class="slide level2 smaller"><h2><span class="theme-subtopic">Vamos fazer o nosso modelo um pouco mais complexo</span></h2>
+<p>Vamos estimar 3 diferentes modelos:</p>
+<h4 id="modelo-1">Modelo 1</h4>
+<p>O mesmo estimado no exercício anterior - já temos código e tudo mais!</p>
+<h4 id="modelo-2">Modelo 2</h4>
+<p>Adicione ao <strong>Modelo 1</strong>, a variável …</p>
+<h4 id="modelo-3">Modelo 3</h4>
+<p>Adicione ao <strong>Modelo 1</strong>, variável …</p>
+<h4 id="modelo-4">Modelo 4</h4>
+<p>Adicione ao <strong>Modelo 1</strong>, as variáveis que adicionamos no <strong>Modelo 2 e 3</strong></p>
+</section><section id="vamos-lá-1" class="slide level2 theme-subtopic"><h2>Vamos lá!</h2>
+<p>Dica (código em R para modelo com 2 variáveis explicativas):</p>
+<p><code>modelo2 = lm(Var_Y ~ Var_X1 + Var_X2, data = dados)</code></p>
+<div style="display: flex; justify-content: flex-end; align-items: center; height: 100vh;">
+<img src="images/hands-on.gif" style="border-radius: 50%; border:5px solid #708d81; width:400px; height:auto;">
+</div>
+</section><section id="isso-é-tudo-para-hoje" class="slide level2 theme-next"><h2>Isso é tudo para hoje!</h2>
+<p>Para próxima aula:</p>
+<ol type="1">
+<li>Exercício sobre Regressão Linear Múltipla (próximo slide)</li>
+<li>Leitura de material para aula de hoje (caso não tenha lido)</li>
+<li>Leitura de material para a aula seguinte (Ver ementa)</li>
+</ol></section><section id="orientações-sobre-o-exercício" class="slide level2 theme-next"><h2>Orientações sobre o exercício</h2>
+<p>Utilizaremos os mesmos dados que utilizamos na aula de hoje.</p>
+<ul>
+<li><p>Rode o Modelo 1 da aula de hoje e interprete os resultados</p></li>
+<li><p>Adicione ao modelo 1, a variável do Modelo 2 da aula de hoje e interprete os resultados de cada variável;</p></li>
+<li><p>Adicione ao Modelo 2, a variável do Modelo 3 da aula de hoje e interprete os resultados de cada variável;</p></li>
+<li><p>Adicione a variável XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXxxx e interprete os resultados dela;</p></li>
+<li><p>Volte às estatísticas do modelo – obtidas com <code><a href="https://rdrr.io/r/base/summary.html">summary()</a></code> – e compare se houve muita mudança nos coeficientes de cada uma das variáveis quando incluída outras variáveis ao modelo. <strong>O que isso nos diz?</strong></p></li>
+<li><p>Observe se o <span class="math inline">\(R^2\)</span> – obtidos com <code><a href="https://rdrr.io/r/base/summary.html">summary()</a></code> – apresentou muita mudança entre os modelos. <strong>O que isso nos diz?</strong></p></li>
+</ul></section></section><section id="section-26" class="title-slide slide level1 cebrap-fim smaller center"><h1></h1>
+<p><img data-src="images/cebrap50.png" class="absolute" style="top: -90px; right: 460px; width: 100px; height: 100px; "></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div style="text-align: right;">
+<p><strong>Presidência</strong></p>
+<p><strong>Diretoria Administrativa</strong></p>
+<p><strong>Diretoria Científica</strong></p>
+<p><strong>Coordenação de Seminários</strong></p>
+<p><strong>Coordenação de Cursos</strong></p>
+</div>
+</div><div class="column" style="width:50%;">
+<p>Adrian Gurza Lavalle</p>
+<p>Victor Callil</p>
+<p>Arilson Favareto</p>
+<p>Bianca Tavolari</p>
+<p>Monise Fernandes Picanço</p>
+</div></div>
+<div style="text-align: center;">
+<p><strong>Curso</strong></p>
+<p>Introdução à análise de regressão para pesquisas sociais</p>
+<p><strong>Ministrante</strong></p>
+<p>Thiago Cordeiro Almeida</p>
+<p>E-mail: <a href="thiagocordalmeida@gmail.com">thiagocordalmeida@gmail.com</a></p>
+<p>Github: <a href="github.com/thiagocalm">@thiagocalm</a></p>
+</div>
 
 
-</section></section>
+</section>
 </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="images/cebrap-imagem.png" class="slide-logo"></p>
