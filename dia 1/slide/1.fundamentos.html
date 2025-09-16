@@ -10,7 +10,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.7.32">
 <meta name="author" content="Thiago Cordeiro Almeida">
-<meta name="dcterms.date" content="2025-09-15">
+<meta name="dcterms.date" content="2025-09-16">
 <title>Regressão para pesquisas sociais</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -208,7 +208,7 @@ Thiago Cordeiro Almeida
     </div>
 </div>
 
-  <p class="date">September 15, 2025</p>
+  <p class="date">September 16, 2025</p>
 </section><section><section id="antes-de-começar" class="title-slide slide level1 center"><h1>Antes de começar…</h1>
 <p>lista de presença!</p>
 <p><img data-src="images/attention.gif" class="absolute" style="bottom: 10px; right: 50px; width: 240px; height: 240px; "></p>
@@ -583,20 +583,31 @@ Thiago Cordeiro Almeida
     Pearson's product-moment correlation
 
 data:  renda and enem_mat
-t = 17.207, df = 998, p-value &lt; 2.2e-16
+t = 17.114, df = 998, p-value &lt; 2.2e-16
 alternative hypothesis: true correlation is not equal to 0
 95 percent confidence interval:
- 0.4290547 0.5247576
+ 0.4269419 0.5228808
 sample estimates:
       cor 
-0.4783251 </code></pre>
+0.4763278 </code></pre>
 </div>
 </div>
 <p>Qual a conclusão que teríamos?</p>
 <ol type="a">
 <li class="fragment"><p>Um aumento da renda teria um efeito direto de 50% no aumento da nota de matemática.</p></li>
 <li class="fragment"><p>Um aumento da nota de matemática teria um efeito direto de 50% no aumento da renda.</p></li>
-</ol></section></section><section><section id="relação-entre-fenômenos-sociais-associação-ou-efeito-1" class="title-slide slide level1 theme-first center"><h1>Relação entre fenômenos sociais: associação ou efeito?</h1>
+</ol></section><section id="slide-extra" class="slide level2 theme-subtopic smaller"><h2>Slide extra!!!</h2>
+<p>Explicando o código <code><a href="https://rdrr.io/r/stats/cor.test.html">cor.test()</a></code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a><span class="fu">cor.test</span>(renda, enem_mat) <span class="co"># teste de correlação, default 'Pearson'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Conforme conversamos em aula, a depender da natureza da variável há tipos de testes de correlação mais adequados:</p>
+<ul>
+<li class="fragment"><p><code>cor.test(VARIAVEL1,VARIAVEL2, method = 'pearson')</code>: é utilizado quando se tem duas variáveis quantitativas, preferencialmente contínuas.</p></li>
+<li class="fragment"><p><code>cor.test(VARIAVEL1,VARIAVEL2, method = 'spearman')</code>: é utilizado quando se tem ao menos uma variável ordinal, pode ser usado para discretas também.</p></li>
+<li class="fragment"><p><code>cor.test(VARIAVEL1,VARIAVEL2, method = 'kendall')</code>: assemelha-se ao <code>spearman</code>, mas é adequado para pequenas amostras.</p></li>
+<li class="fragment"><p><code>chisq.test(VARIAVEL1,VARIAVEL2)</code>: utilizado quando se tem variáveis qualitativas nominais ou binárias.</p></li>
+</ul></section></section><section><section id="relação-entre-fenômenos-sociais-associação-ou-efeito-1" class="title-slide slide level1 theme-first center"><h1>Relação entre fenômenos sociais: associação ou efeito?</h1>
 <p>Correlação e causalidade</p>
 </section><section id="correlação-e-causalidade" class="slide level2 theme-subtopic smaller"><h2>Correlação e causalidade</h2>
 <p>Em pesquisas sociais, o estabelecimento da relação entre um determinado fenômeno <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> é tema de muitas áreas de pesquisa.</p>

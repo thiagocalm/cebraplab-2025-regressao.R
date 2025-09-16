@@ -655,6 +655,26 @@ a.  Um aumento da renda teria um efeito direto de 50% no aumento da nota de mate
 
 b.  Um aumento da nota de matemática teria um efeito direto de 50% no aumento da renda.
 
+## Slide extra!!!{.theme-subtopic .smaller .r-fit-text}
+
+Explicando o código `cor.test()`
+
+```{r, eval=FALSE}
+
+cor.test(renda, enem_mat) # teste de correlação, default 'Pearson'
+
+```
+
+Conforme conversamos em aula, a depender da natureza da variável há tipos de testes de correlação mais adequados:
+
+- `cor.test(VARIAVEL1,VARIAVEL2, method = 'pearson')`: é utilizado quando se tem duas variáveis quantitativas, preferencialmente contínuas.
+
+- `cor.test(VARIAVEL1,VARIAVEL2, method = 'spearman')`: é utilizado quando se tem ao menos uma variável ordinal, pode ser usado para discretas também.
+
+- `cor.test(VARIAVEL1,VARIAVEL2, method = 'kendall')`: assemelha-se ao `spearman`, mas é adequado para pequenas amostras.
+
+- `chisq.test(VARIAVEL1,VARIAVEL2)`: utilizado quando se tem variáveis qualitativas nominais ou binárias.
+
 # Relação entre fenômenos sociais: associação ou efeito? {.theme-first}
 
 Correlação e causalidade
