@@ -1,0 +1,187 @@
+---
+title: "Regressão para pesquisas sociais"
+subtitle: "Dia 2 - Exercício: RLS e RLM"
+author: "Thiago Cordeiro Almeida"
+institute: "Centre d'Estudis Demogràfics (CED, Espanha) · Cebrap"
+date: today
+date-format: long
+logo: "images/cebrap-imagem.png"
+footer: "cebrap.lab – Introdução à análise de regressão para pesquisas sociais"
+
+format:
+  pdf:
+    papersize: a4
+    fontsize: 12pt
+    geometry: margin=2.5cm
+    number-sections: true
+    theme: template/cebrap2025.scss
+    math: mathjax
+    header-includes: |
+      \usepackage{fancyhdr}
+      \usepackage{graphicx}
+      \pagestyle{fancy}
+      \fancyhf{}
+      % Logo on the left of footer
+      \fancyfoot[L]{\includegraphics[height=1cm]{images/cebrap-imagem.png}}
+      % Footer text centered
+      \fancyfoot[C]{cebrap.lab – Introdução à análise de regressão para pesquisas sociais}
+      % Page number on the right
+      \fancyfoot[R]{\thepage}
+      % Remove header content
+      \renewcommand{\headrulewidth}{0pt}
+      \renewcommand{\footrulewidth}{0pt}
+      % Section numbering style
+      \renewcommand\thesection{\arabic{section}.}
+
+editor: visual
+execute:
+  freeze: auto
+  echo: true
+  warning: false
+  message: false
+---
+
+# Introdução
+
+Vamos trabalhar neste documento com dados do Censo Demográfico de 2010 e Cadastro Único.
+
+Estamos interessados em responder à seguinte pergunta: **Quais os fatores associados ao acesso ao esgotamento sanitário de populações vulneráveis no Brasil?**
+
+Vamos seguir as etapas descritas nos slides para cada modelo a ser estimado.
+
+# Importação dos dados
+
+Ao longo dessas análises, usaremos a gramática de programação `tidyverse`. Caso você ainda não esteja familiarizado/a com essa forma de programação, sugiro a leitura do material da Curso-R que deixei nas referências do curso, há um capítulo sobre isso. Eles, com certeza, te convencerão sobre a potencialidade dessa forma de programção.
+
+Dentro do `tidyverse`, há distintas bibliotecas. Usaremos duas chamadas `dplyr` -- para manipulação dos dados -- e `ggplot2` -- para gráficos.
+
+```{r}
+
+# ajustes gerais
+options(scipen = 9999999)
+rm(list = ls())
+
+## pacotes necessarios
+# instalando pacote de gerenciador de pacotes, pacman
+ifelse(!require(pacman),install.packages("pacman"),require(pacman))
+p_load(tidyverse, here, skimr) # importando pacote que usaremos, tidyverse
+
+# importando dados
+# setwd() # CONFIGURE O SEU DIRETORIO DE TRABALHO
+
+# o comando 'here()' faz com que trabalhemos onde esta o nosso codigo ou projeto
+
+diretorio <- file.path(here(),"dia 2","pratica")
+# diretorio <- file.path(here())
+
+dados <- read_csv2(file.path(diretorio,"dados_acesso_esgoto.csv"))
+
+```
+# Exploratória da base de dados
+
+Vamos fazer uma breve exploração dos dados, para compreender como a nossa base de dados está organizada.
+
+A começar, vamos usar o pacote que o Guilherme nos recomendou na última aula, chamado `skimr`^[Para mais informações sobre ele, você pode acessar [esse texto da Curso-R](https://blog.curso-r.com/posts/2022-05-05-skimr/).].
+
+```{r}
+dados |> 
+  skim()
+```
+
+Com base no que este código nos retorna, podemos ter uma visão geral da distribuição das variáveis, segundo algumas informações principais, como medidas de tendência central e dispersão, para variáveis categorizadas como contínuas, valores mínimos e máximos, número de casos ausentes, etc.
+
+# Modelos
+
+# Modelo 1 - PBF
+
+O nosso modelo 1 consiste em incluir somente PBF como variável explicativa. Pode ser descrito em sua forma populacional como:
+
+$$AcessoEsgoto = \beta_0 + \beta_1 \cdot PBF + \epsilon$$
+Para estimar, basta rodar:
+```{r}
+
+modelo1 <- lm(
+  acesso_esgoto ~ pbf,
+  data = dados
+)
+
+```
+
+Para obter seus resultados, temos:
+
+```{r}
+summary(modelo1)
+```
+
+Podemos observar que um aumento em 1% do percentual de famílias que recebem bolsa família reduziria, em média, em 0.84% o percentual de famílias com acesso à rede de esgoto.
+
+# Modelo 2 - Informalidade
+
+O nosso modelo 2 consiste em incluir a Informalidade, para além do PBF como variável explicativa. Pode ser descrito em sua forma populacional como:
+
+$$AcessoEsgoto = \beta_0 + \beta_1 \cdot PBF + \beta_2 \cdot Informalidade + \epsilon$$
+Para estimar, basta rodar:
+```{r}
+
+modelo2 <- lm(
+  acesso_esgoto ~ pbf + informalidade,
+  data = dados
+)
+
+```
+
+Para obter seus resultados, temos:
+
+```{r}
+summary(modelo2)
+```
+
+Neste caso, o que obtemos é uma relação negativa em que, aumentando a informalidade entre os jovens em 1%, haveria uma redução do percentual de famílias com acesso ao esgotamento sanitário em 0.05%. Para o PBF, parece manter o mesmo sentido e intensidade.
+
+# Modelo 3 - Ensino Médio
+
+O nosso modelo 3 consiste em incluir somente frequência ao Ensino Médio, para além de PBF, como variável explicativa. Pode ser descrito em sua forma populacional como:
+
+$$AcessoEsgoto = \beta_0 +  \beta_1 \cdot PBF + \beta_2 \cdot EnsinoMedio + \epsilon$$
+Para estimar, basta rodar:
+```{r}
+
+modelo3 <- lm(
+  acesso_esgoto ~ pbf + em,
+  data = dados
+)
+
+```
+
+Para obter seus resultados, temos:
+
+```{r}
+summary(modelo3)
+```
+
+Neste caso, o que obtemos é uma relação positiva em que, aumentando a frequência média dos jovens ao Ensino Médio em 1%, haveria um aumento do percentual de famílias com acesso ao esgotamento sanitário em 0.16%. Por outro lado, a associação do PBF mantém a mesma.
+
+# Modelo 4 - PBF, Informalidade e Ensino Médio
+
+O nosso modelo 4 consiste em incluir todas as variáveis explicativas do acesso ao esgotamento sanitário. Pode ser descrito em sua forma populacional como:
+
+$$AcessoEsgoto = \beta_0 +  \beta_1 \cdot PBF + \beta_2 \cdot Informalidade + \beta_3 \cdot EnsinoMedio + \epsilon$$
+Para estimar, basta rodar:
+```{r}
+
+# modelo 4 - todos juntos
+
+modelo4 <- lm(
+  acesso_esgoto ~ pbf + informalidade + em,
+  data = dados
+)
+
+```
+
+Para obter seus resultados, temos:
+
+```{r}
+summary(modelo4)
+```
+Os resultados parecem se manter semelhantes aos anteriores!
+

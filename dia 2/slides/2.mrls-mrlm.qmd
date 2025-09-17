@@ -12,6 +12,7 @@ format:
   revealjs:
     theme: template/cebrap2025.scss
     math: mathjax
+    incremental: true
     # scrollable: true
     # standalone: true
     # embed-resources: true
@@ -627,7 +628,7 @@ Temos os melhores estimadores para o modelo populacional. À medida que aumenta 
 
 ### Acesso ao esgotamento sanitário
 
-**PERGUNTA**: Quais os fatores associados ao acesso ao esgotamento sanitário de populações vulneráveis no Brasil?
+**Pergunta**: Quais os fatores associados ao acesso ao esgotamento sanitário de populações vulneráveis no Brasil?
 
 Mais especificamente, qual a associação entre acesso ao Programa Bolsa Família para famílias com jovens entre 15-29 anos e o acesso ao esgotamento sanitário?
 
@@ -682,6 +683,8 @@ Se temos na base de dados a variável explicativa que **sabemos que está associ
 - Parcimônia do modelo: *the simpler, the better!*
 :::
 ::::
+
+## []{.theme-subtopic}
 
 ### No cenário **2**
 
