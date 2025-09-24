@@ -6,18 +6,18 @@
 <script src="1.fundamentos_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="1.fundamentos_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="1.fundamentos_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="1.fundamentos_files/libs/quarto-html/quarto-syntax-highlighting-f06e18ba1ac294546b00b08c9de61a75.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
-<meta name="author" content="Thiago Cordeiro Almeida">
-<meta name="dcterms.date" content="2025-09-16">
-<title>Regressão para pesquisas sociais</title>
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-<link rel="stylesheet" href="1.fundamentos_files/libs/revealjs/dist/reset.css">
-<link rel="stylesheet" href="1.fundamentos_files/libs/revealjs/dist/reveal.css">
-<style>
+<link href="1.fundamentos_files/libs/quarto-html/quarto-syntax-highlighting-f06e18ba1ac294546b00b08c9de61a75.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.7.32">
+
+  <meta name="author" content="Thiago Cordeiro Almeida">
+  <meta name="dcterms.date" content="2025-09-24">
+  <title>Regressão para pesquisas sociais</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="1.fundamentos_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="1.fundamentos_files/libs/revealjs/dist/reveal.css">
+  <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -96,14 +96,14 @@
     code span.vs { color: #bae67e; } /* VerbatimString */
     code span.wa { color: #f28779; } /* Warning */
   </style>
-<link rel="stylesheet" href="1.fundamentos_files/libs/revealjs/dist/theme/quarto-b3977c39e43a2656fc3cf4adeeeb87a5.css">
-<link href="1.fundamentos_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-<link href="1.fundamentos_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-<link href="1.fundamentos_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-<link href="1.fundamentos_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
-<link href="1.fundamentos_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
-<link href="1.fundamentos_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
-<style type="text/css">
+  <link rel="stylesheet" href="1.fundamentos_files/libs/revealjs/dist/theme/quarto-b3977c39e43a2656fc3cf4adeeeb87a5.css">
+  <link href="1.fundamentos_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="1.fundamentos_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="1.fundamentos_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="1.fundamentos_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="1.fundamentos_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="1.fundamentos_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
       overflow: auto;
@@ -195,7 +195,8 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block center"><h1 class="title">Regressão para pesquisas sociais</h1>
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Regressão para pesquisas sociais</h1>
   <p class="subtitle"><span style="font-size:1em;"> Aula 1 - Fundamentos para modelagem de dados quantitativos </span></p>
 
 <div class="quarto-title-authors">
@@ -204,15 +205,21 @@
 Thiago Cordeiro Almeida 
 </div>
         <p class="quarto-title-affiliation">
-            Doutorando, Centre d’Estudis Demogràfics (CED, Espanha) <br> Pesquisador Assistente, Cebrap <br></p>
+            Doutorando, Centre d’Estudis Demogràfics (CED, Espanha) <br> Pesquisador Assistente, Cebrap <br>
+          </p>
     </div>
 </div>
 
-  <p class="date">September 16, 2025</p>
-</section><section><section id="antes-de-começar" class="title-slide slide level1 center"><h1>Antes de começar…</h1>
+  <p class="date">September 24, 2025</p>
+</section>
+<section>
+<section id="antes-de-começar" class="title-slide slide level1 center">
+<h1>Antes de começar…</h1>
 <p>lista de presença!</p>
 <p><img data-src="images/attention.gif" class="absolute" style="bottom: 10px; right: 50px; width: 240px; height: 240px; "></p>
-</section><section id="estrutura-da-aula" class="slide level2 theme-next"><h2>Estrutura da aula</h2>
+</section>
+<section id="estrutura-da-aula" class="slide level2 theme-next">
+<h2>Estrutura da aula</h2>
 <div class="columns">
 <div class="column" style="width:30%;">
 <p>Tópicos que vamos cobrir hoje são:</p>
@@ -222,22 +229,25 @@ Thiago Cordeiro Almeida
 <li class="fragment"><p>Definições e noções acerca de dados quantitativos</p></li>
 <li class="fragment"><p>Conceitos estatísticos importantes</p></li>
 <li class="fragment"><p>Noção de correlação e causalidade</p></li>
-<li class="fragment">
-<p>Modelagem de fenônemos sociais</p>
+<li class="fragment"><p>Modelagem de fenônemos sociais</p>
 <ul>
 <li class="fragment"><p>Intuição</p></li>
 <li class="fragment"><p>Limites</p></li>
 <li class="fragment"><p>Fundamentos</p></li>
-</ul>
-</li>
+</ul></li>
 </ul>
 </div>
 </div></div>
-</section></section><section><section id="algumas-definições-acerca-de-dados-quantitativos" class="title-slide slide level1 theme-first center"><h1>Algumas definições acerca de dados quantitativos</h1>
+</section></section>
+<section>
+<section id="algumas-definições-acerca-de-dados-quantitativos" class="title-slide slide level1 theme-first center">
+<h1>Algumas definições acerca de dados quantitativos</h1>
 <div style="text-align: left;">
 <p>Natureza dos dados quantitativos</p>
 </div>
-</section><section id="natureza-dos-dados-quantitativos" class="slide level2 theme-subtopic smaller"><h2>Natureza dos dados quantitativos</h2>
+</section>
+<section id="natureza-dos-dados-quantitativos" class="slide level2 theme-subtopic smaller">
+<h2>Natureza dos dados quantitativos</h2>
 <p>está ligada à forma de classificação dos tipos de dados existentes.</p>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -257,7 +267,9 @@ Thiago Cordeiro Almeida
 </ul>
 <p><strong>Exemplos</strong>: <span class="gap">Fluxos de atividades culturais, peso das pessoas ao nascer</span></p>
 </div></div>
-</section><section id="natureza-dos-dados-quantitativos-1" class="slide level2 theme-subtopic smaller"><h2>Natureza dos dados quantitativos</h2>
+</section>
+<section id="natureza-dos-dados-quantitativos-1" class="slide level2 theme-subtopic smaller">
+<h2>Natureza dos dados quantitativos</h2>
 <p>está ligada à forma de classificação dos tipos de dados existentes.</p>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -278,11 +290,16 @@ Thiago Cordeiro Almeida
 <p><strong>Exemplos</strong>: <span class="gap">Fluxos de atividades culturais, peso das pessoas ao nascer</span></p>
 </div></div>
 <p><img data-src="images/question.gif" class="absolute" style="bottom: 20px; right: 450px; width: 300px; height: 300px; "></p>
-</section></section><section><section id="algumas-definições-acerca-de-dados-quantitativos-1" class="title-slide slide level1 theme-first center"><h1>Algumas definições acerca de dados quantitativos</h1>
+</section></section>
+<section>
+<section id="algumas-definições-acerca-de-dados-quantitativos-1" class="title-slide slide level1 theme-first center">
+<h1>Algumas definições acerca de dados quantitativos</h1>
 <div style="text-align: left;">
 <p>Tipos de dados quantitativos</p>
 </div>
-</section><section id="tipos-de-dados-quantitativos" class="slide level2 theme-subtopic smaller"><h2>Tipos de dados quantitativos</h2>
+</section>
+<section id="tipos-de-dados-quantitativos" class="slide level2 theme-subtopic smaller">
+<h2>Tipos de dados quantitativos</h2>
 <p>podem ser divididos entre <strong>primários X secundários</strong>, <strong>públicos X privados</strong>, …</p>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -300,7 +317,9 @@ Thiago Cordeiro Almeida
 <li class="fragment">Podem ser dados quantitativos ou qualitativos (!!!)</li>
 </ul>
 </div></div>
-</section><section id="tipos-de-dados-quantitativos-1" class="slide level2 theme-subtopic smaller"><h2>Tipos de dados quantitativos</h2>
+</section>
+<section id="tipos-de-dados-quantitativos-1" class="slide level2 theme-subtopic smaller">
+<h2>Tipos de dados quantitativos</h2>
 <p>podem ser divididos entre <strong>primários X secundários</strong>, <strong>públicos X privados</strong>, …</p>
 <div class="columns">
 <h3 id="dados-públicos">Dados públicos</h3>
@@ -320,17 +339,27 @@ Thiago Cordeiro Almeida
 <li class="fragment"><p>Validade dos dados; …</p></li>
 </ul>
 </div></div>
-</section><section id="tipos-de-dados-quantitativos-2" class="slide level2 theme-subtopic"><h2>Tipos de dados quantitativos</h2>
+</section>
+<section id="tipos-de-dados-quantitativos-2" class="slide level2 theme-subtopic">
+<h2>Tipos de dados quantitativos</h2>
 <h4 id="brainstorming-de-dados-públicos">Brainstorming de dados públicos!:</h4>
-</section></section><section><section id="conceitos-estatísticos-importantes" class="title-slide slide level1 theme-first center"><h1>Conceitos estatísticos importantes</h1>
+</section></section>
+<section>
+<section id="conceitos-estatísticos-importantes" class="title-slide slide level1 theme-first center">
+<h1>Conceitos estatísticos importantes</h1>
 
-</section><section id="população-e-amostra" class="slide level2 theme-subtopic smaller"><h2>População e amostra</h2>
+</section>
+<section id="população-e-amostra" class="slide level2 theme-subtopic smaller">
+<h2>População e amostra</h2>
 <p>Não somente relacionado ao desenho de coleta dos dados, mas todas as estatísticas que calculamos estão associadas a esses conceitos</p>
 <h3 id="população">População</h3>
 <p>Um conjunto de elementos (animados ou inanimados) que compartilham de alguma característica definida e que seja relevante para o/a pesquisador/a ou pesquisa.</p>
 <h3 id="amostra">Amostra</h3>
 <p>Um fragmento, parte, subconjunto da população estudada. É definida, em geral, através de critérios explícitos.</p>
-<img data-src="images/pop-amostra.png" class="absolute r-stretch" style="bottom: 20px; right: 50px; width: 500px; height: 300px; "></section><section id="variáveis" class="slide level2 theme-subtopic smaller"><h2>Variáveis</h2>
+<img data-src="images/pop-amostra.png" class="absolute r-stretch" style="bottom: 20px; right: 50px; width: 500px; height: 300px; ">
+</section>
+<section id="variáveis" class="slide level2 theme-subtopic smaller">
+<h2>Variáveis</h2>
 <p>São características específicas extraídas de uma determinada população ou amostra.</p>
 <p><strong>Exemplos:</strong></p>
 <ul>
@@ -343,46 +372,41 @@ Thiago Cordeiro Almeida
 <li><p>número de animais de estimação em casa, …</p></li>
 </ul>
 <p>No mundo real, é necessário que “simplifiquemos” sua complexidade para que seja possível a sua análise.</p>
-</section><section id="natureza-das-variáveis" class="slide level2 theme-subtopic smaller"><h2>Natureza das variáveis</h2>
+</section>
+<section id="natureza-das-variáveis" class="slide level2 theme-subtopic smaller">
+<h2>Natureza das variáveis</h2>
 <p>São categorizações excludentes, <em>todavia, uma variável pode ser transformada em outra natureza/tipo</em>.</p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <h3 style="text-align: center;" id="qualitativa">Qualitativa</h3>
 <p>Valores apresentam atributos ou qualidades.</p>
 <ul>
-<li class="fragment">
-<p><strong>Nominal</strong> (não ordenado) - pode ainda ser dividida em binária ou não.</p>
+<li class="fragment"><p><strong>Nominal</strong> (não ordenado) - pode ainda ser dividida em binária ou não.</p>
 <ul>
 <li class="fragment">Ex.: estados, sexo, nomes.</li>
-</ul>
-</li>
-<li class="fragment">
-<p><strong>Ordinal</strong> (ordenado)</p>
+</ul></li>
+<li class="fragment"><p><strong>Ordinal</strong> (ordenado)</p>
 <ul>
 <li class="fragment">Ex.: nível de escolaridade, <span class="fragment highlight-red">faixa de renda</span>, faixa de tamanho de cidade</li>
-</ul>
-</li>
+</ul></li>
 </ul>
 </div><div class="column" style="width:50%;">
 <h3 style="text-align: center;" id="quantitativa">Quantitativa</h3>
 <p>Valores são expressos em números, apresentam quantidades.</p>
 <ul>
-<li class="fragment">
-<p><strong>Discreta</strong> (contagem) - expressa em números inteiros.</p>
+<li class="fragment"><p><strong>Discreta</strong> (contagem) - expressa em números inteiros.</p>
 <ul>
 <li class="fragment">Ex.: anos de estudos, número de irmãos, número de domicílios.</li>
-</ul>
-</li>
-<li class="fragment">
-<p><strong>Contínua</strong> (medidas) - expressa em números infinitesimais.</p>
+</ul></li>
+<li class="fragment"><p><strong>Contínua</strong> (medidas) - expressa em números infinitesimais.</p>
 <ul>
-<li class="fragment">Ex.: Altura, peso, <span class="fragment highlight-red">renda</span>
-</li>
-</ul>
-</li>
+<li class="fragment">Ex.: Altura, peso, <span class="fragment highlight-red">renda</span></li>
+</ul></li>
 </ul>
 </div></div>
-</section><section id="tipos-de-medidas" class="slide level2 theme-subtopic smaller"><h2>Tipos de medidas</h2>
+</section>
+<section id="tipos-de-medidas" class="slide level2 theme-subtopic smaller">
+<h2>Tipos de medidas</h2>
 <p>Para cada tipo de variável, há um tipo de medida que se adequa melhor à sua análise.</p>
 <ul>
 <li class="fragment"><p><strong>Números absolutos</strong></p></li>
@@ -392,7 +416,10 @@ Thiago Cordeiro Almeida
 <li class="fragment"><p><strong>Razão</strong> (divisão de duas grandezas quaisquer)</p></li>
 <li class="fragment"><p><strong>Medidas de tendência central</strong> (média, moda, mediana)</p></li>
 <li class="fragment"><p><strong>Medidas de variabilidade/dispersão</strong> (variância, desvio padrão, coeficiente de variação)</p></li>
-</ul></section><section id="tipos-de-análises" class="slide level2 theme-subtopic smaller"><h2>Tipos de análises</h2>
+</ul>
+</section>
+<section id="tipos-de-análises" class="slide level2 theme-subtopic smaller">
+<h2>Tipos de análises</h2>
 <p>Há níveis de análises que são necessários de serem explorados na interação de fenômenos/variáveis.</p>
 <div class="columns">
 <div class="column" style="width:30%;">
@@ -411,7 +438,9 @@ Thiago Cordeiro Almeida
 <p>Quanti X Quanti X Quali</p>
 <p>Quanti X Quanti X Quati</p>
 </div></div>
-</section><section id="tipos-de-análises-1" class="slide level2 theme-subtopic smaller"><h2>Tipos de análises</h2>
+</section>
+<section id="tipos-de-análises-1" class="slide level2 theme-subtopic smaller">
+<h2>Tipos de análises</h2>
 <p>Há níveis de análises que são necessários de serem explorados na interação de fenômenos/variáveis.</p>
 <div class="columns">
 <div class="column" style="width:30%;">
@@ -419,7 +448,8 @@ Thiago Cordeiro Almeida
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="1.fundamentos_files/figure-revealjs/unnamed-chunk-1-1.png" width="960"></p>
+<figure>
+<p><img data-src="1.fundamentos_files/figure-revealjs/unnamed-chunk-1-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -427,7 +457,8 @@ Thiago Cordeiro Almeida
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="1.fundamentos_files/figure-revealjs/unnamed-chunk-2-1.png" width="960"></p>
+<figure>
+<p><img data-src="1.fundamentos_files/figure-revealjs/unnamed-chunk-2-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -437,7 +468,8 @@ Thiago Cordeiro Almeida
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="1.fundamentos_files/figure-revealjs/unnamed-chunk-3-1.png" width="960"></p>
+<figure>
+<p><img data-src="1.fundamentos_files/figure-revealjs/unnamed-chunk-3-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -445,7 +477,8 @@ Thiago Cordeiro Almeida
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="1.fundamentos_files/figure-revealjs/unnamed-chunk-4-1.png" width="960"></p>
+<figure>
+<p><img data-src="1.fundamentos_files/figure-revealjs/unnamed-chunk-4-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -455,31 +488,46 @@ Thiago Cordeiro Almeida
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="1.fundamentos_files/figure-revealjs/unnamed-chunk-5-1.png" width="960"></p>
+<figure>
+<p><img data-src="1.fundamentos_files/figure-revealjs/unnamed-chunk-5-1.png" width="960"></p>
 </figure>
 </div>
 </div>
 </div>
 </div></div>
-</section></section><section id="pausa" class="title-slide slide level1 theme-stop center"><h1>Pausa!</h1>
+</section></section>
+<section id="pausa" class="title-slide slide level1 theme-stop center">
+<h1>Pausa!</h1>
 <div style="display: flex; justify-content: flex-end; align-items: center; height: 100vh;">
 <img src="images/stop.gif" style="border-radius: 50%; border:5px solid #708d81; width:450px; height:auto;">
 </div>
-</section><section><section id="relação-entre-fenômenos-sociais-associação-ou-efeito" class="title-slide slide level1 theme-first center"><h1>Relação entre fenômenos sociais: associação ou efeito?</h1>
+</section>
+
+<section>
+<section id="relação-entre-fenômenos-sociais-associação-ou-efeito" class="title-slide slide level1 theme-first center">
+<h1>Relação entre fenômenos sociais: associação ou efeito?</h1>
 <p>Quando e como podemos dizer que um fenômeno social interage com o outro?</p>
-</section><section id="formas-de-se-captar-a-interação-entre-fenômenos-sociais" class="slide level2 theme-subtopic"><h2>Formas de se captar a interação entre fenômenos sociais</h2>
+</section>
+<section id="formas-de-se-captar-a-interação-entre-fenômenos-sociais" class="slide level2 theme-subtopic">
+<h2>Formas de se captar a interação entre fenômenos sociais</h2>
 <p>O principal intuíto por trás da ideia de analisar dois fenômenos sociais conjuntamente está na possível <strong>relação entre eles</strong>.</p>
 <ul>
 <li class="fragment"><p>Isso carrega uma ideia subjacente de que eles apresentam uma <strong>dependência</strong>/<strong>interação</strong> um com o outro.</p></li>
 <li class="fragment"><p>Partindo dessa ideia, como se quantifica a interação entre fenômenos sociais?</p></li>
-</ul></section><section id="formas-de-se-captar-a-interação-entre-fenômenos-sociais-1" class="slide level2 theme-subtopic smaller"><h2>Formas de se captar a interação entre fenômenos sociais</h2>
+</ul>
+</section>
+<section id="formas-de-se-captar-a-interação-entre-fenômenos-sociais-1" class="slide level2 theme-subtopic smaller">
+<h2>Formas de se captar a interação entre fenômenos sociais</h2>
 <p>Quantificação da interação entre fenômenos sociais</p>
 <ol type="1">
 <li class="fragment">Estabeleça a natureza da relação entre eles</li>
 </ol>
 <ul>
 <li class="fragment">Em geral, podemos estabelecer a relação entre fenômenos sociais através de: (i) <strong>abordagem teórica</strong>; (ii) <strong>evidênciais empíricas</strong>; ou (iii) ambos!</li>
-</ul></section><section id="formas-de-se-captar-a-interação-entre-fenômenos-sociais-2" class="slide level2 theme-subtopic smaller"><h2>Formas de se captar a interação entre fenômenos sociais</h2>
+</ul>
+</section>
+<section id="formas-de-se-captar-a-interação-entre-fenômenos-sociais-2" class="slide level2 theme-subtopic smaller">
+<h2>Formas de se captar a interação entre fenômenos sociais</h2>
 <p>Quantificação da interação entre fenômenos sociais</p>
 <ol type="1">
 <li class="fragment">Estabeleça a natureza da relação entre eles</li>
@@ -488,7 +536,9 @@ Thiago Cordeiro Almeida
 <li class="fragment">Em geral, podemos estabelecer a relação entre fenômenos sociais através de: (i) <strong>abordagem teórica</strong>; (ii) <strong>evidênciais empíricas</strong>; ou (iii) ambos!</li>
 </ul>
 <p><img data-src="images/programa-pe-meia.png" class="absolute" style="bottom: 20px; right: 150px; width: 500px; height: 300px; "></p>
-</section><section id="formas-de-se-captar-a-interação-entre-fenômenos-sociais-3" class="slide level2 theme-subtopic smaller"><h2>Formas de se captar a interação entre fenômenos sociais</h2>
+</section>
+<section id="formas-de-se-captar-a-interação-entre-fenômenos-sociais-3" class="slide level2 theme-subtopic smaller">
+<h2>Formas de se captar a interação entre fenômenos sociais</h2>
 <p>Quantificação da interação entre fenômenos sociais</p>
 <p>.2. Explore a relação entre eles empíricamente</p>
 <div class="columns">
@@ -497,7 +547,9 @@ Thiago Cordeiro Almeida
 </div><div class="column" style="width:60%;">
 
 </div></div>
-</section><section id="formas-de-se-captar-a-interação-entre-fenômenos-sociais-4" class="slide level2 theme-subtopic smaller r-text-fit"><h2>Formas de se captar a interação entre fenômenos sociais</h2>
+</section>
+<section id="formas-de-se-captar-a-interação-entre-fenômenos-sociais-4" class="slide level2 theme-subtopic smaller r-text-fit">
+<h2>Formas de se captar a interação entre fenômenos sociais</h2>
 <p>Quantificação da interação entre fenômenos sociais</p>
 <p>.2. Explore a relação entre eles empíricamente</p>
 <div class="columns">
@@ -507,13 +559,16 @@ Thiago Cordeiro Almeida
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="1.fundamentos_files/figure-revealjs/unnamed-chunk-6-1.png" width="960"></p>
+<figure>
+<p><img data-src="1.fundamentos_files/figure-revealjs/unnamed-chunk-6-1.png" width="960"></p>
 </figure>
 </div>
 </div>
 </div>
 </div></div>
-</section><section id="formas-de-se-captar-a-interação-entre-fenômenos-sociais-5" class="slide level2 theme-subtopic smaller"><h2>Formas de se captar a interação entre fenômenos sociais</h2>
+</section>
+<section id="formas-de-se-captar-a-interação-entre-fenômenos-sociais-5" class="slide level2 theme-subtopic smaller">
+<h2>Formas de se captar a interação entre fenômenos sociais</h2>
 <p>Quantificação da interação entre fenômenos sociais</p>
 <ol start="3" type="1">
 <li class="fragment">Avalie a magnitude da interação estatísticamente</li>
@@ -521,7 +576,10 @@ Thiago Cordeiro Almeida
 <ul>
 <li class="fragment"><p>Há diferentes medidas estatísticas para avaliar se há e a magnitude da relação entre fenômenos sociais.</p></li>
 <li class="fragment"><p>Elas nos apontam (i) se há diferença estatisticamente significativa; (ii) a força dessa diferença; e (iii) a direção dessa diferença.</p></li>
-</ul></section><section id="formas-de-se-captar-a-interação-entre-fenômenos-sociais-6" class="slide level2 theme-subtopic smaller"><h2>Formas de se captar a interação entre fenômenos sociais</h2>
+</ul>
+</section>
+<section id="formas-de-se-captar-a-interação-entre-fenômenos-sociais-6" class="slide level2 theme-subtopic smaller">
+<h2>Formas de se captar a interação entre fenômenos sociais</h2>
 <p>Quantificação da interação entre fenômenos sociais</p>
 <div class="columns">
 <div class="column" style="width:30%;">
@@ -531,7 +589,9 @@ Thiago Cordeiro Almeida
 </div><div class="column" style="width:30%;">
 <h3 class="r-fit-text" style="text-align: center;" id="direção-da-diferença">Direção da diferença</h3>
 </div></div>
-</section><section id="formas-de-se-captar-a-interação-entre-fenômenos-sociais-7" class="slide level2 theme-subtopic smaller"><h2>Formas de se captar a interação entre fenômenos sociais</h2>
+</section>
+<section id="formas-de-se-captar-a-interação-entre-fenômenos-sociais-7" class="slide level2 theme-subtopic smaller">
+<h2>Formas de se captar a interação entre fenômenos sociais</h2>
 <p>Quantificação da interação entre fenômenos sociais</p>
 <div class="columns">
 <div class="column" style="width:30%;">
@@ -543,7 +603,9 @@ Thiago Cordeiro Almeida
 </div><div class="column" style="width:30%;">
 <h3 class="r-fit-text" style="text-align: center;" id="direção-da-diferença-1">Direção da diferença</h3>
 </div></div>
-</section><section id="formas-de-se-captar-a-interação-entre-fenômenos-sociais-8" class="slide level2 theme-subtopic smaller"><h2>Formas de se captar a interação entre fenômenos sociais</h2>
+</section>
+<section id="formas-de-se-captar-a-interação-entre-fenômenos-sociais-8" class="slide level2 theme-subtopic smaller">
+<h2>Formas de se captar a interação entre fenômenos sociais</h2>
 <p>Quantificação da interação entre fenômenos sociais</p>
 <div class="columns">
 <div class="column" style="width:30%;">
@@ -556,7 +618,9 @@ Thiago Cordeiro Almeida
 </div><div class="column" style="width:30%;">
 <h3 class="r-fit-text" style="text-align: center;" id="direção-da-diferença-2">Direção da diferença</h3>
 </div></div>
-</section><section id="formas-de-se-captar-a-interação-entre-fenômenos-sociais-9" class="slide level2 theme-subtopic smaller"><h2>Formas de se captar a interação entre fenômenos sociais</h2>
+</section>
+<section id="formas-de-se-captar-a-interação-entre-fenômenos-sociais-9" class="slide level2 theme-subtopic smaller">
+<h2>Formas de se captar a interação entre fenômenos sociais</h2>
 <p>Quantificação da interação entre fenômenos sociais</p>
 <div class="columns">
 <div class="column" style="width:30%;">
@@ -574,7 +638,9 @@ Thiago Cordeiro Almeida
 <li class="fragment"><p><strong>Relação indireta:</strong> aumento em <span class="math inline">\(X\)</span> leva a uma redução em <span class="math inline">\(Y\)</span> (vice-versa).</p></li>
 </ul>
 </div></div>
-</section><section id="formas-de-se-captar-a-interação-entre-fenômenos-sociais-10" class="slide level2 theme-subtopic smaller"><h2>Formas de se captar a interação entre fenômenos sociais</h2>
+</section>
+<section id="formas-de-se-captar-a-interação-entre-fenômenos-sociais-10" class="slide level2 theme-subtopic smaller">
+<h2>Formas de se captar a interação entre fenômenos sociais</h2>
 <p>Quantificação da interação entre fenômenos sociais: <strong>O exemplo do programa pé-de-meia</strong>.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a><span class="fu">cor.test</span>(renda, enem_mat) <span class="co"># teste de correlação, default 'Pearson'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -583,21 +649,24 @@ Thiago Cordeiro Almeida
     Pearson's product-moment correlation
 
 data:  renda and enem_mat
-t = 17.114, df = 998, p-value &lt; 2.2e-16
+t = 15.071, df = 998, p-value &lt; 2.2e-16
 alternative hypothesis: true correlation is not equal to 0
 95 percent confidence interval:
- 0.4269419 0.5228808
+ 0.3786961 0.4797673
 sample estimates:
       cor 
-0.4763278 </code></pre>
+0.4305806 </code></pre>
 </div>
 </div>
 <p>Qual a conclusão que teríamos?</p>
 <ol type="a">
 <li class="fragment"><p>Um aumento da renda teria um efeito direto de 50% no aumento da nota de matemática.</p></li>
 <li class="fragment"><p>Um aumento da nota de matemática teria um efeito direto de 50% no aumento da renda.</p></li>
-</ol></section><section id="slide-extra" class="slide level2 theme-subtopic smaller"><h2>Slide extra!!!</h2>
-<p>Explicando o código <code><a href="https://rdrr.io/r/stats/cor.test.html">cor.test()</a></code></p>
+</ol>
+</section>
+<section id="slide-extra" class="slide level2 theme-subtopic smaller">
+<h2>Slide extra!!!</h2>
+<p>Explicando o código <code>cor.test()</code></p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href=""></a><span class="fu">cor.test</span>(renda, enem_mat) <span class="co"># teste de correlação, default 'Pearson'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -607,11 +676,19 @@ sample estimates:
 <li class="fragment"><p><code>cor.test(VARIAVEL1,VARIAVEL2, method = 'spearman')</code>: é utilizado quando se tem ao menos uma variável ordinal, pode ser usado para discretas também.</p></li>
 <li class="fragment"><p><code>cor.test(VARIAVEL1,VARIAVEL2, method = 'kendall')</code>: assemelha-se ao <code>spearman</code>, mas é adequado para pequenas amostras.</p></li>
 <li class="fragment"><p><code>chisq.test(VARIAVEL1,VARIAVEL2)</code>: utilizado quando se tem variáveis qualitativas nominais ou binárias.</p></li>
-</ul></section></section><section><section id="relação-entre-fenômenos-sociais-associação-ou-efeito-1" class="title-slide slide level1 theme-first center"><h1>Relação entre fenômenos sociais: associação ou efeito?</h1>
+</ul>
+</section></section>
+<section>
+<section id="relação-entre-fenômenos-sociais-associação-ou-efeito-1" class="title-slide slide level1 theme-first center">
+<h1>Relação entre fenômenos sociais: associação ou efeito?</h1>
 <p>Correlação e causalidade</p>
-</section><section id="correlação-e-causalidade" class="slide level2 theme-subtopic smaller"><h2>Correlação e causalidade</h2>
+</section>
+<section id="correlação-e-causalidade" class="slide level2 theme-subtopic smaller">
+<h2>Correlação e causalidade</h2>
 <p>Em pesquisas sociais, o estabelecimento da relação entre um determinado fenômeno <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> é tema de muitas áreas de pesquisa.</p>
-</section><section id="correlação-e-causalidade-1" class="slide level2 theme-subtopic smaller"><h2>Correlação e causalidade</h2>
+</section>
+<section id="correlação-e-causalidade-1" class="slide level2 theme-subtopic smaller">
+<h2>Correlação e causalidade</h2>
 <p>Em pesquisas sociais, o estabelecimento da relação entre um determinado fenômeno <span class="math inline">\(X\)</span> e <span class="math inline">\(Y\)</span> é tema de muitas áreas de pesquisa.</p>
 <h3 style="text-align: center;" id="correlação">Correlação</h3>
 <p>Estabelece uma relação entre dois fenômenos, apresentando sua significância estatística, força da relação e direção, <strong>sem afirmar a ordem desta relação</strong>.</p>
@@ -627,7 +704,9 @@ sample estimates:
 <li class="fragment">Não se sabe se mudanças em <span class="math inline">\(X\)</span> levam a mudanças em <span class="math inline">\(Y\)</span> ou o contrário.</li>
 </ul>
 </div></div>
-</section><section id="correlação-e-causalidade-2" class="slide level2 theme-subtopic smaller"><h2>Correlação e causalidade</h2>
+</section>
+<section id="correlação-e-causalidade-2" class="slide level2 theme-subtopic smaller">
+<h2>Correlação e causalidade</h2>
 <h3 style="text-align: center;" id="causalidade">Causalidade</h3>
 <p>Além de estabelecer significância, força da relação e direção, também pressupõe o estabelecimento de uma ordem para que a relação seja observada.</p>
 <div class="columns">
@@ -644,12 +723,19 @@ sample estimates:
 <li class="fragment"><p>Fenômenos sociais estão intrínsecamente relacionados entre eles, sendo necessário abordagens mais complexas para endereçar a causalidade (e até mesmo a associação).</p></li>
 </ul>
 </div></div>
-</section></section><section><section id="modelagem-de-fenômenos-sociais" class="title-slide slide level1 theme-first center"><h1>Modelagem de fenômenos sociais</h1>
+</section></section>
+<section>
+<section id="modelagem-de-fenômenos-sociais" class="title-slide slide level1 theme-first center">
+<h1>Modelagem de fenômenos sociais</h1>
 <p>Intuição</p>
-</section><section id="o-que-é-e-por-que-modelar" class="slide level2 theme-subtopic smaller"><h2>O que é e por que modelar?</h2>
+</section>
+<section id="o-que-é-e-por-que-modelar" class="slide level2 theme-subtopic smaller">
+<h2>O que é e por que modelar?</h2>
 <p><img data-src="images/models-augmented-reality.png" class="absolute" style="bottom: 20px; right: 5px; width: 300px; height: 300px; "></p>
 <p>A modelagem estatística é um exercício de estabelecimento da relação entre diferentes fenômenos, neste caso sociais.</p>
-</section><section id="o-que-é-e-por-que-modelar-1" class="slide level2 theme-subtopic smaller"><h2>O que é e por que modelar?</h2>
+</section>
+<section id="o-que-é-e-por-que-modelar-1" class="slide level2 theme-subtopic smaller">
+<h2>O que é e por que modelar?</h2>
 <p><img data-src="images/models-augmented-reality.png" class="absolute" style="bottom: 20px; right: 5px; width: 300px; height: 300px; "></p>
 <p>A modelagem estatística é um exercício de estabelecimento da relação entre diferentes fenômenos, neste caso sociais.</p>
 <p>Isso parte do pressuposto de que <em>conhecemos</em> a <em>verdadeira</em> <strong>fórmula/lei</strong> que rege a relação entre os fenômenos estabelecidos. Elas podem ser:</p>
@@ -658,7 +744,10 @@ sample estimates:
 <li class="fragment"><p>Quadráticas;</p></li>
 <li class="fragment"><p>Logarítmicas;</p></li>
 <li class="fragment"><p>Exponenciais; …</p></li>
-</ul></section><section id="o-que-é-e-por-que-modelar-2" class="slide level2 theme-subtopic smaller"><h2>O que é e por que modelar?</h2>
+</ul>
+</section>
+<section id="o-que-é-e-por-que-modelar-2" class="slide level2 theme-subtopic smaller">
+<h2>O que é e por que modelar?</h2>
 <p><img data-src="images/models-augmented-reality.png" class="absolute" style="bottom: 20px; right: 5px; width: 300px; height: 300px; "> A modelagem estatística é um exercício de estabelecimento da relação entre diferentes fenômenos, neste caso sociais.</p>
 <p>Isso parte do pressuposto de que <em>conhecemos</em> a <em>verdadeira</em> <strong>fórmula/lei</strong> que rege a relação entre os fenômenos estabelecidos. Elas podem ser:</p>
 <ul>
@@ -668,7 +757,9 @@ sample estimates:
 <li class="fragment"><p>Exponenciais; …</p></li>
 </ul>
 <h4 id="todos-os-modelos-estão-errados-mas-alguns-são-úteis-george-e.-p.-box">“Todos os modelos estão errados, mas alguns são úteis” George E. P. Box</h4>
-</section><section id="o-que-é-e-por-que-modelar-3" class="slide level2 theme-subtopic smaller"><h2>O que é e por que modelar?</h2>
+</section>
+<section id="o-que-é-e-por-que-modelar-3" class="slide level2 theme-subtopic smaller">
+<h2>O que é e por que modelar?</h2>
 <p>A partir da realidade em que conhecemos, formulamos uma relação matemática que nos permita avaliar e, <em>se assegurados alguns pressupostos</em>, generalizar as relações estabelecidas em uma pequena <strong>amostra</strong> da realidade para toda a <strong>população</strong> a que nossos dados são representativos.</p>
 <p>Para isso, precisamos:</p>
 <ol type="1">
@@ -679,9 +770,14 @@ sample estimates:
 <li class="fragment"><p>Implementar o modelo populacionar para a amostra da população que temos acesso</p></li>
 <li class="fragment"><p>Avaliar a validade do nosso modelo</p></li>
 <li class="fragment"><p>Estabelecer as conclusões possíveis com nossos modelos</p></li>
-</ol></section><section id="motivações-para-se-modelar-fenômenos-sociais" class="slide level2 theme-subtopic smaller"><h2>Motivações para se modelar fenômenos sociais</h2>
+</ol>
+</section>
+<section id="motivações-para-se-modelar-fenômenos-sociais" class="slide level2 theme-subtopic smaller">
+<h2>Motivações para se modelar fenômenos sociais</h2>
 <p>Pode-se estar interessado em predizer tendências futuras para determinado fenômeno sociais de interesse – <strong>PREDIÇÃO</strong> – ou compreender em que medida um fenômeno afeta outro – <strong>RELAÇÃO ENTRE FENÔMENOS</strong>.</p>
-</section><section id="motivações-para-se-modelar-fenômenos-sociais-1" class="slide level2 theme-subtopic smaller"><h2>Motivações para se modelar fenômenos sociais</h2>
+</section>
+<section id="motivações-para-se-modelar-fenômenos-sociais-1" class="slide level2 theme-subtopic smaller">
+<h2>Motivações para se modelar fenômenos sociais</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <h3 style="text-align: center;" id="predição">Predição</h3>
@@ -694,20 +790,28 @@ sample estimates:
 <h3 style="text-align: center;" id="relação-entre-fenômenos">Relação entre fenômenos</h3>
 <p>Mais comuns em estudos de políticas públicas para desenho de programas sociais, em estudos acadêmicos ou em estudos de mercado, esses modelos buscam estabelcer a relação entre um fenômeno <span class="math inline">\(X_1\)</span> e o fenômeno de interesse <span class="math inline">\(Y\)</span> a partir do <em>controle</em> por outras variáveis que também podem afetar <span class="math inline">\(Y\)</span><sup>2</sup>.</p>
 </div></div>
-<aside><ol class="aside-footnotes"><li id="fn1"><p>Ver texto complementar na leitura da aula de hoje.</p></li><li id="fn2"><p>Ver texto do ENAP (2019) presente na leitura da aula de hoje.</p></li></ol></aside></section><section id="limites" class="slide level2 theme-subtopic smaller"><h2>Limites</h2>
+<aside><ol class="aside-footnotes"><li id="fn1"><p>Ver texto complementar na leitura da aula de hoje.</p></li><li id="fn2"><p>Ver texto do ENAP (2019) presente na leitura da aula de hoje.</p></li></ol></aside></section>
+<section id="limites" class="slide level2 theme-subtopic smaller">
+<h2>Limites</h2>
 <p>Quais são os limites da modelagem de dados?</p>
 <p><img data-src="images/question.gif" class="absolute" style="bottom: 20px; right: 50px; width: 300px; height: 300px; "></p>
-</section><section id="limites-1" class="slide level2 theme-subtopic smaller"><h2>Limites</h2>
+</section>
+<section id="limites-1" class="slide level2 theme-subtopic smaller">
+<h2>Limites</h2>
 <p>Quais são os limites da modelagem de dados?</p>
 <h4 id="dados-disponíveis">Dados disponíveis</h4>
 <p>Se não há dados ou os dados são ruins, a modelagem vai ser diretamente afetada por isso.</p>
-</section><section id="limites-2" class="slide level2 theme-subtopic smaller"><h2>Limites</h2>
+</section>
+<section id="limites-2" class="slide level2 theme-subtopic smaller">
+<h2>Limites</h2>
 <p>Quais são os limites da modelagem de dados?</p>
 <h4 id="dados-disponíveis-1">Dados disponíveis</h4>
 <p>Se não há dados ou os dados são ruins, a modelagem vai ser diretamente afetada por isso.</p>
 <h4 id="conhecimento-teórico-sobre-a-relação-entre-fenômenos">Conhecimento teórico sobre a relação entre fenômenos</h4>
 <p>Se não há um embasamento teórico ou empírico suficiente para estabelecer as relações entre os fenômenos, o modelo terá alcance limitado.</p>
-</section><section id="limites-3" class="slide level2 theme-subtopic smaller"><h2>Limites</h2>
+</section>
+<section id="limites-3" class="slide level2 theme-subtopic smaller">
+<h2>Limites</h2>
 <p>Quais são os limites da modelagem de dados?</p>
 <h4 id="dados-disponíveis-2">Dados disponíveis</h4>
 <p>Se não há dados ou os dados são ruins, a modelagem vai ser diretamente afetada por isso.</p>
@@ -715,20 +819,28 @@ sample estimates:
 <p>Se não há um embasamento teórico ou empírico suficiente para estabelecer as relações entre os fenômenos, o modelo terá alcance limitado.</p>
 <h4 id="conhecimento-técnico-sobre-a-relação-entre-fenômenos">Conhecimento técnico sobre a relação entre fenômenos</h4>
 <p>Mesmo havendo conhecimento teórico suficiente, em muitos casos, o conhecimento técnico dos modelos que conhecemos não permitem que testemos certas hipóteses.</p>
-</section><section id="isso-é-tudo-para-hoje" class="slide level2 theme-next"><h2>Isso é tudo para hoje!</h2>
+</section>
+<section id="isso-é-tudo-para-hoje" class="slide level2 theme-next">
+<h2>Isso é tudo para hoje!</h2>
 <p>Para próxima aula:</p>
 <ol type="1">
 <li class="fragment">Exercício sobre correlação espúria</li>
 <li class="fragment">Leitura de material para aula de hoje (caso não tenha lido)</li>
 <li class="fragment">Leitura de material para a aula seguinte (Ver ementa)</li>
-</ol></section><section id="isso-é-tudo-para-hoje-1" class="slide level2 theme-next"><h2>Isso é tudo para hoje!</h2>
+</ol>
+</section>
+<section id="isso-é-tudo-para-hoje-1" class="slide level2 theme-next">
+<h2>Isso é tudo para hoje!</h2>
 <p>Orientações sobre o exercício:</p>
 <ul>
 <li class="fragment"><p>Explore os dados contidos na pasta <code>pratica &gt; dados_correlacao.csv</code></p></li>
 <li class="fragment"><p>Plot um gráfico das duas variáveis disponíveis</p></li>
 <li class="fragment"><p>Analise a correlação de Pearson</p></li>
 <li class="fragment"><p>Apresente suas hipóteses sobre o que explica isso.</p></li>
-</ul></section></section><section id="section" class="title-slide slide level1 cebrap-fim smaller center"><h1></h1>
+</ul>
+</section></section>
+<section id="section" class="title-slide slide level1 cebrap-fim smaller center">
+<h1></h1>
 <p><img data-src="images/cebrap50.png" class="absolute" style="top: -90px; right: 460px; width: 100px; height: 100px; "></p>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -757,7 +869,9 @@ sample estimates:
 
 
 </section>
-</div>
+
+
+    </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="images/cebrap-imagem.png" class="slide-logo"></p>
 <div class="footer footer-default">
@@ -765,7 +879,24 @@ sample estimates:
 </div>
 </div></div>
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="1.fundamentos_files/libs/revealjs/dist/reveal.js"></script><!-- reveal.js plugins --><script src="1.fundamentos_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script><script src="1.fundamentos_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script><script src="1.fundamentos_files/libs/revealjs/plugin/reveal-menu/menu.js"></script><script src="1.fundamentos_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script><script src="1.fundamentos_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script><script src="1.fundamentos_files/libs/revealjs/plugin/quarto-support/support.js"></script><script src="1.fundamentos_files/libs/revealjs/plugin/notes/notes.js"></script><script src="1.fundamentos_files/libs/revealjs/plugin/search/search.js"></script><script src="1.fundamentos_files/libs/revealjs/plugin/zoom/zoom.js"></script><script src="1.fundamentos_files/libs/revealjs/plugin/math/math.js"></script><script>window.define = window.backupDefine; window.backupDefine = undefined;</script><script>
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="1.fundamentos_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="1.fundamentos_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="1.fundamentos_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="1.fundamentos_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="1.fundamentos_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="1.fundamentos_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="1.fundamentos_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="1.fundamentos_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="1.fundamentos_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="1.fundamentos_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="1.fundamentos_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
 
       // Full list of configuration options available at:
       // https://revealjs.com/config/
@@ -957,42 +1088,84 @@ sample estimates:
           RevealZoom
         ]
       });
-    </script><script>
+    </script>
+    
+
+    <script>
+
       // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+
       // slide changes (different for each slide format).
+
       (function () {
+
         // dispatch for htmlwidgets
+
         function fireSlideEnter() {
+
           const event = window.document.createEvent("Event");
+
           event.initEvent("slideenter", true, true);
+
           window.document.dispatchEvent(event);
+
         }
+
     
+
         function fireSlideChanged(previousSlide, currentSlide) {
+
           fireSlideEnter();
+
     
+
           // dispatch for shiny
+
           if (window.jQuery) {
+
             if (previousSlide) {
+
               window.jQuery(previousSlide).trigger("hidden");
+
             }
+
             if (currentSlide) {
+
               window.jQuery(currentSlide).trigger("shown");
+
             }
+
           }
+
         }
+
     
+
         // hookup for slidy
+
         if (window.w3c_slidy) {
+
           window.w3c_slidy.add_observer(function (slide_num) {
+
             // slide_num starts at position 1
+
             fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+
           });
+
         }
+
     
+
       })();
-    </script><script id="quarto-html-after-body" type="application/javascript">
+
+    </script>
+
+    
+
+    <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
         tabsets.forEach(function(tabset) {
@@ -1159,6 +1332,6 @@ sample estimates:
         }
       });
       </script>
-
+    
 
 </body></html>

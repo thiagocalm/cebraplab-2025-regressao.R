@@ -6,18 +6,18 @@
 <script src="2.mrls-mrlm_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="2.mrls-mrlm_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="2.mrls-mrlm_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="2.mrls-mrlm_files/libs/quarto-html/quarto-syntax-highlighting-f06e18ba1ac294546b00b08c9de61a75.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.32">
-<meta name="author" content="Thiago Cordeiro Almeida">
-<meta name="dcterms.date" content="2025-09-17">
-<title>Regressão para pesquisas sociais</title>
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-<link rel="stylesheet" href="2.mrls-mrlm_files/libs/revealjs/dist/reset.css">
-<link rel="stylesheet" href="2.mrls-mrlm_files/libs/revealjs/dist/reveal.css">
-<style>
+<link href="2.mrls-mrlm_files/libs/quarto-html/quarto-syntax-highlighting-f06e18ba1ac294546b00b08c9de61a75.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.7.32">
+
+  <meta name="author" content="Thiago Cordeiro Almeida">
+  <meta name="dcterms.date" content="2025-09-24">
+  <title>Regressão para pesquisas sociais</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="2.mrls-mrlm_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="2.mrls-mrlm_files/libs/revealjs/dist/reveal.css">
+  <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -96,14 +96,14 @@
     code span.vs { color: #bae67e; } /* VerbatimString */
     code span.wa { color: #f28779; } /* Warning */
   </style>
-<link rel="stylesheet" href="2.mrls-mrlm_files/libs/revealjs/dist/theme/quarto-b3977c39e43a2656fc3cf4adeeeb87a5.css">
-<link href="2.mrls-mrlm_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-<link href="2.mrls-mrlm_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-<link href="2.mrls-mrlm_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-<link href="2.mrls-mrlm_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
-<link href="2.mrls-mrlm_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
-<link href="2.mrls-mrlm_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
-<style type="text/css">
+  <link rel="stylesheet" href="2.mrls-mrlm_files/libs/revealjs/dist/theme/quarto-b3977c39e43a2656fc3cf4adeeeb87a5.css">
+  <link href="2.mrls-mrlm_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="2.mrls-mrlm_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="2.mrls-mrlm_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="2.mrls-mrlm_files/libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="2.mrls-mrlm_files/libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="2.mrls-mrlm_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
       overflow: auto;
@@ -190,13 +190,17 @@
       margin-right: 0; 
     }
   </style>
-<script src="2.mrls-mrlm_files/libs/kePrint-0.0.1/kePrint.js"></script><link href="2.mrls-mrlm_files/libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+  <script src="2.mrls-mrlm_files/libs/kePrint-0.0.1/kePrint.js"></script>
+
+  <link href="2.mrls-mrlm_files/libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block center"><h1 class="title">Regressão para pesquisas sociais</h1>
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Regressão para pesquisas sociais</h1>
   <p class="subtitle"><span style="font-size:1em;"> Aula 2 - Modelagem de dados de natureza contínua </span></p>
 
 <div class="quarto-title-authors">
@@ -205,21 +209,30 @@
 Thiago Cordeiro Almeida 
 </div>
         <p class="quarto-title-affiliation">
-            Doutorando, Centre d’Estudis Demogràfics (CED, Espanha) <br> Pesquisador Assistente, Cebrap <br></p>
+            Doutorando, Centre d’Estudis Demogràfics (CED, Espanha) <br> Pesquisador Assistente, Cebrap <br>
+          </p>
     </div>
 </div>
 
-  <p class="date">September 17, 2025</p>
-</section><section id="antes-de-começar" class="title-slide slide level1 center"><h1>Antes de começar…</h1>
+  <p class="date">September 24, 2025</p>
+</section>
+<section id="antes-de-começar" class="title-slide slide level1 center">
+<h1>Antes de começar…</h1>
 <p>lista de presença!</p>
 <p><img data-src="images/attention.gif" class="absolute" style="bottom: 10px; right: 50px; width: 240px; height: 240px; "></p>
-</section><section><section id="antes-de-começar-2" class="title-slide slide level1 center"><h1>Antes de começar (2)…</h1>
+</section>
+
+<section>
+<section id="antes-de-começar-2" class="title-slide slide level1 center">
+<h1>Antes de começar (2)…</h1>
 <ul>
 <li class="fragment"><p>Dúvidas gerais sobre a aula anterior?</p></li>
 <li class="fragment"><p>Exercício da aula anterior: dúvidas, comentários, considerações?</p></li>
 </ul>
 <p><img data-src="images/question.gif" class="absolute" style="bottom: -150px; right: 0px; width: 200px; height: 200px; "></p>
-</section><section id="estrutura-da-aula" class="slide level2 theme-next smaller"><h2>Estrutura da aula</h2>
+</section>
+<section id="estrutura-da-aula" class="slide level2 theme-next smaller">
+<h2>Estrutura da aula</h2>
 <div class="columns">
 <div class="column" style="width:30%;">
 <p>Tópicos que vamos cobrir hoje são:</p>
@@ -229,55 +242,61 @@ Thiago Cordeiro Almeida
 <li class="fragment"><p>Fluxo de análise de dados contínuos com o uso de modelagem</p></li>
 <li class="fragment"><p>Conceitos, noções (e jargões) econométricos</p></li>
 <li class="fragment"><p>Exemplo empírico do dia</p></li>
-<li class="fragment">
-<p>Regressão linear simples</p>
+<li class="fragment"><p>Regressão linear simples</p>
 <ul>
 <li class="fragment"><p>Intuição e formalização</p></li>
 <li class="fragment"><p>Propriedade e pressupostos</p></li>
 <li class="fragment"><p>Mão na massa!</p></li>
-</ul>
-</li>
-<li class="fragment">
-<p>Regressão linear multivariada</p>
+</ul></li>
+<li class="fragment"><p>Regressão linear multivariada</p>
 <ul>
 <li class="fragment"><p>Intuição e formalização</p></li>
 <li class="fragment"><p>Novidades em relação à regressão linear simples</p></li>
 <li class="fragment"><p>Mão na massa!: interpretação</p></li>
-</ul>
-</li>
+</ul></li>
 </ul>
 </div>
 </div></div>
-</section></section><section><section id="fluxo-de-análise-de-dados-contínuos" class="title-slide slide level1 theme-first center"><h1>Fluxo de análise de dados contínuos</h1>
+</section></section>
+<section>
+<section id="fluxo-de-análise-de-dados-contínuos" class="title-slide slide level1 theme-first center">
+<h1>Fluxo de análise de dados contínuos</h1>
 <div style="text-align: left;">
 <p>A partir do uso de modelos</p>
 </div>
-</section><section id="fluxo-de-análise-de-dados" class="slide level2 theme-subtopic smaller"><h2>Fluxo de análise de dados</h2>
+</section>
+<section id="fluxo-de-análise-de-dados" class="slide level2 theme-subtopic smaller">
+<h2>Fluxo de análise de dados</h2>
 <p><img data-src="images/fluxo-analise.png" class="absolute" style="bottom: 10px; right: 75px; width: 1300px; height: 650px; "></p>
-</section></section><section><section id="conceitos-e-definições-estatísticas-importantes" class="title-slide slide level1 theme-first center"><h1>Conceitos e definições estatísticas importantes</h1>
+</section></section>
+<section>
+<section id="conceitos-e-definições-estatísticas-importantes" class="title-slide slide level1 theme-first center">
+<h1>Conceitos e definições estatísticas importantes</h1>
 <div style="text-align: left;">
 <p>Modelos probabilísticos</p>
 </div>
-</section><section id="modelos-probabilísticos" class="slide level2"><h2><span class="theme-subtopic smaller">Modelos probabilísticos</span></h2>
+</section>
+<section id="modelos-probabilísticos" class="slide level2">
+<h2><span class="theme-subtopic smaller">Modelos probabilísticos</span></h2>
 <ul>
 <li class="fragment"><p>Na aula anterior, exploramos diferentes formas de analisar descritivamente a distribuição de determinado fenômeno através de diferentes tipos de medida.</p></li>
 <li class="fragment"><p>Em termos estatísticos, para cada distribuição observada em uma amostra, há (<em>ou haveria</em>) um modelo teórico que descreveria estatísticamente essa mesma distribuição.</p></li>
-</ul></section><section id="modelos-probabilísticos-1" class="slide level2 font-size-smallest"><h2><span class="theme-subtopic">Modelos probabilísticos</span></h2>
+</ul>
+</section>
+<section id="modelos-probabilísticos-1" class="slide level2 font-size-smallest">
+<h2><span class="theme-subtopic">Modelos probabilísticos</span></h2>
 <p><strong>Exemplo:</strong> programa pé-de-meia.</p>
 <p>Estamos interessados em saber a parcela dos estudantes que tiveram nota em matemática acima da média no ENEM dentro do universo de pessoas que participaram do programa.</p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <h4 id="abordagem-empírica">Abordagem empírica</h4>
 <ol type="1">
-<li class="fragment">Calcularia a proporção de pessoas que tiveram a média acima como: <span class="math display">\[p(X)=\frac{e}{n}\]</span>
-</li>
+<li class="fragment">Calcularia a proporção de pessoas que tiveram a média acima como: <span class="math display">\[p(X)=\frac{e}{n}\]</span></li>
 </ol>
 <p>Em que,</p>
 <ul>
-<li class="fragment">
-<span class="math inline">\(e\)</span>: evento, no caso, num. acima da média;</li>
-<li class="fragment">
-<span class="math inline">\(n\)</span>: observações, no caso, num. estudantes no ENEM.</li>
+<li class="fragment"><span class="math inline">\(e\)</span>: evento, no caso, num. acima da média;</li>
+<li class="fragment"><span class="math inline">\(n\)</span>: observações, no caso, num. estudantes no ENEM.</li>
 </ul>
 </div><div class="column" style="width:50%;">
 <h4 id="abordagem-probabilística">Abordagem probabilística</h4>
@@ -293,14 +312,19 @@ Thiago Cordeiro Almeida
 <li class="fragment"><p>Estimaria a probabilidade desse evento de interesse ocorrer.</p></li>
 </ol>
 </div></div>
-</section><section id="modelos-probabilísticos-2" class="slide level2 smaller"><h2><span class="theme-subtopic">Modelos probabilísticos</span></h2>
+</section>
+<section id="modelos-probabilísticos-2" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Modelos probabilísticos</span></h2>
 <p>Sob o pressuposto de que nossa amostra de estudantes que participaram do ENEM e do programa é <strong>i.i.d.</strong><sup>1</sup>, o que obteríamos calculando via abordagem empírica seria <em>exatamente</em> o mesmo ao calcular via abordagem probabilística!!!</p>
 <p>Ou seja,</p>
 <ul>
 <li class="fragment"><p>Podemos estudar propriedades estatísticas dos fenômenos sociais em que trabalhamos não só restritos a uma determinada amostra em que temos, mas fazendo <em>generalizações</em> desses fenômenos;</p></li>
 <li class="fragment"><p>Utilizando modelos que representem esses fenômenos, conseguimos ter estimativas do comportamento deles que incorporem <em>incertezas</em> inerentes a eles.</p></li>
 <li class="fragment"><p>Modelagens são formas de adicionar complexidade ao estudo desses fenômenos a partir das suas interações com outros fenômenos sociais.</p></li>
-</ul><aside><ol class="aside-footnotes"><li id="fn1"><p><strong>i.i.d.</strong> = <strong>i</strong>ndependente e <strong>i</strong>dênticamente <strong>d</strong>istribuída.</p></li></ol></aside></section><section id="modelos-probabilísticos-3" class="slide level2 smaller"><h2><span class="theme-subtopic">Modelos probabilísticos</span></h2>
+</ul>
+<aside><ol class="aside-footnotes"><li id="fn1"><p><strong>i.i.d.</strong> = <strong>i</strong>ndependente e <strong>i</strong>dênticamente <strong>d</strong>istribuída.</p></li></ol></aside></section>
+<section id="modelos-probabilísticos-3" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Modelos probabilísticos</span></h2>
 <h3 id="relação-entre-modelos-probabilísticos-e-modelos-de-regressão">Relação entre modelos probabilísticos e modelos de regressão</h3>
 <p>O que fazemos em nossos modelos de regressão é, basicamente, estudar as propriedades da nossa <strong>variável de estudo</strong> através de relações associadas ao melhor modelo probabilístico que descreve essa variável.</p>
 <p>Com isso, podemos:</p>
@@ -308,11 +332,17 @@ Thiago Cordeiro Almeida
 <li class="fragment"><p>Prever resultados futuros condicionados a um conjunto de outras variáveis (probabilidade condicional a um conjunto de <span class="math inline">\(X\)</span>)</p></li>
 <li class="fragment"><p>Estabelecer em que medida variando uma das variáveis, seus valores são afetados (probabilidade condicional a um <span class="math inline">\(X\)</span>)</p></li>
 <li class="fragment"><p>Obter valores esperados e incerteza de seus resultados (esperança e variância)</p></li>
-</ul></section></section><section><section id="conceitos-e-definições-estatísticas-importantes-1" class="title-slide slide level1 theme-first center"><h1>Conceitos e definições estatísticas importantes</h1>
+</ul>
+</section></section>
+<section>
+<section id="conceitos-e-definições-estatísticas-importantes-1" class="title-slide slide level1 theme-first center">
+<h1>Conceitos e definições estatísticas importantes</h1>
 <div style="text-align: left;">
 <p>Variável aleatória (<em>v.a.</em>)</p>
 </div>
-</section><section id="variável-aleatória" class="slide level2 smaller"><h2><span class="theme-subtopic">Variável aleatória</span></h2>
+</section>
+<section id="variável-aleatória" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Variável aleatória</span></h2>
 <p>Uma variável <span class="math inline">\(X\)</span> é aleatória se cada um de seus valores – ou um intervalo entre valores – está associado a uma probabilidade <span class="math inline">\(p(X)\)</span>.</p>
 <h3 id="exemplo">Exemplo</h3>
 <p>Vamos voltar ao <strong>pé-de-meia</strong>.</p>
@@ -320,10 +350,12 @@ Thiago Cordeiro Almeida
 <div class="cell">
 <div class="cell-output-display">
 <table class="table caption-top" data-quarto-postprocess="true" style="margin-left: auto; margin-right: auto;">
-<thead><tr class="header">
+<thead>
+<tr class="header">
 <th style="text-align: center;" data-quarto-table-cell-role="th">x</th>
 <th style="text-align: center;" data-quarto-table-cell-role="th">px</th>
-</tr></thead>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: center;">Abaixo (x = 0)</td>
@@ -337,7 +369,9 @@ Thiago Cordeiro Almeida
 </table>
 </div>
 </div>
-</section><section id="section" class="slide level2 smaller"><h2><span class="theme-subtopic"></span></h2>
+</section>
+<section id="section" class="slide level2 smaller">
+<h2><span class="theme-subtopic"></span></h2>
 <p>Variáveis aleatórias <span class="math inline">\(v.a.\)</span> apresentam algumas propiedades que serão importantes nos modelos que utilizaremos:</p>
 <h4 id="esperança-de-x">Esperança de X</h4>
 <p>Se uma determinada variável é aleatória e o seu seu modelo de probabilidade é conhecido, a sua <em>Esperança</em> – também chamada de média – pode ser conhecida.</p>
@@ -345,7 +379,9 @@ Thiago Cordeiro Almeida
 <h4 id="variabilidade-de-x">Variabilidade de X</h4>
 <p>Do mesmo modo, se uma determinada variável é aleatória e é conhecido o seu modelo de probabilidade, a sua <em>variância</em> – ou sua variabilidade em torno da média – também pode ser conhecido.</p>
 <p>Geralmente é apresentada enquanto: <span class="math inline">\(V(X) = E[X - E(X)]^2\)</span>, sendo <span class="math inline">\(X\)</span> uma variável aleatória.</p>
-</section><section id="section-1" class="slide level2 smaller"><h2><span class="theme-subtopic"></span></h2>
+</section>
+<section id="section-1" class="slide level2 smaller">
+<h2><span class="theme-subtopic"></span></h2>
 <h3 id="relação-entre-variáveis-aleatórias">Relação entre variáveis aleatórias</h3>
 <p>Conhecendo-se as propriedades de uma variável aleatória, pode-se relacionar duas ou mais variáveis aleatórias, de modo que:</p>
 <p><span class="math display">\[Y = f(X_1, X_2, X_3, X_4,...,X_n) = X_1 + X_2 + X_3 + X_4 + ... + X_n\]</span></p>
@@ -353,14 +389,21 @@ Thiago Cordeiro Almeida
 <p><span class="math display">\[E(Y) = E(X_1 + X_2 + X_3 + X_4 + ... + X_n)\]</span></p>
 <p><span class="math display">\[E(Y) = E(X_1) + E(X_2) + E(X_3) + E(X_4) + ... + E(X_n)\]</span></p>
 <p>Portanto, tudo o que precisamos saber é qual o modelo probabilístico – <span class="math inline">\(f(\cdot)\)</span> – associado à determinado fenômeno social – que trataremos como uma <span class="math inline">\(v.a.\)</span>. A partir disso, podemos relacionar esse fenômeno social de interesse com outros fenômenos – outras <span class="math inline">\(v.a.\)</span></p>
-</section><section id="tipos-de-variável-aleatória" class="slide level2 smaller"><h2><span class="theme-subtopic">Tipos de Variável Aleatória</span></h2>
+</section>
+<section id="tipos-de-variável-aleatória" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Tipos de Variável Aleatória</span></h2>
 <p>As <span class="math inline">\(v.a.\)</span> podem ser divididas entre <strong>discretas</strong> e <strong>contínuas</strong></p>
 <p><img data-src="images/distributions.png" class="absolute" style="bottom: 10px; right: 75px; width: 1000px; height: 550px; "></p>
-</section></section><section><section id="conceitos-e-definições-estatísticas-importantes-2" class="title-slide slide level1 theme-first center"><h1>Conceitos e definições estatísticas importantes</h1>
+</section></section>
+<section>
+<section id="conceitos-e-definições-estatísticas-importantes-2" class="title-slide slide level1 theme-first center">
+<h1>Conceitos e definições estatísticas importantes</h1>
 <div style="text-align: left;">
 <p>Algumas nomenclaturas</p>
 </div>
-</section><section id="algumas-nomenclaturas" class="slide level2 smaller"><h2><span class="theme-subtopic">Algumas nomenclaturas</span></h2>
+</section>
+<section id="algumas-nomenclaturas" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Algumas nomenclaturas</span></h2>
 <h4 id="variável-a-ser-estudada">Variável a ser estudada</h4>
 <p><span class="math inline">\(Y\)</span>: Variável dependente - variável a ser medida - variável a ser testada - variável resposta - variável resultado</p>
 <h4 id="variáveis-que-explicam-a-variável-de-estudo">Variáveis que explicam a variável de estudo</h4>
@@ -369,60 +412,78 @@ Thiago Cordeiro Almeida
 <p>Há muitos casos em que estamos interessados em uma – ou um conjunto de – variável(is) independente(s). Todavia, por razões das propriedades dos modelos, é importante que insiramos outras variáveis na análise. Estas são chamadas de <strong>variáveis controle/confundidoras</strong>.</p>
 <ul>
 <li class="fragment">Em geral, seus resultados não são explicados, mas são explicitados.</li>
-</ul></section></section><section><section id="modelo-de-regressão-linear" class="title-slide slide level1 theme-first center"><h1>Modelo de regressão Linear</h1>
+</ul>
+</section></section>
+<section>
+<section id="modelo-de-regressão-linear" class="title-slide slide level1 theme-first center">
+<h1>Modelo de regressão Linear</h1>
 <div style="text-align: left;">
 <p>Modelo de Regressão Linear Simples (RLS)</p>
 </div>
-</section><section id="modelo-de-regressão-linear-simples-rls" class="slide level2 smaller"><h2><span class="theme-subtopic">Modelo de Regressão Linear Simples (RLS)</span></h2>
+</section>
+<section id="modelo-de-regressão-linear-simples-rls" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Modelo de Regressão Linear Simples (RLS)</span></h2>
 <p>Nos modelos de regressão em geral, estamos interessados em explicar <strong>como a variação de uma determinada variável afeta a variação de uma outra variável (variável resposta)</strong>.</p>
 <p>No caso simplificado do modelo RLS, temos as seguintes características:</p>
 <ul>
 <li class="fragment"><p>Uma variável aleatória resposta/dependente de natureza contínua: <span class="math inline">\(Y\)</span></p></li>
 <li class="fragment"><p>Uma variável aleatória explicativa: <span class="math inline">\(X\)</span></p></li>
 <li class="fragment"><p>Um fator de erro do modelo que nos diz quanto da variabilidade de <span class="math inline">\(Y\)</span> que continua não explicado por <span class="math inline">\(X\)</span>: <span class="math inline">\(\epsilon\)</span></p></li>
-</ul></section><section id="modelo-de-regressão-linear-simples-rls-1" class="slide level2 smaller"><h2><span class="theme-subtopic">Modelo de Regressão Linear Simples (RLS)</span></h2>
+</ul>
+</section>
+<section id="modelo-de-regressão-linear-simples-rls-1" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Modelo de Regressão Linear Simples (RLS)</span></h2>
 
-<img data-src="2.mrls-mrlm_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section><section id="modelo-de-regressão-linear-simples-rls-2" class="slide level2 smaller"><h2><span class="theme-subtopic">Modelo de Regressão Linear Simples (RLS)</span></h2>
+<img data-src="2.mrls-mrlm_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section>
+<section id="modelo-de-regressão-linear-simples-rls-2" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Modelo de Regressão Linear Simples (RLS)</span></h2>
 
-<img data-src="2.mrls-mrlm_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section><section id="section-2" class="slide level2 smaller"><h2><span class="theme-subtopic"></span></h2>
+<img data-src="2.mrls-mrlm_files/figure-revealjs/unnamed-chunk-3-1.png" width="960" class="r-stretch"></section>
+<section id="section-2" class="slide level2 smaller">
+<h2><span class="theme-subtopic"></span></h2>
 <h3 id="formalização-de-um-mrls">Formalização de um MRLS</h3>
 <p>Dizemos que a representação geral (ou populacional) de um determinado modelo de regressão é dada por:</p>
 <p><span class="math display">\[Y_i = \beta_0 + \beta_1 \cdot X_i + \epsilon_i\]</span></p>
 <p>Em que:</p>
 <ul>
-<li class="fragment">
-<p><span class="math inline">\(\beta_0\)</span>: intercepto do modelo.</p>
+<li class="fragment"><p><span class="math inline">\(\beta_0\)</span>: intercepto do modelo.</p>
 <ul>
 <li class="fragment">Nos diz qual valor <span class="math inline">\(Y\)</span> assume quando <span class="math inline">\(X\)</span> é igualado a <span class="math inline">\(0\)</span>.</li>
-</ul>
-</li>
-<li class="fragment">
-<p><span class="math inline">\(\beta_1\)</span>: coeficiente do modelo associado à variável <span class="math inline">\(X\)</span>.</p>
+</ul></li>
+<li class="fragment"><p><span class="math inline">\(\beta_1\)</span>: coeficiente do modelo associado à variável <span class="math inline">\(X\)</span>.</p>
 <ul>
 <li class="fragment"><p>Nos diz qual a magnitude da mudança em <span class="math inline">\(Y\)</span> quando <span class="math inline">\(X\)</span> varia uma unidade para cima ou para baixo.</p></li>
 <li class="fragment"><p>É também chamado de <strong>inclinação da reta</strong>, devido à suas propriedades estatísticas do modo em que é calculado*.</p></li>
-</ul>
-</li>
+</ul></li>
 <li class="fragment"><p><span class="math inline">\(\epsilon_i\)</span>: como descrito anteriormente, é o quanto não está sendo explicado em <span class="math inline">\(Y_i\)</span> devido à variação estimada em <span class="math inline">\(X_i\)</span>.</p></li>
-</ul></section><section id="section-3" class="slide level2 smaller"><h2><span class="theme-subtopic-assumption"></span></h2>
+</ul>
+</section>
+<section id="section-3" class="slide level2 smaller">
+<h2><span class="theme-subtopic-assumption"></span></h2>
 <h4 id="hipótese-independência-entre-erro-e-variáveis-observadas">Hipótese: independência entre erro e variáveis observadas</h4>
 <p>Partindo do nosso modelo RLS para a população, <span class="math display">\[Y_i = \beta_0 + \beta_1 \cdot X_i + \epsilon_i\]</span></p>
 <p>A <strong>hipótese-chave</strong> é que a média dos erros condicionada na variável explicativa <span class="math inline">\(X_i\)</span> é igual a zero, ou seja: <span class="math display">\[E[\epsilon_i|X_i]=0\]</span></p>
 <p>Em outras palavras, estamos assumindo que não há nenhum fator contido em <span class="math inline">\(\epsilon\)</span> que seja correlacionado com <span class="math inline">\(X\)</span>, de modo que <span class="math inline">\(\beta\)</span> seja um efeito <em>puro</em> de X.</p>
-</section><section id="section-4" class="slide level2 smaller"><h2><span class="theme-subtopic-assumption"></span></h2>
+</section>
+<section id="section-4" class="slide level2 smaller">
+<h2><span class="theme-subtopic-assumption"></span></h2>
 <p>Modelo populacional: <span class="math display">\[Y_i = \beta_0 + \beta_1 \cdot X_i + \epsilon_i\]</span></p>
 <p>Quando vamos <em>estimar</em> os nossos parâmetros para a nossa amostra, assumimos os valores médios para os nossos <span class="math inline">\(i\)</span> casos observados, isto é:</p>
 <p><span class="math display">\[\bar{Y} = \hat{\beta_0} + \hat{\beta_1} \cdot \bar{X} + \hat{\epsilon_i}\]</span></p>
 <p>Os únicos valores que não conhecemos são referentes a <span class="math inline">\(\beta_0\)</span> e <span class="math inline">\(\beta\)</span>, uma vez que <span class="math inline">\(\epsilon\)</span> é obtido residualmente.</p>
 <p>Tudo o que precisamos fazer é <strong>estimar os parâmetros desconhecidos do modelo populacional</strong>.</p>
-</section><section id="section-5" class="slide level2 smaller"><h2><span class="theme-subtopic"></span></h2>
+</section>
+<section id="section-5" class="slide level2 smaller">
+<h2><span class="theme-subtopic"></span></h2>
 <h3 id="estimando-parâmetros-do-modelo">Estimando parâmetros do modelo</h3>
 <p>O modelo a ser estimado consiste em:</p>
 <p><span class="math display">\[\bar{Y} = \hat{\beta_0} + \hat{\beta_1} \cdot \bar{X} + \hat{\epsilon_i}\]</span></p>
 <h4 id="estimadores-de-mínimos-quadrados-ordinários-mqo">Estimadores de Mínimos Quadrados Ordinários (MQO)</h4>
 <p>Os estimadores de MQO asseguram, via relações estatísticas, que tenhamos valores para nossos parâmetros desconhecidos que <strong>minimizem o desvio dos resíduos</strong>.</p>
 <p>Isto é, temos a reta que melhor se ajusta aos nossos dados de modo que passe mais perto possível de cada ponto.</p>
-</section><section id="section-6" class="slide level2 smaller"><h2><span class="theme-subtopic"></span></h2>
+</section>
+<section id="section-6" class="slide level2 smaller">
+<h2><span class="theme-subtopic"></span></h2>
 <h3 id="estimando-parâmetros-do-modelo-1">Estimando parâmetros do modelo</h3>
 <p><span class="math display">\[\bar{Y} = \hat{\beta_0} + \hat{\beta_1} \cdot \bar{X}\]</span></p>
 <h4 id="estimadores-de-mínimos-quadrados-ordinários-mqo-1">Estimadores de Mínimos Quadrados Ordinários (MQO)</h4>
@@ -432,7 +493,10 @@ Thiago Cordeiro Almeida
 <li class="fragment"><p><span class="math inline">\(\hat{\beta_1} = \frac{Cov(x,y)}{Var(x)}\)</span></p></li>
 <li class="fragment"><p>Valores preditos: <span class="math inline">\(\hat{Y_i} = \hat{\beta_0} + \hat{\beta_1} \cdot X_i\)</span> para <span class="math inline">\(i = 1,...,n\)</span>.</p></li>
 <li class="fragment"><p>Resíduos: <span class="math inline">\(\hat{u_i}=y_i-\hat{Y_i}\)</span>, para <span class="math inline">\(i=1,...,n\)</span></p></li>
-</ul></section><section id="section-7" class="slide level2 smaller"><h2><span class="theme-subtopic"></span></h2>
+</ul>
+</section>
+<section id="section-7" class="slide level2 smaller">
+<h2><span class="theme-subtopic"></span></h2>
 <p>Para o exemplo anterior, se partimos do modelo a ser estimado:</p>
 <p><span class="math display">\[\overline{Divorcio} = \hat{\beta_0} + \hat{\beta_1} \cdot \overline{Margarina} + \hat{\epsilon}\]</span></p>
 <p>Aplicando em R:</p>
@@ -449,7 +513,9 @@ Coefficients:
      3.3086       0.2014  </code></pre>
 </div>
 </div>
-</section><section id="section-8" class="slide level2 smaller"><h2><span class="theme-subtopic"></span></h2>
+</section>
+<section id="section-8" class="slide level2 smaller">
+<h2><span class="theme-subtopic"></span></h2>
 <p>Para o exemplo anterior, se partimos do modelo a ser estimado:</p>
 <p><span class="math display">\[\overline{Divorcio} = \hat{\beta_0} + \hat{\beta_1} \cdot \overline{Margarina} + \hat{\epsilon}\]</span></p>
 <p>Aplicando em R:</p>
@@ -477,13 +543,21 @@ Multiple R-squared:  0.9852,    Adjusted R-squared:  0.9833
 F-statistic: 531.5 on 1 and 8 DF,  p-value: 0.0000000133</code></pre>
 </div>
 </div>
-</section></section><section id="pausa" class="title-slide slide level1 theme-stop center"><h1>Pausa!</h1>
+</section></section>
+<section id="pausa" class="title-slide slide level1 theme-stop center">
+<h1>Pausa!</h1>
 <div style="display: flex; justify-content: flex-end; align-items: center; height: 100vh;">
 <img src="images/stop.gif" style="border-radius: 50%; border:5px solid #708d81; width:400px; height:auto;">
 </div>
-</section><section><section id="modelo-de-regressão-linear-1" class="title-slide slide level1 theme-first center"><h1>Modelo de regressão Linear</h1>
+</section>
+
+<section>
+<section id="modelo-de-regressão-linear-1" class="title-slide slide level1 theme-first center">
+<h1>Modelo de regressão Linear</h1>
 <p>Propriedades do MRL</p>
-</section><section id="propriedades-do-mrl" class="slide level2 smaller"><h2><span class="theme-subtopic">Propriedades do MRL</span></h2>
+</section>
+<section id="propriedades-do-mrl" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Propriedades do MRL</span></h2>
 <p>Para assegurar que, através do MQO, tenhamos estimadores <strong>não viesados</strong> e <strong>mais eficientes</strong>, devemos assegurar que 6 hipóteses sejam asseguradas:</p>
 <ol type="1">
 <li class="fragment"><p>O modelo é linear nos parâmetros;</p></li>
@@ -492,27 +566,39 @@ F-statistic: 531.5 on 1 and 8 DF,  p-value: 0.0000000133</code></pre>
 <li class="fragment"><p>Independência entre erro e variáveis observadas;</p></li>
 <li class="fragment"><p>Variância do erro constante para todas as variáveis explicativas;</p></li>
 <li class="fragment"><p>O erro segue uma distribuição normal com média 0 e variância constante</p></li>
-</ol></section><section id="section-9" class="slide level2"><h2><span class="theme-subtopic"></span></h2>
+</ol>
+</section>
+<section id="section-9" class="slide level2">
+<h2><span class="theme-subtopic"></span></h2>
 <h3 id="h1-o-modelo-é-linear-nos-parâmetros">H1: O modelo é linear nos parâmetros</h3>
 <p>Os parâmetros – <span class="math inline">\(\beta\)</span>s – se relacionam de forma linear.</p>
 <p><span class="math display">\[Y_i = \beta_0 + \beta_1 \cdot X_i + \epsilon_i\]</span></p>
 <p>É por essa propriedade que chamamos os modelos de <strong>modelos lineares</strong>.</p>
-</section><section id="section-10" class="slide level2"><h2><span class="theme-subtopic"></span></h2>
+</section>
+<section id="section-10" class="slide level2">
+<h2><span class="theme-subtopic"></span></h2>
 <h3 id="h2-amostra-é-aleatória-e-segue-o-modelo-populacional-descrito-em-h1">H2: Amostra é aleatória e segue o modelo populacional descrito em H1</h3>
 <p>Para uma dada amostra de tamanho <span class="math inline">\(N\)</span> qualquer, seu processo gerador seguiu uma distribuição aleatória, seguindo o modelo populacional descrito em H1.</p>
 <p>Todavia, <em>em casos onde temos problemas de seletividade amostral</em>, isso pode afetar essa hipótese.</p>
-</section><section id="section-11" class="slide level2 smaller"><h2><span class="theme-subtopic"></span></h2>
+</section>
+<section id="section-11" class="slide level2 smaller">
+<h2><span class="theme-subtopic"></span></h2>
 <h3 id="h3-inexistência-variáveis-constantes-ou-que-não-tenham-uma-relação-linear-exata-com-outra-variável-explicativa">H3: Inexistência variáveis constantes ou que não tenham uma relação linear exata com outra variável explicativa</h3>
 <p>Para qualquer variável explicativa <span class="math inline">\(X\)</span>, há uma variabilidade de seus resultados em relação a <span class="math inline">\(Y\)</span>.</p>
 <p>Além disso, determinada variável <span class="math inline">\(X\)</span> não pode estar totalmente correlacionada com outra variável <span class="math inline">\(X\)</span>.</p>
 <ul>
 <li class="fragment">Assegura que não haja perfeita colinearidade,i.e., que toda a variação em <span class="math inline">\(X_1\)</span> esteja associada a <span class="math inline">\(X_2\)</span>.</li>
-</ul></section><section id="section-12" class="slide level2"><h2><span class="theme-subtopic"></span></h2>
+</ul>
+</section>
+<section id="section-12" class="slide level2">
+<h2><span class="theme-subtopic"></span></h2>
 <h3 id="h4-independência-entre-erro-e-variáveis-observadas">H4: Independência entre erro e variáveis observadas</h3>
 <p>Mencionado anteriormente: a média dos erros condicionada na variável explicativa <span class="math inline">\(X_i\)</span> é igual a zero, ou seja: <span class="math display">\[E[\epsilon_i|X_i]=0\]</span></p>
 <p>Para um determinado valor de <span class="math inline">\(X\)</span>, os outros fatores não observados no modelo não afetam o resultado de <span class="math inline">\(X\)</span>.</p>
 <p><strong>Não é que <span class="math inline">\(\epsilon\)</span> não afete <span class="math inline">\(Y\)</span></strong>, e sim que <strong><span class="math inline">\(\epsilon\)</span> não está condicionado a <span class="math inline">\(X\)</span></strong>.</p>
-</section><section id="section-13" class="slide level2 smaller"><h2><span class="theme-subtopic"></span></h2>
+</section>
+<section id="section-13" class="slide level2 smaller">
+<h2><span class="theme-subtopic"></span></h2>
 <h3 id="h5-variância-do-erro-constante-para-todas-as-variáveis-explicativas">H5: Variância do erro constante para todas as variáveis explicativas</h3>
 <p><span class="math display">\[Var[\epsilon|X]=\sigma^2\]</span> Chamamos essa hipótese de <strong>homocedasticidade</strong> ou <strong>variância constante do erro</strong>.</p>
 <p>Pode ser violada em situações de:</p>
@@ -520,19 +606,28 @@ F-statistic: 531.5 on 1 and 8 DF,  p-value: 0.0000000133</code></pre>
 <li class="fragment"><p><strong>Outliers para uma variável específica</strong></p></li>
 <li class="fragment"><p><strong>Distribuições de alguma variável específica</strong> que seguem um distinto padrão.</p></li>
 <li class="fragment"><p>…</p></li>
-</ul></section><section id="section-14" class="slide level2"><h2><span class="theme-subtopic"></span></h2>
+</ul>
+</section>
+<section id="section-14" class="slide level2">
+<h2><span class="theme-subtopic"></span></h2>
 <h3 id="h6-o-erro-segue-uma-distribuição-normal-com-média-0-e-variância-constante">H6: O erro segue uma distribuição normal com média 0 e variância constante</h3>
 <p>Assumindo isso, podemos também assumir, <em>por propriedades estatísticas</em>, que qualquer um de nossos parâmetros também têm distribuição normal.</p>
 <p>Por que assumimos essa hipótese para o erro e não para os parâmetros?</p>
 <ul>
 <li class="fragment">O erro pode ser estudado e avaliado, os parâmetros não.</li>
-</ul></section><section id="section-15" class="slide level2 smaller"><h2><span class="theme-subtopic"></span></h2>
+</ul>
+</section>
+<section id="section-15" class="slide level2 smaller">
+<h2><span class="theme-subtopic"></span></h2>
 <h4 id="assegurando-a-existência-de-h1-h4">Assegurando a existência de H1-H4</h4>
 <p>Estimadores MQO <strong>não viesados</strong>. Isto é, representam o que seria o valor a ser obtido na população estudada, mesmo depois de implementar em <span class="math inline">\(N\)</span> diferentes amostras.</p>
 <ul>
 <li class="fragment"><p><span class="math inline">\(E[\hat{\beta_0}|X]=\beta_0\)</span></p></li>
 <li class="fragment"><p><span class="math inline">\(E[\hat{\beta_1}|X]=\beta_1\)</span></p></li>
-</ul></section><section id="section-16" class="slide level2 smaller"><h2><span class="theme-subtopic"></span></h2>
+</ul>
+</section>
+<section id="section-16" class="slide level2 smaller">
+<h2><span class="theme-subtopic"></span></h2>
 <h4 id="assegurando-a-existência-de-h1-h4-1">Assegurando a existência de H1-H4</h4>
 <p>Estimadores MQO <strong>não viesados</strong>. Isto é, representam o que seria o valor a ser obtido na população estudada, mesmo depois de implementar em <span class="math inline">\(N\)</span> diferentes amostras.</p>
 <ul>
@@ -541,7 +636,9 @@ F-statistic: 531.5 on 1 and 8 DF,  p-value: 0.0000000133</code></pre>
 </ul>
 <h4 id="assegurando-a-existência-de-h5">Assegurando a existência de H5</h4>
 <p>Estimadores MQO sendo <strong>os mais eficientes</strong>. Isto é, asseguram a menor variância possível dentre outros processos de estimação dos parâmetros.</p>
-</section><section id="section-17" class="slide level2 smaller"><h2><span class="theme-subtopic"></span></h2>
+</section>
+<section id="section-17" class="slide level2 smaller">
+<h2><span class="theme-subtopic"></span></h2>
 <h4 id="assegurando-a-existência-de-h1-h4-2">Assegurando a existência de H1-H4</h4>
 <p>Estimadores MQO <strong>não viesados</strong>. Isto é, representam o que seria o valor a ser obtido na população estudada, mesmo depois de implementar em <span class="math inline">\(N\)</span> diferentes amostras.</p>
 <ul>
@@ -552,7 +649,9 @@ F-statistic: 531.5 on 1 and 8 DF,  p-value: 0.0000000133</code></pre>
 <p>Estimadores MQO sendo <strong>os mais eficientes</strong>. Isto é, asseguram a menor variância possível dentre outros processos de estimação dos parâmetros.</p>
 <h4 id="assegurando-a-existência-de-h1-h5">Assegurando a existência de H1-H5</h4>
 <p>Temos os melhores estimadores para o modelo populacional. À medida que aumenta o tamanho da amostra, aproxima-se mais do valor do parâmetro na população e com menor incerteza sobre ele.</p>
-</section><section id="section-18" class="slide level2 smaller"><h2><span class="theme-subtopic"></span></h2>
+</section>
+<section id="section-18" class="slide level2 smaller">
+<h2><span class="theme-subtopic"></span></h2>
 <h4 id="assegurando-a-existência-de-h1-h4-3">Assegurando a existência de H1-H4</h4>
 <p>Estimadores MQO <strong>não viesados</strong>. Isto é, representam o que seria o valor a ser obtido na população estudada, mesmo depois de implementar em <span class="math inline">\(N\)</span> diferentes amostras.</p>
 <ul>
@@ -565,30 +664,44 @@ F-statistic: 531.5 on 1 and 8 DF,  p-value: 0.0000000133</code></pre>
 <p>Temos os melhores estimadores para o modelo populacional. À medida que aumenta o tamanho da amostra, aproxima-se mais do valor do parâmetro na população e com menor incerteza sobre ele.</p>
 <h4 id="assegurando-a-existência-de-h1-h6">Assegurando a existência de H1-H6</h4>
 <p>É possível fazer inferência sob a significância estatística dos coeficientes estimados em comparação com o valor do parâmetro na população.</p>
-</section></section><section><section id="exemplo-da-aula" class="title-slide slide level1 theme-first center"><h1>Exemplo da aula!</h1>
+</section></section>
+<section>
+<section id="exemplo-da-aula" class="title-slide slide level1 theme-first center">
+<h1>Exemplo da aula!</h1>
 <p>…</p>
-</section><section id="section-19" class="slide level2"><h2><span class="theme-subtopic"></span></h2>
+</section>
+<section id="section-19" class="slide level2">
+<h2><span class="theme-subtopic"></span></h2>
 <h3 id="acesso-ao-esgotamento-sanitário">Acesso ao esgotamento sanitário</h3>
 <p><strong>Pergunta</strong>: Quais os fatores associados ao acesso ao esgotamento sanitário de populações vulneráveis no Brasil?</p>
 <p>Mais especificamente, qual a associação entre acesso ao Programa Bolsa Família para famílias com jovens entre 15-29 anos e o acesso ao esgotamento sanitário?</p>
 <h4 id="dados">Dados</h4>
 <p>Uma base de dados construída com dados do CadÚnico e Censo Demográfico 2010.</p>
-</section><section id="vamos-lá" class="slide level2"><h2><span class="theme-subtopic">Vamos lá!</span></h2>
+</section>
+<section id="vamos-lá" class="slide level2">
+<h2><span class="theme-subtopic">Vamos lá!</span></h2>
 <p>…</p>
 <div style="display: flex; justify-content: flex-end; align-items: center; height: 100vh;">
 <img src="images/hands-on.gif" style="border-radius: 50%; border:5px solid #708d81; width:400px; height:auto;">
 </div>
-</section></section><section><section id="modelo-de-regressão-linear-2" class="title-slide slide level1 theme-first center"><h1>Modelo de regressão Linear</h1>
+</section></section>
+<section>
+<section id="modelo-de-regressão-linear-2" class="title-slide slide level1 theme-first center">
+<h1>Modelo de regressão Linear</h1>
 <p>Modelo de Regressão Linear Múltipla (RLM)</p>
-</section><section id="modelo-de-regressão-linear-múltipla-rlm" class="slide level2"><h2><span class="theme-subtopic">Modelo de Regressão Linear Múltipla (RLM)</span></h2>
+</section>
+<section id="modelo-de-regressão-linear-múltipla-rlm" class="slide level2">
+<h2><span class="theme-subtopic">Modelo de Regressão Linear Múltipla (RLM)</span></h2>
 <p>No caso dos modelos RLS, havia somente uma variável explicativa.</p>
 <p>Todavia, pode ser que haja outros fenômenos sociais que estejam:</p>
 <ol type="1">
 <li class="fragment"><p>Associados com a nossa variável de interesse <span class="math inline">\(Y\)</span></p></li>
 <li class="fragment"><p>Associados com a nossa variável explicativa <span class="math inline">\(X\)</span></p></li>
-</ol></section><section id="section-20" class="slide level2"><h2><span class="theme-subtopic"></span></h2>
-<h3 id="no-cenário-1">No cenário <strong>1</strong>
-</h3>
+</ol>
+</section>
+<section id="section-20" class="slide level2">
+<h2><span class="theme-subtopic"></span></h2>
+<h3 id="no-cenário-1">No cenário <strong>1</strong></h3>
 <p>Se temos na base de dados a variável explicativa que <strong>sabemos que está associada com <span class="math inline">\(Y\)</span></strong>, por que não a incluir?</p>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -600,13 +713,13 @@ F-statistic: 531.5 on 1 and 8 DF,  p-value: 0.0000000133</code></pre>
 </div><div class="column" style="width:50%;">
 <h4 style="text-align: center;" id="perdas-de-incluir">Perdas de incluir</h4>
 <ul>
-<li class="fragment">Parcimônia do modelo: <em>the simpler, the better!</em>
-</li>
+<li class="fragment">Parcimônia do modelo: <em>the simpler, the better!</em></li>
 </ul>
 </div></div>
-</section><section id="section-21" class="slide level2"><h2><span class="theme-subtopic"></span></h2>
-<h3 id="no-cenário-2">No cenário <strong>2</strong>
-</h3>
+</section>
+<section id="section-21" class="slide level2">
+<h2><span class="theme-subtopic"></span></h2>
+<h3 id="no-cenário-2">No cenário <strong>2</strong></h3>
 <p>Se <strong>sabemos que está associada com <span class="math inline">\(X\)</span></strong>, ela deve ser incluída.</p>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -621,43 +734,59 @@ F-statistic: 531.5 on 1 and 8 DF,  p-value: 0.0000000133</code></pre>
 <li class="fragment">Neste caso, não há.</li>
 </ul>
 </div></div>
-</section><section id="section-22" class="slide level2"><h2><span class="theme-subtopic"></span></h2>
+</section>
+<section id="section-22" class="slide level2">
+<h2><span class="theme-subtopic"></span></h2>
 <h3 id="formalização">Formalização</h3>
 <p><span class="math display">\[Y_i = \beta_0 + \beta_1 \cdot X_{1i} + \beta_2 \cdot X_{2i} + ... + \beta_k \cdot X_{ki}  + \epsilon_i\]</span></p>
 <p>Em que:</p>
 <ul>
-<li class="fragment">
-<span class="math inline">\(k\)</span> é o número de parâmetros associados às variáveis explicativas incluídas no modelo.</li>
-</ul></section><section id="section-23" class="slide level2"><h2><span class="theme-subtopic"></span></h2>
+<li class="fragment"><span class="math inline">\(k\)</span> é o número de parâmetros associados às variáveis explicativas incluídas no modelo.</li>
+</ul>
+</section>
+<section id="section-23" class="slide level2">
+<h2><span class="theme-subtopic"></span></h2>
 <h3 id="o-que-muda-entre-rls-e-rlm">O que muda entre RLS e RLM?</h3>
 <p>Em RLS, temos o modelo populacional descrito como:</p>
 <p><span class="math display">\[Y_i = \beta_0 + \beta_1 \cdot X_{1i} + \epsilon_i\]</span></p>
 <p>Enquanto em RLM, temos:</p>
 <p><span class="math display">\[Y_i = \beta_0 + \beta_1 \cdot X_{1i} + \beta_2 \cdot X_{2i} + ... + \beta_k \cdot X_{ki}  + \epsilon_i\]</span></p>
-</section><section id="section-24" class="slide level2"><h2><span class="theme-subtopic"></span></h2>
+</section>
+<section id="section-24" class="slide level2">
+<h2><span class="theme-subtopic"></span></h2>
 <h3 id="o-que-muda-entre-rls-e-rlm-1">O que muda entre RLS e RLM?</h3>
 <p>Em RLS, temos o modelo populacional descrito como:</p>
 <p><span class="math display">\[Y_i = \beta_0 + \beta_1 \cdot X_{1i} + \epsilon_i\]</span></p>
 <p>Enquanto em RLM, temos:</p>
 <p><span class="math display">\[Y_i = \beta_0 + \beta_1 \cdot X_{1i} + \beta_2 \cdot X_{2i} + ... + \beta_k \cdot X_{ki}  + \epsilon_i\]</span></p>
 <p>Adicionar mais variáveis ao modelo nos dá maior confiança de que estaremos cumprindo os pressupostos para se ter estimadores <strong>não viesados</strong> e <strong>mais eficientes</strong>.</p>
-</section><section id="section-25" class="slide level2"><h2><span class="theme-subtopic"></span></h2>
+</section>
+<section id="section-25" class="slide level2">
+<h2><span class="theme-subtopic"></span></h2>
 <h3 id="o-que-muda-entre-rls-e-rlm-2">O que muda entre RLS e RLM?</h3>
 <p>Em RLS, temos o modelo populacional descrito como:</p>
 <p><span class="math display">\[Y_i = \beta_0 + \beta_1 \cdot X_{1i} + \epsilon_i\]</span></p>
 <p>Enquanto em RLM, temos:</p>
 <p><span class="math display">\[Y_i = \beta_0 + \beta_1 \cdot X_{1i} + \beta_2 \cdot X_{2i} + ... + \beta_k \cdot X_{ki}  + \epsilon_i\]</span></p>
 <p>Adicionar mais variáveis ao modelo nos dá maior confiança de que estaremos cumprindo os pressupostos para se ter estimadores <strong>não viesados</strong> e <strong>mais eficientes</strong>. Aumenta a complexidade dos modelos também…</p>
-</section><section id="section-26" class="slide level2"><h2><span class="theme-subtopic"></span></h2>
+</section>
+<section id="section-26" class="slide level2">
+<h2><span class="theme-subtopic"></span></h2>
 <h3 id="o-que-muda-entre-rls-e-rlm-3">O que muda entre RLS e RLM?</h3>
 <h4 id="interpretação-dos-modelos-rlm">Interpretação dos modelos RLM</h4>
 <p>Nos modelos RLM, temos que invocar a noção de <em>ceteris paribus</em> para uma correta interpretação dos resultados.</p>
 <p><strong>CETERIS PARIBUS</strong>: “tudo o mais é constante”.</p>
 <ul>
 <li class="fragment">Mantendo-se todos os outros fatores fixos, constantes, pode-se interpretar como a variação em determinada variável explicativa <span class="math inline">\(X_k\)</span> se relaciona com <span class="math inline">\(Y\)</span>.</li>
-</ul></section></section><section><section id="exemplo-da-aula-1" class="title-slide slide level1 theme-first center"><h1>Exemplo da aula!</h1>
+</ul>
+</section></section>
+<section>
+<section id="exemplo-da-aula-1" class="title-slide slide level1 theme-first center">
+<h1>Exemplo da aula!</h1>
 <p>Parte 2</p>
-</section><section id="vamos-fazer-o-nosso-modelo-um-pouco-mais-complexo" class="slide level2 smaller"><h2><span class="theme-subtopic">Vamos fazer o nosso modelo um pouco mais complexo</span></h2>
+</section>
+<section id="vamos-fazer-o-nosso-modelo-um-pouco-mais-complexo" class="slide level2 smaller">
+<h2><span class="theme-subtopic">Vamos fazer o nosso modelo um pouco mais complexo</span></h2>
 <p>Vamos estimar 3 diferentes modelos:</p>
 <h4 id="modelo-1">Modelo 1</h4>
 <p>O mesmo estimado no exercício anterior - já temos código e tudo mais!</p>
@@ -667,28 +796,38 @@ F-statistic: 531.5 on 1 and 8 DF,  p-value: 0.0000000133</code></pre>
 <p>Adicione ao <strong>Modelo 1</strong>, variável frequência ao ensino médio (<code>em</code>)</p>
 <h4 id="modelo-4">Modelo 4</h4>
 <p>Adicione ao <strong>Modelo 1</strong>, as variáveis que adicionamos no <strong>Modelo 2 e 3</strong></p>
-</section><section id="vamos-lá-1" class="slide level2 theme-subtopic"><h2>Vamos lá!</h2>
+</section>
+<section id="vamos-lá-1" class="slide level2 theme-subtopic">
+<h2>Vamos lá!</h2>
 <p>Dica (código em R para modelo com 2 variáveis explicativas):</p>
 <p><code>modelo2 = lm(Var_Y ~ Var_X1 + Var_X2, data = dados)</code></p>
 <div style="display: flex; justify-content: flex-end; align-items: center; height: 100vh;">
 <img src="images/hands-on.gif" style="border-radius: 50%; border:5px solid #708d81; width:400px; height:auto;">
 </div>
-</section><section id="isso-é-tudo-para-hoje" class="slide level2 theme-next"><h2>Isso é tudo para hoje!</h2>
+</section>
+<section id="isso-é-tudo-para-hoje" class="slide level2 theme-next">
+<h2>Isso é tudo para hoje!</h2>
 <p>Para próxima aula:</p>
 <ol type="1">
 <li class="fragment">Exercício sobre Regressão Linear Múltipla (próximo slide)</li>
 <li class="fragment">Leitura de material para aula de hoje (caso não tenha lido)</li>
 <li class="fragment">Leitura de material para a aula seguinte (Ver ementa)</li>
-</ol></section><section id="orientações-sobre-o-exercício" class="slide level2 smaller"><h2>Orientações sobre o exercício</h2>
+</ol>
+</section>
+<section id="orientações-sobre-o-exercício" class="slide level2 smaller">
+<h2>Orientações sobre o exercício</h2>
 <p>Utilizaremos os mesmos dados que utilizamos na aula de hoje.</p>
 <ul>
 <li class="fragment"><p>Rode o Modelo 1 da aula de hoje e interprete os resultados</p></li>
 <li class="fragment"><p>Adicione ao modelo 1, a variável do Modelo 2 da aula de hoje e interprete os resultados de cada variável;</p></li>
 <li class="fragment"><p>Adicione ao Modelo 2, a variável do Modelo 3 da aula de hoje e interprete os resultados de cada variável;</p></li>
 <li class="fragment"><p>Adicione a variável <code>municipio_rural</code> e interprete os resultados dela;</p></li>
-<li class="fragment"><p>Volte às estatísticas do modelo – obtidas com <code><a href="https://rdrr.io/r/base/summary.html">summary()</a></code> – e compare se houve muita mudança nos coeficientes de cada uma das variáveis quando incluída outras variáveis ao modelo. <strong>O que isso nos diz?</strong></p></li>
-<li class="fragment"><p>Observe se o <span class="math inline">\(R^2\)</span> – obtidos com <code><a href="https://rdrr.io/r/base/summary.html">summary()</a></code> – apresentou muita mudança entre os modelos. <strong>O que isso nos diz?</strong></p></li>
-</ul></section></section><section id="section-27" class="title-slide slide level1 cebrap-fim smaller center"><h1></h1>
+<li class="fragment"><p>Volte às estatísticas do modelo – obtidas com <code>summary()</code> – e compare se houve muita mudança nos coeficientes de cada uma das variáveis quando incluída outras variáveis ao modelo. <strong>O que isso nos diz?</strong></p></li>
+<li class="fragment"><p>Observe se o <span class="math inline">\(R^2\)</span> – obtidos com <code>summary()</code> – apresentou muita mudança entre os modelos. <strong>O que isso nos diz?</strong></p></li>
+</ul>
+</section></section>
+<section id="section-27" class="title-slide slide level1 cebrap-fim smaller center">
+<h1></h1>
 <p><img data-src="images/cebrap50.png" class="absolute" style="top: -90px; right: 460px; width: 100px; height: 100px; "></p>
 <div class="columns">
 <div class="column" style="width:50%;">
@@ -717,7 +856,9 @@ F-statistic: 531.5 on 1 and 8 DF,  p-value: 0.0000000133</code></pre>
 
 
 </section>
-</div>
+
+
+    </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="images/cebrap-imagem.png" class="slide-logo"></p>
 <div class="footer footer-default">
@@ -725,7 +866,24 @@ F-statistic: 531.5 on 1 and 8 DF,  p-value: 0.0000000133</code></pre>
 </div>
 </div></div>
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="2.mrls-mrlm_files/libs/revealjs/dist/reveal.js"></script><!-- reveal.js plugins --><script src="2.mrls-mrlm_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script><script src="2.mrls-mrlm_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script><script src="2.mrls-mrlm_files/libs/revealjs/plugin/reveal-menu/menu.js"></script><script src="2.mrls-mrlm_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script><script src="2.mrls-mrlm_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script><script src="2.mrls-mrlm_files/libs/revealjs/plugin/quarto-support/support.js"></script><script src="2.mrls-mrlm_files/libs/revealjs/plugin/notes/notes.js"></script><script src="2.mrls-mrlm_files/libs/revealjs/plugin/search/search.js"></script><script src="2.mrls-mrlm_files/libs/revealjs/plugin/zoom/zoom.js"></script><script src="2.mrls-mrlm_files/libs/revealjs/plugin/math/math.js"></script><script>window.define = window.backupDefine; window.backupDefine = undefined;</script><script>
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="2.mrls-mrlm_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="2.mrls-mrlm_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="2.mrls-mrlm_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="2.mrls-mrlm_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="2.mrls-mrlm_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="2.mrls-mrlm_files/libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="2.mrls-mrlm_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="2.mrls-mrlm_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="2.mrls-mrlm_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="2.mrls-mrlm_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="2.mrls-mrlm_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
 
       // Full list of configuration options available at:
       // https://revealjs.com/config/
@@ -917,42 +1075,84 @@ F-statistic: 531.5 on 1 and 8 DF,  p-value: 0.0000000133</code></pre>
           RevealZoom
         ]
       });
-    </script><script>
+    </script>
+    
+
+    <script>
+
       // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+
       // slide changes (different for each slide format).
+
       (function () {
+
         // dispatch for htmlwidgets
+
         function fireSlideEnter() {
+
           const event = window.document.createEvent("Event");
+
           event.initEvent("slideenter", true, true);
+
           window.document.dispatchEvent(event);
+
         }
+
     
+
         function fireSlideChanged(previousSlide, currentSlide) {
+
           fireSlideEnter();
+
     
+
           // dispatch for shiny
+
           if (window.jQuery) {
+
             if (previousSlide) {
+
               window.jQuery(previousSlide).trigger("hidden");
+
             }
+
             if (currentSlide) {
+
               window.jQuery(currentSlide).trigger("shown");
+
             }
+
           }
+
         }
+
     
+
         // hookup for slidy
+
         if (window.w3c_slidy) {
+
           window.w3c_slidy.add_observer(function (slide_num) {
+
             // slide_num starts at position 1
+
             fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+
           });
+
         }
+
     
+
       })();
-    </script><script id="quarto-html-after-body" type="application/javascript">
+
+    </script>
+
+    
+
+    <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
         const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
         tabsets.forEach(function(tabset) {
@@ -1119,6 +1319,6 @@ F-statistic: 531.5 on 1 and 8 DF,  p-value: 0.0000000133</code></pre>
         }
       });
       </script>
-
+    
 
 </body></html>
